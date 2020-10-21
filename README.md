@@ -19,4 +19,4 @@
 #### （...\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Driver\Include及...\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Include）
 ## 项目意见
 #### 如果项目有问题或者有新功能需求，欢迎向作者提交意见！
-#### 联系方式 QQ/微信：624644898
+#### 联系方式 QQ/微信：717398244
