@@ -1,4 +1,4 @@
-Component: ARM Compiler 5.06 update 6 (build 750) Tool: armlink [4d35ed]
+Component: ARM Compiler 5.06 update 5 (build 528) Tool: armlink [4d35e2]
 
 ==============================================================================
 
@@ -81,7 +81,7 @@ Section Cross References
     cmsis-dap.o(i.BoardInit) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
     cmsis-dap.o(i.BoardInit) refers to cmsis-dap.o(i.LEDS_SETUP) for LEDS_SETUP
     cmsis-dap.o(i.BoardInit) refers to cmsis-dap.o(.constdata) for INIT_PINS_A
-    cmsis-dap.o(i.Do_DAPUSB) refers to usbd_user_hid_1.o(i.usbd_hid_process) for usbd_hid_process
+    cmsis-dap.o(i.Do_DAPUSB) refers to usbd_user_hid.o(i.usbd_hid_process) for usbd_hid_process
     cmsis-dap.o(i.HardFault_Handler) refers to cmsis-dap.o(i.LEDS_SETUP) for LEDS_SETUP
     cmsis-dap.o(i.HardFault_Handler) refers to cmsis-dap.o(i.LedRunningOn) for LedRunningOn
     cmsis-dap.o(i.HardFault_Handler) refers to dap.o(i.Delayms) for Delayms
@@ -220,7 +220,7 @@ Section Cross References
     startup_stm32f10x_hd.o(RESET) refers to dma_stm32f10x.o(i.DMA1_Channel6_IRQHandler) for DMA1_Channel6_IRQHandler
     startup_stm32f10x_hd.o(RESET) refers to dma_stm32f10x.o(i.DMA1_Channel7_IRQHandler) for DMA1_Channel7_IRQHandler
     startup_stm32f10x_hd.o(RESET) refers to hw_config.o(i.USB_HP_CAN1_TX_IRQHandler) for USB_HP_CAN1_TX_IRQHandler
-    startup_stm32f10x_hd.o(RESET) refers to usbd_stm32f103_1.o(i.USB_LP_CAN1_RX0_IRQHandler) for USB_LP_CAN1_RX0_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to usbd_stm32f103.o(i.USB_LP_CAN1_RX0_IRQHandler) for USB_LP_CAN1_RX0_IRQHandler
     startup_stm32f10x_hd.o(RESET) refers to usart.o(i.USART1_IRQHandler) for USART1_IRQHandler
     startup_stm32f10x_hd.o(RESET) refers to usart_stm32f10x.o(i.USART2_IRQHandler) for USART2_IRQHandler
     startup_stm32f10x_hd.o(RESET) refers to hw_config.o(i.USBWakeUp_IRQHandler) for USBWakeUp_IRQHandler
@@ -956,61 +956,61 @@ Section Cross References
     swo.o(i.USART_Callback) refers to swo.o(.data) for TracePending
     swo.o(i.USART_Callback) refers to usart_stm32f10x.o(.constdata) for Driver_USART2
     swo.o(i.USART_Callback) refers to swo.o(.bss) for TraceBuf
-    usb_config_1.o(i.USBD_Configure_Event) refers to usbd_hid.o(i.USBD_HID_Configure_Event) for USBD_HID_Configure_Event
-    usb_config_1.o(i.USBD_Reset_Event) refers to usbd_cdc_acm.o(i.USBD_CDC_ACM_Reset_Event) for USBD_CDC_ACM_Reset_Event
-    usb_config_1.o(i.USBD_SOF_Event) refers to usbd_hid.o(i.USBD_HID_SOF_Event) for USBD_HID_SOF_Event
-    usb_config_1.o(i.USBD_SOF_Event) refers to usbd_cdc_acm.o(i.USBD_CDC_ACM_SOF_Event) for USBD_CDC_ACM_SOF_Event
-    usb_config_1.o(i.usbd_class_init) refers to usbd_user_hid_1.o(i.usbd_hid_init) for usbd_hid_init
-    usb_config_1.o(i.usbd_class_init) refers to usbd_cdc_acm.o(i.USBD_CDC_ACM_Initialize) for USBD_CDC_ACM_Initialize
-    usb_config_1.o(.constdata) refers to usb_config_1.o(i.USBD_Reset_Event) for USBD_Reset_Event
-    usb_config_1.o(.constdata) refers to usb_config_1.o(i.USBD_SOF_Event) for USBD_SOF_Event
-    usb_config_1.o(.constdata) refers (Weak) to cmsis-dap.o(i.USBD_Error_Event) for USBD_Error_Event
-    usb_config_1.o(.constdata) refers to usbd_core.o(i.USBD_EndPoint0) for USBD_EndPoint0
-    usb_config_1.o(.constdata) refers to usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_INTIN_Event) for USBD_CDC_ACM_EP_INTIN_Event
-    usb_config_1.o(.constdata) refers to usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULK_Event) for USBD_CDC_ACM_EP_BULK_Event
-    usb_config_1.o(.constdata) refers to usbd_hid.o(i.USBD_HID_EP_INT_Event) for USBD_HID_EP_INT_Event
-    usb_config_1.o(.constdata) refers to usb_config_1.o(i.USBD_Configure_Event) for USBD_Configure_Event
-    usbd_stm32f103_1.o(i.USBD_ClrStallEP) refers to usbd_stm32f103_1.o(i.EP_Reset) for EP_Reset
-    usbd_stm32f103_1.o(i.USBD_ClrStallEP) refers to usbd_stm32f103_1.o(i.EP_Status) for EP_Status
-    usbd_stm32f103_1.o(i.USBD_ConfigEP) refers to usbd_stm32f103_1.o(.data) for FreeBufAddr
-    usbd_stm32f103_1.o(i.USBD_Configure) refers to usbd_stm32f103_1.o(.data) for FreeBufAddr
-    usbd_stm32f103_1.o(i.USBD_DisableEP) refers to usbd_stm32f103_1.o(i.EP_Status) for EP_Status
-    usbd_stm32f103_1.o(i.USBD_EnableEP) refers to usbd_stm32f103_1.o(i.EP_Status) for EP_Status
-    usbd_stm32f103_1.o(i.USBD_Init) refers to usbd_stm32f103_1.o(i.USBD_IntrEna) for USBD_IntrEna
-    usbd_stm32f103_1.o(i.USBD_Init) refers to cmsis-dap.o(i.PORT_USB_CONNECT_SETUP) for PORT_USB_CONNECT_SETUP
-    usbd_stm32f103_1.o(i.USBD_ReadEP) refers to usbd_stm32f103_1.o(i.EP_Status) for EP_Status
-    usbd_stm32f103_1.o(i.USBD_ReadEP) refers to usbd_stm32f103_1.o(.data) for pBUF_DSCR
-    usbd_stm32f103_1.o(i.USBD_Reset) refers to usb_config_1.o(.constdata) for USBD_P_Error_Event
-    usbd_stm32f103_1.o(i.USBD_Reset) refers to usbd_stm32f103_1.o(.data) for FreeBufAddr
-    usbd_stm32f103_1.o(i.USBD_ResetEP) refers to usbd_stm32f103_1.o(i.EP_Reset) for EP_Reset
-    usbd_stm32f103_1.o(i.USBD_SetStallEP) refers to usbd_stm32f103_1.o(i.EP_Status) for EP_Status
-    usbd_stm32f103_1.o(i.USBD_WriteEP) refers to usbd_stm32f103_1.o(i.EP_Status) for EP_Status
-    usbd_stm32f103_1.o(i.USBD_WriteEP) refers to usbd_stm32f103_1.o(.data) for pBUF_DSCR
-    usbd_stm32f103_1.o(i.USB_LP_CAN1_RX0_IRQHandler) refers to usb_istr.o(i.USB_Istr) for USB_Istr
-    usbd_stm32f103_1.o(i.USB_LP_CAN1_RX0_IRQHandler) refers to usbd_stm32f103_1.o(i.USBD_Reset) for USBD_Reset
-    usbd_stm32f103_1.o(i.USB_LP_CAN1_RX0_IRQHandler) refers to usbd_core.o(i.usbd_reset_core) for usbd_reset_core
-    usbd_stm32f103_1.o(i.USB_LP_CAN1_RX0_IRQHandler) refers to usbd_stm32f103_1.o(i.USBD_Suspend) for USBD_Suspend
-    usbd_stm32f103_1.o(i.USB_LP_CAN1_RX0_IRQHandler) refers to usbd_stm32f103_1.o(i.USBD_WakeUp) for USBD_WakeUp
-    usbd_stm32f103_1.o(i.USB_LP_CAN1_RX0_IRQHandler) refers to usb_config_1.o(.constdata) for USBD_P_Reset_Event
-    usbd_user_hid_1.o(i.HID_ProcessCommand) refers to stm32f10x_flash.o(i.FLASH_Unlock) for FLASH_Unlock
-    usbd_user_hid_1.o(i.HID_ProcessCommand) refers to stm32f10x_flash.o(i.FLASH_Lock) for FLASH_Lock
-    usbd_user_hid_1.o(i.HID_ProcessCommand) refers to stm32f10x_flash.o(i.FLASH_ErasePage) for FLASH_ErasePage
-    usbd_user_hid_1.o(i.HID_ProcessCommand) refers to stm32f10x_flash.o(i.FLASH_ProgramHalfWord) for FLASH_ProgramHalfWord
-    usbd_user_hid_1.o(i.HID_ProcessCommand) refers to cmsis-dap.o(.data) for pUserAppDescriptor
-    usbd_user_hid_1.o(i.HID_ProcessCommand) refers to usbd_user_hid_1.o(.bss) for USB_Response
-    usbd_user_hid_1.o(i.HID_ProcessCommand) refers to usbd_user_hid_1.o(.data) for USB_ResponseIn
-    usbd_user_hid_1.o(i.usbd_hid_get_report) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
-    usbd_user_hid_1.o(i.usbd_hid_get_report) refers to usbd_user_hid_1.o(.data) for USB_ResponseOut
-    usbd_user_hid_1.o(i.usbd_hid_get_report) refers to usbd_user_hid_1.o(.bss) for USB_Response
-    usbd_user_hid_1.o(i.usbd_hid_init) refers to usbd_user_hid_1.o(.data) for USB_RequestFlag
-    usbd_user_hid_1.o(i.usbd_hid_process) refers to usbd_user_hid_1.o(i.HID_ProcessCommand) for HID_ProcessCommand
-    usbd_user_hid_1.o(i.usbd_hid_process) refers to usbd_hid.o(i.usbd_hid_get_report_trigger) for usbd_hid_get_report_trigger
-    usbd_user_hid_1.o(i.usbd_hid_process) refers to usbd_user_hid_1.o(.data) for USB_RequestOut
-    usbd_user_hid_1.o(i.usbd_hid_process) refers to usbd_user_hid_1.o(.bss) for USB_Response
-    usbd_user_hid_1.o(i.usbd_hid_set_report) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
-    usbd_user_hid_1.o(i.usbd_hid_set_report) refers to cmsis-dap.o(.data) for pUserAppDescriptor
-    usbd_user_hid_1.o(i.usbd_hid_set_report) refers to usbd_user_hid_1.o(.data) for USB_RequestFlag
-    usbd_user_hid_1.o(i.usbd_hid_set_report) refers to usbd_user_hid_1.o(.bss) for USB_Request
+    usb_config.o(i.USBD_Configure_Event) refers to usbd_hid.o(i.USBD_HID_Configure_Event) for USBD_HID_Configure_Event
+    usb_config.o(i.USBD_Reset_Event) refers to usbd_cdc_acm.o(i.USBD_CDC_ACM_Reset_Event) for USBD_CDC_ACM_Reset_Event
+    usb_config.o(i.USBD_SOF_Event) refers to usbd_hid.o(i.USBD_HID_SOF_Event) for USBD_HID_SOF_Event
+    usb_config.o(i.USBD_SOF_Event) refers to usbd_cdc_acm.o(i.USBD_CDC_ACM_SOF_Event) for USBD_CDC_ACM_SOF_Event
+    usb_config.o(i.usbd_class_init) refers to usbd_user_hid.o(i.usbd_hid_init) for usbd_hid_init
+    usb_config.o(i.usbd_class_init) refers to usbd_cdc_acm.o(i.USBD_CDC_ACM_Initialize) for USBD_CDC_ACM_Initialize
+    usb_config.o(.constdata) refers to usb_config.o(i.USBD_Reset_Event) for USBD_Reset_Event
+    usb_config.o(.constdata) refers to usb_config.o(i.USBD_SOF_Event) for USBD_SOF_Event
+    usb_config.o(.constdata) refers (Weak) to cmsis-dap.o(i.USBD_Error_Event) for USBD_Error_Event
+    usb_config.o(.constdata) refers to usbd_core.o(i.USBD_EndPoint0) for USBD_EndPoint0
+    usb_config.o(.constdata) refers to usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_INTIN_Event) for USBD_CDC_ACM_EP_INTIN_Event
+    usb_config.o(.constdata) refers to usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULK_Event) for USBD_CDC_ACM_EP_BULK_Event
+    usb_config.o(.constdata) refers to usbd_hid.o(i.USBD_HID_EP_INT_Event) for USBD_HID_EP_INT_Event
+    usb_config.o(.constdata) refers to usb_config.o(i.USBD_Configure_Event) for USBD_Configure_Event
+    usbd_stm32f103.o(i.USBD_ClrStallEP) refers to usbd_stm32f103.o(i.EP_Reset) for EP_Reset
+    usbd_stm32f103.o(i.USBD_ClrStallEP) refers to usbd_stm32f103.o(i.EP_Status) for EP_Status
+    usbd_stm32f103.o(i.USBD_ConfigEP) refers to usbd_stm32f103.o(.data) for FreeBufAddr
+    usbd_stm32f103.o(i.USBD_Configure) refers to usbd_stm32f103.o(.data) for FreeBufAddr
+    usbd_stm32f103.o(i.USBD_DisableEP) refers to usbd_stm32f103.o(i.EP_Status) for EP_Status
+    usbd_stm32f103.o(i.USBD_EnableEP) refers to usbd_stm32f103.o(i.EP_Status) for EP_Status
+    usbd_stm32f103.o(i.USBD_Init) refers to usbd_stm32f103.o(i.USBD_IntrEna) for USBD_IntrEna
+    usbd_stm32f103.o(i.USBD_Init) refers to cmsis-dap.o(i.PORT_USB_CONNECT_SETUP) for PORT_USB_CONNECT_SETUP
+    usbd_stm32f103.o(i.USBD_ReadEP) refers to usbd_stm32f103.o(i.EP_Status) for EP_Status
+    usbd_stm32f103.o(i.USBD_ReadEP) refers to usbd_stm32f103.o(.data) for pBUF_DSCR
+    usbd_stm32f103.o(i.USBD_Reset) refers to usb_config.o(.constdata) for USBD_P_Error_Event
+    usbd_stm32f103.o(i.USBD_Reset) refers to usbd_stm32f103.o(.data) for FreeBufAddr
+    usbd_stm32f103.o(i.USBD_ResetEP) refers to usbd_stm32f103.o(i.EP_Reset) for EP_Reset
+    usbd_stm32f103.o(i.USBD_SetStallEP) refers to usbd_stm32f103.o(i.EP_Status) for EP_Status
+    usbd_stm32f103.o(i.USBD_WriteEP) refers to usbd_stm32f103.o(i.EP_Status) for EP_Status
+    usbd_stm32f103.o(i.USBD_WriteEP) refers to usbd_stm32f103.o(.data) for pBUF_DSCR
+    usbd_stm32f103.o(i.USB_LP_CAN1_RX0_IRQHandler) refers to usb_istr.o(i.USB_Istr) for USB_Istr
+    usbd_stm32f103.o(i.USB_LP_CAN1_RX0_IRQHandler) refers to usbd_stm32f103.o(i.USBD_Reset) for USBD_Reset
+    usbd_stm32f103.o(i.USB_LP_CAN1_RX0_IRQHandler) refers to usbd_core.o(i.usbd_reset_core) for usbd_reset_core
+    usbd_stm32f103.o(i.USB_LP_CAN1_RX0_IRQHandler) refers to usbd_stm32f103.o(i.USBD_Suspend) for USBD_Suspend
+    usbd_stm32f103.o(i.USB_LP_CAN1_RX0_IRQHandler) refers to usbd_stm32f103.o(i.USBD_WakeUp) for USBD_WakeUp
+    usbd_stm32f103.o(i.USB_LP_CAN1_RX0_IRQHandler) refers to usb_config.o(.constdata) for USBD_P_Reset_Event
+    usbd_user_hid.o(i.HID_ProcessCommand) refers to stm32f10x_flash.o(i.FLASH_Unlock) for FLASH_Unlock
+    usbd_user_hid.o(i.HID_ProcessCommand) refers to stm32f10x_flash.o(i.FLASH_Lock) for FLASH_Lock
+    usbd_user_hid.o(i.HID_ProcessCommand) refers to stm32f10x_flash.o(i.FLASH_ErasePage) for FLASH_ErasePage
+    usbd_user_hid.o(i.HID_ProcessCommand) refers to stm32f10x_flash.o(i.FLASH_ProgramHalfWord) for FLASH_ProgramHalfWord
+    usbd_user_hid.o(i.HID_ProcessCommand) refers to cmsis-dap.o(.data) for pUserAppDescriptor
+    usbd_user_hid.o(i.HID_ProcessCommand) refers to usbd_user_hid.o(.bss) for USB_Response
+    usbd_user_hid.o(i.HID_ProcessCommand) refers to usbd_user_hid.o(.data) for USB_ResponseIn
+    usbd_user_hid.o(i.usbd_hid_get_report) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    usbd_user_hid.o(i.usbd_hid_get_report) refers to usbd_user_hid.o(.data) for USB_ResponseOut
+    usbd_user_hid.o(i.usbd_hid_get_report) refers to usbd_user_hid.o(.bss) for USB_Response
+    usbd_user_hid.o(i.usbd_hid_init) refers to usbd_user_hid.o(.data) for USB_RequestFlag
+    usbd_user_hid.o(i.usbd_hid_process) refers to usbd_user_hid.o(i.HID_ProcessCommand) for HID_ProcessCommand
+    usbd_user_hid.o(i.usbd_hid_process) refers to usbd_hid.o(i.usbd_hid_get_report_trigger) for usbd_hid_get_report_trigger
+    usbd_user_hid.o(i.usbd_hid_process) refers to usbd_user_hid.o(.data) for USB_RequestOut
+    usbd_user_hid.o(i.usbd_hid_process) refers to usbd_user_hid.o(.bss) for USB_Response
+    usbd_user_hid.o(i.usbd_hid_set_report) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    usbd_user_hid.o(i.usbd_hid_set_report) refers to cmsis-dap.o(.data) for pUserAppDescriptor
+    usbd_user_hid.o(i.usbd_hid_set_report) refers to usbd_user_hid.o(.data) for USB_RequestFlag
+    usbd_user_hid.o(i.usbd_hid_set_report) refers to usbd_user_hid.o(.bss) for USB_Request
     usbd_user_cdc_acm.o(i.CDC_ACM_UART_to_USB) refers to usbd_cdc_acm.o(i.USBD_CDC_ACM_DataSend) for USBD_CDC_ACM_DataSend
     usbd_user_cdc_acm.o(i.CDC_ACM_UART_to_USB) refers to usart_stm32f10x.o(.constdata) for Driver_USART2
     usbd_user_cdc_acm.o(i.CDC_ACM_UART_to_USB) refers to usbd_user_cdc_acm.o(.data) for uart_rx_cnt
@@ -1277,182 +1277,182 @@ Section Cross References
     w25qxx.o(i.W25QXX_Write_Page) refers to spi.o(i.SPI2_ReadWriteByte) for SPI2_ReadWriteByte
     w25qxx.o(i.W25QXX_Write_Page) refers to w25qxx.o(i.W25QXX_Wait_Busy) for W25QXX_Wait_Busy
     w25qxx.o(i.W25QXX_Write_SR) refers to spi.o(i.SPI2_ReadWriteByte) for SPI2_ReadWriteByte
-    usbd_core.o(i.USBD_DataInStage) refers to usbd_stm32f103_1.o(i.USBD_WriteEP) for USBD_WriteEP
+    usbd_core.o(i.USBD_DataInStage) refers to usbd_stm32f103.o(i.USBD_WriteEP) for USBD_WriteEP
     usbd_core.o(i.USBD_DataInStage) refers to usbd_core.o(.data) for .data
-    usbd_core.o(i.USBD_DataInStage) refers to usb_config_1.o(.constdata) for usbd_max_packet0
-    usbd_core.o(i.USBD_DataOutStage) refers to usbd_stm32f103_1.o(i.USBD_ReadEP) for USBD_ReadEP
+    usbd_core.o(i.USBD_DataInStage) refers to usb_config.o(.constdata) for usbd_max_packet0
+    usbd_core.o(i.USBD_DataOutStage) refers to usbd_stm32f103.o(i.USBD_ReadEP) for USBD_ReadEP
     usbd_core.o(i.USBD_DataOutStage) refers to usbd_core.o(.data) for .data
     usbd_core.o(i.USBD_EndPoint0) refers to usbd_core.o(i.USBD_SetupStage) for USBD_SetupStage
-    usbd_core.o(i.USBD_EndPoint0) refers to usbd_stm32f103_1.o(i.USBD_DirCtrlEP) for USBD_DirCtrlEP
+    usbd_core.o(i.USBD_EndPoint0) refers to usbd_stm32f103.o(i.USBD_DirCtrlEP) for USBD_DirCtrlEP
     usbd_core.o(i.USBD_EndPoint0) refers to usbd_core.o(i.USBD_ReqGetStatus) for USBD_ReqGetStatus
     usbd_core.o(i.USBD_EndPoint0) refers to usbd_core.o(i.USBD_DataInStage) for USBD_DataInStage
     usbd_core.o(i.USBD_EndPoint0) refers to usbd_core.o(i.USBD_ReqSetClrFeature) for USBD_ReqSetClrFeature
     usbd_core.o(i.USBD_EndPoint0) refers to usbd_core.o(i.USBD_StatusInStage) for USBD_StatusInStage
-    usbd_core.o(i.USBD_EndPoint0) refers to usbd_stm32f103_1.o(i.USBD_SetAddress) for USBD_SetAddress
+    usbd_core.o(i.USBD_EndPoint0) refers to usbd_stm32f103.o(i.USBD_SetAddress) for USBD_SetAddress
     usbd_core.o(i.USBD_EndPoint0) refers to usbd_core.o(i.USBD_ReqGetDescriptor) for USBD_ReqGetDescriptor
     usbd_core.o(i.USBD_EndPoint0) refers to usbd_core.o(i.USBD_ReqSetConfiguration) for USBD_ReqSetConfiguration
     usbd_core.o(i.USBD_EndPoint0) refers to usbd_core.o(i.USBD_ReqSetInterface) for USBD_ReqSetInterface
-    usbd_core.o(i.USBD_EndPoint0) refers to usb_config_1.o(i.usbd_os_evt_set) for usbd_os_evt_set
-    usbd_core.o(i.USBD_EndPoint0) refers to usb_config_1.o(i.USBD_EndPoint0_Setup_CLS_ReqToDEV) for USBD_EndPoint0_Setup_CLS_ReqToDEV
+    usbd_core.o(i.USBD_EndPoint0) refers to usb_config.o(i.usbd_os_evt_set) for usbd_os_evt_set
+    usbd_core.o(i.USBD_EndPoint0) refers to usb_config.o(i.USBD_EndPoint0_Setup_CLS_ReqToDEV) for USBD_EndPoint0_Setup_CLS_ReqToDEV
     usbd_core.o(i.USBD_EndPoint0) refers to usbd_core_hid.o(i.USBD_EndPoint0_Setup_HID_ReqToIF) for USBD_EndPoint0_Setup_HID_ReqToIF
-    usbd_core.o(i.USBD_EndPoint0) refers to usb_config_1.o(i.USBD_EndPoint0_Setup_MSC_ReqToIF) for USBD_EndPoint0_Setup_MSC_ReqToIF
-    usbd_core.o(i.USBD_EndPoint0) refers to usb_config_1.o(i.USBD_EndPoint0_Setup_ADC_ReqToIF) for USBD_EndPoint0_Setup_ADC_ReqToIF
+    usbd_core.o(i.USBD_EndPoint0) refers to usb_config.o(i.USBD_EndPoint0_Setup_MSC_ReqToIF) for USBD_EndPoint0_Setup_MSC_ReqToIF
+    usbd_core.o(i.USBD_EndPoint0) refers to usb_config.o(i.USBD_EndPoint0_Setup_ADC_ReqToIF) for USBD_EndPoint0_Setup_ADC_ReqToIF
     usbd_core.o(i.USBD_EndPoint0) refers to usbd_core_cdc.o(i.USBD_EndPoint0_Setup_CDC_ReqToIF) for USBD_EndPoint0_Setup_CDC_ReqToIF
-    usbd_core.o(i.USBD_EndPoint0) refers to usb_config_1.o(i.USBD_EndPoint0_Setup_CLS_ReqToIF) for USBD_EndPoint0_Setup_CLS_ReqToIF
-    usbd_core.o(i.USBD_EndPoint0) refers to usb_config_1.o(i.USBD_EndPoint0_Setup_ADC_ReqToEP) for USBD_EndPoint0_Setup_ADC_ReqToEP
-    usbd_core.o(i.USBD_EndPoint0) refers to usb_config_1.o(i.USBD_EndPoint0_Setup_CLS_ReqToEP) for USBD_EndPoint0_Setup_CLS_ReqToEP
-    usbd_core.o(i.USBD_EndPoint0) refers to usbd_stm32f103_1.o(i.USBD_SetStallEP) for USBD_SetStallEP
+    usbd_core.o(i.USBD_EndPoint0) refers to usb_config.o(i.USBD_EndPoint0_Setup_CLS_ReqToIF) for USBD_EndPoint0_Setup_CLS_ReqToIF
+    usbd_core.o(i.USBD_EndPoint0) refers to usb_config.o(i.USBD_EndPoint0_Setup_ADC_ReqToEP) for USBD_EndPoint0_Setup_ADC_ReqToEP
+    usbd_core.o(i.USBD_EndPoint0) refers to usb_config.o(i.USBD_EndPoint0_Setup_CLS_ReqToEP) for USBD_EndPoint0_Setup_CLS_ReqToEP
+    usbd_core.o(i.USBD_EndPoint0) refers to usbd_stm32f103.o(i.USBD_SetStallEP) for USBD_SetStallEP
     usbd_core.o(i.USBD_EndPoint0) refers to usbd_core.o(i.USBD_DataOutStage) for USBD_DataOutStage
-    usbd_core.o(i.USBD_EndPoint0) refers to usb_config_1.o(i.USBD_EndPoint0_Out_CLS_ReqToDEV) for USBD_EndPoint0_Out_CLS_ReqToDEV
+    usbd_core.o(i.USBD_EndPoint0) refers to usb_config.o(i.USBD_EndPoint0_Out_CLS_ReqToDEV) for USBD_EndPoint0_Out_CLS_ReqToDEV
     usbd_core.o(i.USBD_EndPoint0) refers to usbd_core_hid.o(i.USBD_EndPoint0_Out_HID_ReqToIF) for USBD_EndPoint0_Out_HID_ReqToIF
-    usbd_core.o(i.USBD_EndPoint0) refers to usb_config_1.o(i.USBD_EndPoint0_Out_ADC_ReqToIF) for USBD_EndPoint0_Out_ADC_ReqToIF
+    usbd_core.o(i.USBD_EndPoint0) refers to usb_config.o(i.USBD_EndPoint0_Out_ADC_ReqToIF) for USBD_EndPoint0_Out_ADC_ReqToIF
     usbd_core.o(i.USBD_EndPoint0) refers to usbd_core_cdc.o(i.USBD_EndPoint0_Out_CDC_ReqToIF) for USBD_EndPoint0_Out_CDC_ReqToIF
-    usbd_core.o(i.USBD_EndPoint0) refers to usb_config_1.o(i.USBD_EndPoint0_Out_CLS_ReqToIF) for USBD_EndPoint0_Out_CLS_ReqToIF
-    usbd_core.o(i.USBD_EndPoint0) refers to usb_config_1.o(i.USBD_EndPoint0_Out_ADC_ReqToEP) for USBD_EndPoint0_Out_ADC_ReqToEP
-    usbd_core.o(i.USBD_EndPoint0) refers to usb_config_1.o(i.USBD_EndPoint0_Out_CLS_ReqToEP) for USBD_EndPoint0_Out_CLS_ReqToEP
+    usbd_core.o(i.USBD_EndPoint0) refers to usb_config.o(i.USBD_EndPoint0_Out_CLS_ReqToIF) for USBD_EndPoint0_Out_CLS_ReqToIF
+    usbd_core.o(i.USBD_EndPoint0) refers to usb_config.o(i.USBD_EndPoint0_Out_ADC_ReqToEP) for USBD_EndPoint0_Out_ADC_ReqToEP
+    usbd_core.o(i.USBD_EndPoint0) refers to usb_config.o(i.USBD_EndPoint0_Out_CLS_ReqToEP) for USBD_EndPoint0_Out_CLS_ReqToEP
     usbd_core.o(i.USBD_EndPoint0) refers to usbd_core.o(i.USBD_StatusOutStage) for USBD_StatusOutStage
-    usbd_core.o(i.USBD_EndPoint0) refers to usbd_stm32f103_1.o(i.USBD_ClrStallEP) for USBD_ClrStallEP
+    usbd_core.o(i.USBD_EndPoint0) refers to usbd_stm32f103.o(i.USBD_ClrStallEP) for USBD_ClrStallEP
     usbd_core.o(i.USBD_EndPoint0) refers to usbd_core.o(.data) for .data
-    usbd_core.o(i.USBD_EndPoint0) refers to usb_config_1.o(.constdata) for __rtx
-    usbd_core.o(i.USBD_EndPoint0) refers to usb_config_1.o(.data) for USBD_AltSetting
-    usbd_core.o(i.USBD_RTX_EndPoint0) refers to usb_config_1.o(i.usbd_os_evt_wait_or) for usbd_os_evt_wait_or
-    usbd_core.o(i.USBD_RTX_EndPoint0) refers to usb_config_1.o(i.usbd_os_evt_get) for usbd_os_evt_get
+    usbd_core.o(i.USBD_EndPoint0) refers to usb_config.o(.constdata) for __rtx
+    usbd_core.o(i.USBD_EndPoint0) refers to usb_config.o(.data) for USBD_AltSetting
+    usbd_core.o(i.USBD_RTX_EndPoint0) refers to usb_config.o(i.usbd_os_evt_wait_or) for usbd_os_evt_wait_or
+    usbd_core.o(i.USBD_RTX_EndPoint0) refers to usb_config.o(i.usbd_os_evt_get) for usbd_os_evt_get
     usbd_core.o(i.USBD_RTX_EndPoint0) refers to usbd_core.o(i.USBD_EndPoint0) for USBD_EndPoint0
-    usbd_core.o(i.USBD_SetupStage) refers to usbd_stm32f103_1.o(i.USBD_ReadEP) for USBD_ReadEP
+    usbd_core.o(i.USBD_SetupStage) refers to usbd_stm32f103.o(i.USBD_ReadEP) for USBD_ReadEP
     usbd_core.o(i.USBD_SetupStage) refers to usbd_core.o(.data) for .data
-    usbd_core.o(i.USBD_StatusInStage) refers to usbd_stm32f103_1.o(i.USBD_WriteEP) for USBD_WriteEP
-    usbd_core.o(i.USBD_StatusOutStage) refers to usbd_stm32f103_1.o(i.USBD_ReadEP) for USBD_ReadEP
-    usbd_core.o(i.USBD_StatusOutStage) refers to usb_config_1.o(.bss) for USBD_EP0Buf
+    usbd_core.o(i.USBD_StatusInStage) refers to usbd_stm32f103.o(i.USBD_WriteEP) for USBD_WriteEP
+    usbd_core.o(i.USBD_StatusOutStage) refers to usbd_stm32f103.o(i.USBD_ReadEP) for USBD_ReadEP
+    usbd_core.o(i.USBD_StatusOutStage) refers to usb_config.o(.bss) for USBD_EP0Buf
     usbd_core.o(i.usbd_configured) refers to usbd_core.o(.data) for .data
-    usbd_core.o(i.usbd_connect) refers to usbd_stm32f103_1.o(i.USBD_Connect) for USBD_Connect
-    usbd_core.o(i.usbd_init) refers to usb_config_1.o(i.usbd_class_init) for usbd_class_init
-    usbd_core.o(i.usbd_init) refers to usb_config_1.o(i.USBD_RTX_TaskInit) for USBD_RTX_TaskInit
-    usbd_core.o(i.usbd_init) refers to usbd_stm32f103_1.o(i.USBD_Init) for USBD_Init
+    usbd_core.o(i.usbd_connect) refers to usbd_stm32f103.o(i.USBD_Connect) for USBD_Connect
+    usbd_core.o(i.usbd_init) refers to usb_config.o(i.usbd_class_init) for usbd_class_init
+    usbd_core.o(i.usbd_init) refers to usb_config.o(i.USBD_RTX_TaskInit) for USBD_RTX_TaskInit
+    usbd_core.o(i.usbd_init) refers to usbd_stm32f103.o(i.USBD_Init) for USBD_Init
     usbd_core.o(i.usbd_init) refers to usbd_core.o(.data) for .data
-    usbd_core.o(i.usbd_reset_core) refers to usb_config_1.o(.constdata) for usbd_power
+    usbd_core.o(i.usbd_reset_core) refers to usb_config.o(.constdata) for usbd_power
     usbd_core.o(i.usbd_reset_core) refers to usbd_core.o(.data) for .data
     usbd_cdc_acm.o(i.USBD_CDC_ACM_DataAvailable) refers to usbd_cdc_acm.o(.data) for .data
     usbd_cdc_acm.o(i.USBD_CDC_ACM_DataRead) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
     usbd_cdc_acm.o(i.USBD_CDC_ACM_DataRead) refers to usbd_cdc_acm.o(.data) for .data
     usbd_cdc_acm.o(i.USBD_CDC_ACM_DataSend) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
     usbd_cdc_acm.o(i.USBD_CDC_ACM_DataSend) refers to usbd_cdc_acm.o(.data) for .data
-    usbd_cdc_acm.o(i.USBD_CDC_ACM_DataSend) refers to usb_config_1.o(.constdata) for usbd_cdc_acm_sendbuf_sz
-    usbd_cdc_acm.o(i.USBD_CDC_ACM_DataSend) refers to usb_config_1.o(.bss) for USBD_CDC_ACM_SendBuf
+    usbd_cdc_acm.o(i.USBD_CDC_ACM_DataSend) refers to usb_config.o(.constdata) for usbd_cdc_acm_sendbuf_sz
+    usbd_cdc_acm.o(i.USBD_CDC_ACM_DataSend) refers to usb_config.o(.bss) for USBD_CDC_ACM_SendBuf
     usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULKIN_Event) refers to usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULKIN_HandleData) for USBD_CDC_ACM_EP_BULKIN_HandleData
     usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULKIN_Event) refers to usbd_cdc_acm.o(.data) for .data
-    usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULKIN_HandleData) refers to usbd_stm32f103_1.o(i.USBD_WriteEP) for USBD_WriteEP
+    usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULKIN_HandleData) refers to usbd_stm32f103.o(i.USBD_WriteEP) for USBD_WriteEP
     usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULKIN_HandleData) refers to usbd_cdc_acm.o(.data) for .data
-    usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULKIN_HandleData) refers to usb_config_1.o(.constdata) for usbd_cdc_acm_sendbuf_sz
-    usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULKIN_HandleData) refers to usb_config_1.o(.bss) for USBD_CDC_ACM_SendBuf
+    usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULKIN_HandleData) refers to usb_config.o(.constdata) for usbd_cdc_acm_sendbuf_sz
+    usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULKIN_HandleData) refers to usb_config.o(.bss) for USBD_CDC_ACM_SendBuf
     usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULKIN_HandleData) refers to usbd_core.o(.data) for USBD_HighSpeed
     usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULKOUT_Event) refers to usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULKOUT_HandleData) for USBD_CDC_ACM_EP_BULKOUT_HandleData
     usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULKOUT_Event) refers to usbd_user_cdc_acm.o(i.USBD_CDC_ACM_DataReceived) for USBD_CDC_ACM_DataReceived
     usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULKOUT_Event) refers to usbd_cdc_acm.o(.data) for .data
-    usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULKOUT_HandleData) refers to usbd_stm32f103_1.o(i.USBD_ReadEP) for USBD_ReadEP
+    usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULKOUT_HandleData) refers to usbd_stm32f103.o(i.USBD_ReadEP) for USBD_ReadEP
     usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULKOUT_HandleData) refers to usbd_cdc_acm.o(.data) for .data
-    usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULKOUT_HandleData) refers to usb_config_1.o(.bss) for USBD_CDC_ACM_ReceiveBuf
-    usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULKOUT_HandleData) refers to usb_config_1.o(.constdata) for usbd_cdc_acm_receivebuf_sz
+    usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULKOUT_HandleData) refers to usb_config.o(.bss) for USBD_CDC_ACM_ReceiveBuf
+    usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULKOUT_HandleData) refers to usb_config.o(.constdata) for usbd_cdc_acm_receivebuf_sz
     usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULKOUT_HandleData) refers to usbd_core.o(.data) for USBD_HighSpeed
     usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULK_Event) refers to usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULKOUT_Event) for USBD_CDC_ACM_EP_BULKOUT_Event
     usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULK_Event) refers to usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULKIN_Event) for USBD_CDC_ACM_EP_BULKIN_Event
     usbd_cdc_acm.o(i.USBD_CDC_ACM_GetChar) refers to usbd_cdc_acm.o(i.USBD_CDC_ACM_DataRead) for USBD_CDC_ACM_DataRead
     usbd_cdc_acm.o(i.USBD_CDC_ACM_GetLineCoding) refers to usbd_user_cdc_acm.o(i.USBD_CDC_ACM_PortGetLineCoding) for USBD_CDC_ACM_PortGetLineCoding
     usbd_cdc_acm.o(i.USBD_CDC_ACM_GetLineCoding) refers to usbd_cdc_acm.o(.data) for .data
-    usbd_cdc_acm.o(i.USBD_CDC_ACM_GetLineCoding) refers to usb_config_1.o(.bss) for USBD_EP0Buf
+    usbd_cdc_acm.o(i.USBD_CDC_ACM_GetLineCoding) refers to usb_config.o(.bss) for USBD_EP0Buf
     usbd_cdc_acm.o(i.USBD_CDC_ACM_Initialize) refers to usbd_user_cdc_acm.o(i.USBD_CDC_ACM_PortInitialize) for USBD_CDC_ACM_PortInitialize
-    usbd_cdc_acm.o(i.USBD_CDC_ACM_Notify) refers to usbd_stm32f103_1.o(i.USBD_WriteEP) for USBD_WriteEP
+    usbd_cdc_acm.o(i.USBD_CDC_ACM_Notify) refers to usbd_stm32f103.o(i.USBD_WriteEP) for USBD_WriteEP
     usbd_cdc_acm.o(i.USBD_CDC_ACM_Notify) refers to usbd_core.o(.data) for USBD_Configuration
-    usbd_cdc_acm.o(i.USBD_CDC_ACM_Notify) refers to usb_config_1.o(.bss) for USBD_CDC_ACM_NotifyBuf
-    usbd_cdc_acm.o(i.USBD_CDC_ACM_Notify) refers to usb_config_1.o(.constdata) for usbd_cdc_acm_ep_intin
+    usbd_cdc_acm.o(i.USBD_CDC_ACM_Notify) refers to usb_config.o(.bss) for USBD_CDC_ACM_NotifyBuf
+    usbd_cdc_acm.o(i.USBD_CDC_ACM_Notify) refers to usb_config.o(.constdata) for usbd_cdc_acm_ep_intin
     usbd_cdc_acm.o(i.USBD_CDC_ACM_PutChar) refers to usbd_cdc_acm.o(i.USBD_CDC_ACM_DataSend) for USBD_CDC_ACM_DataSend
     usbd_cdc_acm.o(i.USBD_CDC_ACM_Reset) refers to usbd_user_cdc_acm.o(i.USBD_CDC_ACM_PortReset) for USBD_CDC_ACM_PortReset
     usbd_cdc_acm.o(i.USBD_CDC_ACM_Reset) refers to usbd_user_cdc_acm.o(i.USBD_CDC_ACM_PortSetLineCoding) for USBD_CDC_ACM_PortSetLineCoding
     usbd_cdc_acm.o(i.USBD_CDC_ACM_Reset) refers to usbd_cdc_acm.o(.data) for .data
-    usbd_cdc_acm.o(i.USBD_CDC_ACM_Reset) refers to usb_config_1.o(.bss) for USBD_CDC_ACM_SendBuf
+    usbd_cdc_acm.o(i.USBD_CDC_ACM_Reset) refers to usb_config.o(.bss) for USBD_CDC_ACM_SendBuf
     usbd_cdc_acm.o(i.USBD_CDC_ACM_Reset_Event) refers to usbd_cdc_acm.o(i.USBD_CDC_ACM_Reset) for USBD_CDC_ACM_Reset
     usbd_cdc_acm.o(i.USBD_CDC_ACM_SOF_Event) refers to usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULKOUT_HandleData) for USBD_CDC_ACM_EP_BULKOUT_HandleData
     usbd_cdc_acm.o(i.USBD_CDC_ACM_SOF_Event) refers to usbd_user_cdc_acm.o(i.USBD_CDC_ACM_DataReceived) for USBD_CDC_ACM_DataReceived
     usbd_cdc_acm.o(i.USBD_CDC_ACM_SOF_Event) refers to usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULKIN_HandleData) for USBD_CDC_ACM_EP_BULKIN_HandleData
     usbd_cdc_acm.o(i.USBD_CDC_ACM_SOF_Event) refers to usbd_cdc_acm.o(.data) for .data
-    usbd_cdc_acm.o(i.USBD_CDC_ACM_SOF_Event) refers to usb_config_1.o(.bss) for USBD_CDC_ACM_ReceiveBuf
+    usbd_cdc_acm.o(i.USBD_CDC_ACM_SOF_Event) refers to usb_config.o(.bss) for USBD_CDC_ACM_ReceiveBuf
     usbd_cdc_acm.o(i.USBD_CDC_ACM_SetControlLineState) refers to usbd_user_cdc_acm.o(i.USBD_CDC_ACM_PortSetControlLineState) for USBD_CDC_ACM_PortSetControlLineState
     usbd_cdc_acm.o(i.USBD_CDC_ACM_SetControlLineState) refers to usbd_cdc_acm.o(.data) for .data
     usbd_cdc_acm.o(i.USBD_CDC_ACM_SetLineCoding) refers to usbd_user_cdc_acm.o(i.USBD_CDC_ACM_PortSetLineCoding) for USBD_CDC_ACM_PortSetLineCoding
-    usbd_cdc_acm.o(i.USBD_CDC_ACM_SetLineCoding) refers to usb_config_1.o(.bss) for USBD_EP0Buf
+    usbd_cdc_acm.o(i.USBD_CDC_ACM_SetLineCoding) refers to usb_config.o(.bss) for USBD_EP0Buf
     usbd_cdc_acm.o(i.USBD_CDC_ACM_SetLineCoding) refers to usbd_cdc_acm.o(.data) for .data
     usbd_cdc_acm.o(i.USBD_CDC_ACM_Uninitialization) refers to usbd_user_cdc_acm.o(i.USBD_CDC_ACM_PortUninitialize) for USBD_CDC_ACM_PortUninitialize
-    usbd_cdc_acm.o(i.USBD_RTX_CDC_ACM_EP_BULKIN_Event) refers to usb_config_1.o(i.usbd_os_evt_wait_or) for usbd_os_evt_wait_or
-    usbd_cdc_acm.o(i.USBD_RTX_CDC_ACM_EP_BULKIN_Event) refers to usb_config_1.o(i.usbd_os_evt_get) for usbd_os_evt_get
+    usbd_cdc_acm.o(i.USBD_RTX_CDC_ACM_EP_BULKIN_Event) refers to usb_config.o(i.usbd_os_evt_wait_or) for usbd_os_evt_wait_or
+    usbd_cdc_acm.o(i.USBD_RTX_CDC_ACM_EP_BULKIN_Event) refers to usb_config.o(i.usbd_os_evt_get) for usbd_os_evt_get
     usbd_cdc_acm.o(i.USBD_RTX_CDC_ACM_EP_BULKIN_Event) refers to usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULKIN_Event) for USBD_CDC_ACM_EP_BULKIN_Event
-    usbd_cdc_acm.o(i.USBD_RTX_CDC_ACM_EP_BULKOUT_Event) refers to usb_config_1.o(i.usbd_os_evt_wait_or) for usbd_os_evt_wait_or
-    usbd_cdc_acm.o(i.USBD_RTX_CDC_ACM_EP_BULKOUT_Event) refers to usb_config_1.o(i.usbd_os_evt_get) for usbd_os_evt_get
+    usbd_cdc_acm.o(i.USBD_RTX_CDC_ACM_EP_BULKOUT_Event) refers to usb_config.o(i.usbd_os_evt_wait_or) for usbd_os_evt_wait_or
+    usbd_cdc_acm.o(i.USBD_RTX_CDC_ACM_EP_BULKOUT_Event) refers to usb_config.o(i.usbd_os_evt_get) for usbd_os_evt_get
     usbd_cdc_acm.o(i.USBD_RTX_CDC_ACM_EP_BULKOUT_Event) refers to usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULKOUT_Event) for USBD_CDC_ACM_EP_BULKOUT_Event
-    usbd_cdc_acm.o(i.USBD_RTX_CDC_ACM_EP_BULK_Event) refers to usb_config_1.o(i.usbd_os_evt_wait_or) for usbd_os_evt_wait_or
-    usbd_cdc_acm.o(i.USBD_RTX_CDC_ACM_EP_BULK_Event) refers to usb_config_1.o(i.usbd_os_evt_get) for usbd_os_evt_get
+    usbd_cdc_acm.o(i.USBD_RTX_CDC_ACM_EP_BULK_Event) refers to usb_config.o(i.usbd_os_evt_wait_or) for usbd_os_evt_wait_or
+    usbd_cdc_acm.o(i.USBD_RTX_CDC_ACM_EP_BULK_Event) refers to usb_config.o(i.usbd_os_evt_get) for usbd_os_evt_get
     usbd_cdc_acm.o(i.USBD_RTX_CDC_ACM_EP_BULK_Event) refers to usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULK_Event) for USBD_CDC_ACM_EP_BULK_Event
-    usbd_cdc_acm.o(i.USBD_RTX_CDC_ACM_EP_INTIN_Event) refers to usb_config_1.o(i.usbd_os_evt_wait_or) for usbd_os_evt_wait_or
-    usbd_cdc_acm.o(i.USBD_RTX_CDC_ACM_EP_INTIN_Event) refers to usb_config_1.o(i.usbd_os_evt_get) for usbd_os_evt_get
+    usbd_cdc_acm.o(i.USBD_RTX_CDC_ACM_EP_INTIN_Event) refers to usb_config.o(i.usbd_os_evt_wait_or) for usbd_os_evt_wait_or
+    usbd_cdc_acm.o(i.USBD_RTX_CDC_ACM_EP_INTIN_Event) refers to usb_config.o(i.usbd_os_evt_get) for usbd_os_evt_get
     usbd_hid.o(i.USBD_HID_Configure_Event) refers to usbd_hid.o(.data) for .data
-    usbd_hid.o(i.USBD_HID_EP_INTIN_Event) refers to usbd_user_hid_1.o(i.usbd_hid_get_report) for usbd_hid_get_report
-    usbd_hid.o(i.USBD_HID_EP_INTIN_Event) refers to usbd_stm32f103_1.o(i.USBD_WriteEP) for USBD_WriteEP
-    usbd_hid.o(i.USBD_HID_EP_INTIN_Event) refers to usb_config_1.o(.bss) for USBD_HID_InReport
-    usbd_hid.o(i.USBD_HID_EP_INTIN_Event) refers to usb_config_1.o(.constdata) for usbd_hid_maxpacketsize
+    usbd_hid.o(i.USBD_HID_EP_INTIN_Event) refers to usbd_user_hid.o(i.usbd_hid_get_report) for usbd_hid_get_report
+    usbd_hid.o(i.USBD_HID_EP_INTIN_Event) refers to usbd_stm32f103.o(i.USBD_WriteEP) for USBD_WriteEP
+    usbd_hid.o(i.USBD_HID_EP_INTIN_Event) refers to usb_config.o(.bss) for USBD_HID_InReport
+    usbd_hid.o(i.USBD_HID_EP_INTIN_Event) refers to usb_config.o(.constdata) for usbd_hid_maxpacketsize
     usbd_hid.o(i.USBD_HID_EP_INTIN_Event) refers to usbd_core.o(.data) for USBD_HighSpeed
     usbd_hid.o(i.USBD_HID_EP_INTIN_Event) refers to usbd_hid.o(.data) for .data
-    usbd_hid.o(i.USBD_HID_EP_INTOUT_Event) refers to usbd_stm32f103_1.o(i.USBD_ReadEP) for USBD_ReadEP
-    usbd_hid.o(i.USBD_HID_EP_INTOUT_Event) refers to usbd_user_hid_1.o(i.usbd_hid_set_report) for usbd_hid_set_report
+    usbd_hid.o(i.USBD_HID_EP_INTOUT_Event) refers to usbd_stm32f103.o(i.USBD_ReadEP) for USBD_ReadEP
+    usbd_hid.o(i.USBD_HID_EP_INTOUT_Event) refers to usbd_user_hid.o(i.usbd_hid_set_report) for usbd_hid_set_report
     usbd_hid.o(i.USBD_HID_EP_INTOUT_Event) refers to usbd_hid.o(.data) for .data
-    usbd_hid.o(i.USBD_HID_EP_INTOUT_Event) refers to usb_config_1.o(.bss) for USBD_HID_OutReport
-    usbd_hid.o(i.USBD_HID_EP_INTOUT_Event) refers to usb_config_1.o(.constdata) for usbd_hid_ep_intout
+    usbd_hid.o(i.USBD_HID_EP_INTOUT_Event) refers to usb_config.o(.bss) for USBD_HID_OutReport
+    usbd_hid.o(i.USBD_HID_EP_INTOUT_Event) refers to usb_config.o(.constdata) for usbd_hid_ep_intout
     usbd_hid.o(i.USBD_HID_EP_INTOUT_Event) refers to usbd_core.o(.data) for USBD_HighSpeed
     usbd_hid.o(i.USBD_HID_EP_INT_Event) refers to usbd_hid.o(i.USBD_HID_EP_INTIN_Event) for USBD_HID_EP_INTIN_Event
     usbd_hid.o(i.USBD_HID_EP_INT_Event) refers to usbd_hid.o(i.USBD_HID_EP_INTOUT_Event) for USBD_HID_EP_INTOUT_Event
     usbd_hid.o(i.USBD_HID_GetIdle) refers to usbd_core.o(.data) for USBD_SetupPacket
-    usbd_hid.o(i.USBD_HID_GetIdle) refers to usb_config_1.o(.data) for USBD_HID_IdleSet
-    usbd_hid.o(i.USBD_HID_GetIdle) refers to usb_config_1.o(.bss) for USBD_EP0Buf
+    usbd_hid.o(i.USBD_HID_GetIdle) refers to usb_config.o(.data) for USBD_HID_IdleSet
+    usbd_hid.o(i.USBD_HID_GetIdle) refers to usb_config.o(.bss) for USBD_EP0Buf
     usbd_hid.o(i.USBD_HID_GetProtocol) refers to usbd_hid.o(i.usbd_hid_get_protocol) for usbd_hid_get_protocol
-    usbd_hid.o(i.USBD_HID_GetProtocol) refers to usb_config_1.o(.bss) for USBD_EP0Buf
-    usbd_hid.o(i.USBD_HID_GetReport) refers to usbd_user_hid_1.o(i.usbd_hid_get_report) for usbd_hid_get_report
+    usbd_hid.o(i.USBD_HID_GetProtocol) refers to usb_config.o(.bss) for USBD_EP0Buf
+    usbd_hid.o(i.USBD_HID_GetReport) refers to usbd_user_hid.o(i.usbd_hid_get_report) for usbd_hid_get_report
     usbd_hid.o(i.USBD_HID_GetReport) refers to usbd_core.o(.data) for USBD_SetupPacket
-    usbd_hid.o(i.USBD_HID_GetReport) refers to usb_config_1.o(.bss) for USBD_HID_InReport
-    usbd_hid.o(i.USBD_HID_GetReport) refers to usb_config_1.o(.data) for USBD_HID_FeatReport
+    usbd_hid.o(i.USBD_HID_GetReport) refers to usb_config.o(.bss) for USBD_HID_InReport
+    usbd_hid.o(i.USBD_HID_GetReport) refers to usb_config.o(.data) for USBD_HID_FeatReport
     usbd_hid.o(i.USBD_HID_SOF_Event) refers to usbd_hid.o(i.USBD_HID_EP_INTIN_Event) for USBD_HID_EP_INTIN_Event
     usbd_hid.o(i.USBD_HID_SOF_Event) refers to usbd_core.o(.data) for USBD_Configuration
     usbd_hid.o(i.USBD_HID_SOF_Event) refers to usbd_hid.o(.data) for .data
-    usbd_hid.o(i.USBD_HID_SOF_Event) refers to usb_config_1.o(.data) for USBD_HID_PollingCnt
-    usbd_hid.o(i.USBD_HID_SOF_Event) refers to usb_config_1.o(.constdata) for usbd_hid_interval
-    usbd_hid.o(i.USBD_HID_SOF_Event) refers to usb_config_1.o(.bss) for USBD_HID_InReport
+    usbd_hid.o(i.USBD_HID_SOF_Event) refers to usb_config.o(.data) for USBD_HID_PollingCnt
+    usbd_hid.o(i.USBD_HID_SOF_Event) refers to usb_config.o(.constdata) for usbd_hid_interval
+    usbd_hid.o(i.USBD_HID_SOF_Event) refers to usb_config.o(.bss) for USBD_HID_InReport
     usbd_hid.o(i.USBD_HID_SetIdle) refers to usbd_core.o(.data) for USBD_SetupPacket
-    usbd_hid.o(i.USBD_HID_SetIdle) refers to usb_config_1.o(.data) for USBD_HID_IdleSet
-    usbd_hid.o(i.USBD_HID_SetIdle) refers to usb_config_1.o(.constdata) for usbd_hid_inreport_num
+    usbd_hid.o(i.USBD_HID_SetIdle) refers to usb_config.o(.data) for USBD_HID_IdleSet
+    usbd_hid.o(i.USBD_HID_SetIdle) refers to usb_config.o(.constdata) for usbd_hid_inreport_num
     usbd_hid.o(i.USBD_HID_SetProtocol) refers to usbd_hid.o(i.usbd_hid_set_protocol) for usbd_hid_set_protocol
     usbd_hid.o(i.USBD_HID_SetProtocol) refers to usbd_core.o(.data) for USBD_SetupPacket
-    usbd_hid.o(i.USBD_HID_SetReport) refers to usbd_user_hid_1.o(i.usbd_hid_set_report) for usbd_hid_set_report
+    usbd_hid.o(i.USBD_HID_SetReport) refers to usbd_user_hid.o(i.usbd_hid_set_report) for usbd_hid_set_report
     usbd_hid.o(i.USBD_HID_SetReport) refers to usbd_core.o(.data) for USBD_SetupPacket
-    usbd_hid.o(i.USBD_HID_SetReport) refers to usb_config_1.o(.bss) for USBD_HID_OutReport
-    usbd_hid.o(i.USBD_HID_SetReport) refers to usb_config_1.o(.data) for USBD_HID_FeatReport
-    usbd_hid.o(i.USBD_RTX_HID_EP_INTIN_Event) refers to usb_config_1.o(i.usbd_os_evt_wait_or) for usbd_os_evt_wait_or
-    usbd_hid.o(i.USBD_RTX_HID_EP_INTIN_Event) refers to usb_config_1.o(i.usbd_os_evt_get) for usbd_os_evt_get
+    usbd_hid.o(i.USBD_HID_SetReport) refers to usb_config.o(.bss) for USBD_HID_OutReport
+    usbd_hid.o(i.USBD_HID_SetReport) refers to usb_config.o(.data) for USBD_HID_FeatReport
+    usbd_hid.o(i.USBD_RTX_HID_EP_INTIN_Event) refers to usb_config.o(i.usbd_os_evt_wait_or) for usbd_os_evt_wait_or
+    usbd_hid.o(i.USBD_RTX_HID_EP_INTIN_Event) refers to usb_config.o(i.usbd_os_evt_get) for usbd_os_evt_get
     usbd_hid.o(i.USBD_RTX_HID_EP_INTIN_Event) refers to usbd_hid.o(i.USBD_HID_EP_INTIN_Event) for USBD_HID_EP_INTIN_Event
-    usbd_hid.o(i.USBD_RTX_HID_EP_INTOUT_Event) refers to usb_config_1.o(i.usbd_os_evt_wait_or) for usbd_os_evt_wait_or
-    usbd_hid.o(i.USBD_RTX_HID_EP_INTOUT_Event) refers to usb_config_1.o(i.usbd_os_evt_get) for usbd_os_evt_get
+    usbd_hid.o(i.USBD_RTX_HID_EP_INTOUT_Event) refers to usb_config.o(i.usbd_os_evt_wait_or) for usbd_os_evt_wait_or
+    usbd_hid.o(i.USBD_RTX_HID_EP_INTOUT_Event) refers to usb_config.o(i.usbd_os_evt_get) for usbd_os_evt_get
     usbd_hid.o(i.USBD_RTX_HID_EP_INTOUT_Event) refers to usbd_hid.o(i.USBD_HID_EP_INTOUT_Event) for USBD_HID_EP_INTOUT_Event
-    usbd_hid.o(i.USBD_RTX_HID_EP_INT_Event) refers to usb_config_1.o(i.usbd_os_evt_wait_or) for usbd_os_evt_wait_or
-    usbd_hid.o(i.USBD_RTX_HID_EP_INT_Event) refers to usb_config_1.o(i.usbd_os_evt_get) for usbd_os_evt_get
+    usbd_hid.o(i.USBD_RTX_HID_EP_INT_Event) refers to usb_config.o(i.usbd_os_evt_wait_or) for usbd_os_evt_wait_or
+    usbd_hid.o(i.USBD_RTX_HID_EP_INT_Event) refers to usb_config.o(i.usbd_os_evt_get) for usbd_os_evt_get
     usbd_hid.o(i.USBD_RTX_HID_EP_INT_Event) refers to usbd_hid.o(i.USBD_HID_EP_INT_Event) for USBD_HID_EP_INT_Event
     usbd_hid.o(i.usbd_hid_get_report_trigger) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
     usbd_hid.o(i.usbd_hid_get_report_trigger) refers to usbd_hid.o(i.USBD_HID_EP_INTIN_Event) for USBD_HID_EP_INTIN_Event
-    usbd_hid.o(i.usbd_hid_get_report_trigger) refers to usb_config_1.o(.constdata) for usbd_hid_inreport_max_sz
+    usbd_hid.o(i.usbd_hid_get_report_trigger) refers to usb_config.o(.constdata) for usbd_hid_inreport_max_sz
     usbd_hid.o(i.usbd_hid_get_report_trigger) refers to usbd_core.o(.data) for USBD_Configuration
     usbd_hid.o(i.usbd_hid_get_report_trigger) refers to usbd_hid.o(.data) for .data
-    usbd_hid.o(i.usbd_hid_get_report_trigger) refers to usb_config_1.o(.bss) for USBD_HID_InReport
-    usbd_hid.o(i.usbd_hid_get_report_trigger) refers to usb_config_1.o(.data) for USBD_HID_IdleCnt
+    usbd_hid.o(i.usbd_hid_get_report_trigger) refers to usb_config.o(.bss) for USBD_HID_InReport
+    usbd_hid.o(i.usbd_hid_get_report_trigger) refers to usb_config.o(.data) for USBD_HID_IdleCnt
     usbd_core_cdc.o(i.USBD_EndPoint0_Out_CDC_ReqToIF) refers to usbd_cdc_acm.o(i.USBD_CDC_ACM_SendEncapsulatedCommand) for USBD_CDC_ACM_SendEncapsulatedCommand
     usbd_core_cdc.o(i.USBD_EndPoint0_Out_CDC_ReqToIF) refers to usbd_cdc_acm.o(i.USBD_CDC_ACM_SetCommFeature) for USBD_CDC_ACM_SetCommFeature
     usbd_core_cdc.o(i.USBD_EndPoint0_Out_CDC_ReqToIF) refers to usbd_core.o(i.USBD_StatusInStage) for USBD_StatusInStage
     usbd_core_cdc.o(i.USBD_EndPoint0_Out_CDC_ReqToIF) refers to usbd_cdc_acm.o(i.USBD_CDC_ACM_SetLineCoding) for USBD_CDC_ACM_SetLineCoding
     usbd_core_cdc.o(i.USBD_EndPoint0_Out_CDC_ReqToIF) refers to usbd_core.o(.data) for USBD_SetupPacket
-    usbd_core_cdc.o(i.USBD_EndPoint0_Out_CDC_ReqToIF) refers to usb_config_1.o(.constdata) for usbd_cdc_acm_cif_num
+    usbd_core_cdc.o(i.USBD_EndPoint0_Out_CDC_ReqToIF) refers to usb_config.o(.constdata) for usbd_cdc_acm_cif_num
     usbd_core_cdc.o(i.USBD_EndPoint0_Setup_CDC_ReqToIF) refers to usbd_cdc_acm.o(i.USBD_CDC_ACM_GetEncapsulatedResponse) for USBD_CDC_ACM_GetEncapsulatedResponse
     usbd_core_cdc.o(i.USBD_EndPoint0_Setup_CDC_ReqToIF) refers to usbd_core.o(i.USBD_DataInStage) for USBD_DataInStage
     usbd_core_cdc.o(i.USBD_EndPoint0_Setup_CDC_ReqToIF) refers to usbd_cdc_acm.o(i.USBD_CDC_ACM_GetCommFeature) for USBD_CDC_ACM_GetCommFeature
@@ -1462,12 +1462,12 @@ Section Cross References
     usbd_core_cdc.o(i.USBD_EndPoint0_Setup_CDC_ReqToIF) refers to usbd_cdc_acm.o(i.USBD_CDC_ACM_SetControlLineState) for USBD_CDC_ACM_SetControlLineState
     usbd_core_cdc.o(i.USBD_EndPoint0_Setup_CDC_ReqToIF) refers to usbd_cdc_acm.o(i.USBD_CDC_ACM_SendBreak) for USBD_CDC_ACM_SendBreak
     usbd_core_cdc.o(i.USBD_EndPoint0_Setup_CDC_ReqToIF) refers to usbd_core.o(.data) for USBD_SetupPacket
-    usbd_core_cdc.o(i.USBD_EndPoint0_Setup_CDC_ReqToIF) refers to usb_config_1.o(.constdata) for usbd_cdc_acm_cif_num
-    usbd_core_cdc.o(i.USBD_EndPoint0_Setup_CDC_ReqToIF) refers to usb_config_1.o(.bss) for USBD_EP0Buf
+    usbd_core_cdc.o(i.USBD_EndPoint0_Setup_CDC_ReqToIF) refers to usb_config.o(.constdata) for usbd_cdc_acm_cif_num
+    usbd_core_cdc.o(i.USBD_EndPoint0_Setup_CDC_ReqToIF) refers to usb_config.o(.bss) for USBD_EP0Buf
     usbd_core_hid.o(i.USBD_EndPoint0_Out_HID_ReqToIF) refers to usbd_hid.o(i.USBD_HID_SetReport) for USBD_HID_SetReport
     usbd_core_hid.o(i.USBD_EndPoint0_Out_HID_ReqToIF) refers to usbd_core.o(i.USBD_StatusInStage) for USBD_StatusInStage
     usbd_core_hid.o(i.USBD_EndPoint0_Out_HID_ReqToIF) refers to usbd_core.o(.data) for USBD_SetupPacket
-    usbd_core_hid.o(i.USBD_EndPoint0_Out_HID_ReqToIF) refers to usb_config_1.o(.constdata) for usbd_hid_if_num
+    usbd_core_hid.o(i.USBD_EndPoint0_Out_HID_ReqToIF) refers to usb_config.o(.constdata) for usbd_hid_if_num
     usbd_core_hid.o(i.USBD_EndPoint0_Setup_HID_ReqToIF) refers to usbd_hid.o(i.USBD_HID_GetReport) for USBD_HID_GetReport
     usbd_core_hid.o(i.USBD_EndPoint0_Setup_HID_ReqToIF) refers to usbd_core.o(i.USBD_DataInStage) for USBD_DataInStage
     usbd_core_hid.o(i.USBD_EndPoint0_Setup_HID_ReqToIF) refers to usbd_hid.o(i.USBD_HID_GetIdle) for USBD_HID_GetIdle
@@ -1476,11 +1476,11 @@ Section Cross References
     usbd_core_hid.o(i.USBD_EndPoint0_Setup_HID_ReqToIF) refers to usbd_hid.o(i.USBD_HID_GetProtocol) for USBD_HID_GetProtocol
     usbd_core_hid.o(i.USBD_EndPoint0_Setup_HID_ReqToIF) refers to usbd_hid.o(i.USBD_HID_SetProtocol) for USBD_HID_SetProtocol
     usbd_core_hid.o(i.USBD_EndPoint0_Setup_HID_ReqToIF) refers to usbd_core.o(.data) for USBD_SetupPacket
-    usbd_core_hid.o(i.USBD_EndPoint0_Setup_HID_ReqToIF) refers to usb_config_1.o(.constdata) for usbd_hid_if_num
-    usbd_core_hid.o(i.USBD_EndPoint0_Setup_HID_ReqToIF) refers to usb_config_1.o(.data) for USBD_HID_FeatReport
-    usbd_core_hid.o(i.USBD_EndPoint0_Setup_HID_ReqToIF) refers to usb_config_1.o(.bss) for USBD_EP0Buf
+    usbd_core_hid.o(i.USBD_EndPoint0_Setup_HID_ReqToIF) refers to usb_config.o(.constdata) for usbd_hid_if_num
+    usbd_core_hid.o(i.USBD_EndPoint0_Setup_HID_ReqToIF) refers to usb_config.o(.data) for USBD_HID_FeatReport
+    usbd_core_hid.o(i.USBD_EndPoint0_Setup_HID_ReqToIF) refers to usb_config.o(.bss) for USBD_EP0Buf
     usbd_core_hid.o(i.USBD_ReqGetDescriptor_HID) refers to usbd_core.o(.data) for USBD_SetupPacket
-    usbd_core_hid.o(i.USBD_ReqGetDescriptor_HID) refers to usb_config_1.o(.constdata) for usbd_hid_if_num
+    usbd_core_hid.o(i.USBD_ReqGetDescriptor_HID) refers to usb_config.o(.constdata) for usbd_hid_if_num
     use_no_semi_2.o(.text) refers (Special) to use_no_semi.o(.text) for __use_no_semihosting_swi
     __2printf.o(.text) refers to _printf_char_file.o(.text) for _printf_char_file
     __2printf.o(.text) refers to usart.o(.data) for __stdout
@@ -1637,31 +1637,31 @@ Section Cross References
     defsig_cppl_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
     defsig_segv_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
     defsig_other.o(.text) refers to defsig_general.o(.text) for __default_signal_display
-    usbd_core.o(i.USBD_ReqSetClrFeature) refers to usbd_stm32f103_1.o(i.USBD_WakeUpCfg) for USBD_WakeUpCfg
-    usbd_core.o(i.USBD_ReqSetClrFeature) refers to usbd_stm32f103_1.o(i.USBD_SetStallEP) for USBD_SetStallEP
-    usbd_core.o(i.USBD_ReqSetClrFeature) refers to usbd_stm32f103_1.o(i.USBD_ClrStallEP) for USBD_ClrStallEP
-    usbd_core.o(i.USBD_ReqSetClrFeature) refers to usb_config_1.o(i.USBD_ReqClrFeature_MSC) for USBD_ReqClrFeature_MSC
+    usbd_core.o(i.USBD_ReqSetClrFeature) refers to usbd_stm32f103.o(i.USBD_WakeUpCfg) for USBD_WakeUpCfg
+    usbd_core.o(i.USBD_ReqSetClrFeature) refers to usbd_stm32f103.o(i.USBD_SetStallEP) for USBD_SetStallEP
+    usbd_core.o(i.USBD_ReqSetClrFeature) refers to usbd_stm32f103.o(i.USBD_ClrStallEP) for USBD_ClrStallEP
+    usbd_core.o(i.USBD_ReqSetClrFeature) refers to usb_config.o(i.USBD_ReqClrFeature_MSC) for USBD_ReqClrFeature_MSC
     usbd_core.o(i.USBD_ReqSetClrFeature) refers to usbd_core.o(.data) for .data
     usbd_core.o(i.USBD_ReqGetDescriptor) refers to usbd_core_hid.o(i.USBD_ReqGetDescriptor_HID) for USBD_ReqGetDescriptor_HID
     usbd_core.o(i.USBD_ReqGetDescriptor) refers to usbd_core.o(.data) for .data
-    usbd_core.o(i.USBD_ReqGetDescriptor) refers to usb_config_1.o(.constdata) for usbd_hs_enable
-    usbd_core.o(i.USBD_ReqSetConfiguration) refers to usbd_stm32f103_1.o(i.USBD_DisableEP) for USBD_DisableEP
-    usbd_core.o(i.USBD_ReqSetConfiguration) refers to usbd_stm32f103_1.o(i.USBD_Configure) for USBD_Configure
-    usbd_core.o(i.USBD_ReqSetConfiguration) refers to usbd_stm32f103_1.o(i.USBD_ConfigEP) for USBD_ConfigEP
-    usbd_core.o(i.USBD_ReqSetConfiguration) refers to usbd_stm32f103_1.o(i.USBD_EnableEP) for USBD_EnableEP
-    usbd_core.o(i.USBD_ReqSetConfiguration) refers to usbd_stm32f103_1.o(i.USBD_ResetEP) for USBD_ResetEP
+    usbd_core.o(i.USBD_ReqGetDescriptor) refers to usb_config.o(.constdata) for usbd_hs_enable
+    usbd_core.o(i.USBD_ReqSetConfiguration) refers to usbd_stm32f103.o(i.USBD_DisableEP) for USBD_DisableEP
+    usbd_core.o(i.USBD_ReqSetConfiguration) refers to usbd_stm32f103.o(i.USBD_Configure) for USBD_Configure
+    usbd_core.o(i.USBD_ReqSetConfiguration) refers to usbd_stm32f103.o(i.USBD_ConfigEP) for USBD_ConfigEP
+    usbd_core.o(i.USBD_ReqSetConfiguration) refers to usbd_stm32f103.o(i.USBD_EnableEP) for USBD_EnableEP
+    usbd_core.o(i.USBD_ReqSetConfiguration) refers to usbd_stm32f103.o(i.USBD_ResetEP) for USBD_ResetEP
     usbd_core.o(i.USBD_ReqSetConfiguration) refers to usbd_core.o(.data) for .data
-    usbd_core.o(i.USBD_ReqSetConfiguration) refers to usb_config_1.o(.constdata) for usbd_hs_enable
-    usbd_core.o(i.USBD_ReqSetConfiguration) refers to usb_config_1.o(.data) for USBD_AltSetting
-    usbd_core.o(i.USBD_ReqSetInterface) refers to usbd_stm32f103_1.o(i.USBD_ConfigEP) for USBD_ConfigEP
-    usbd_core.o(i.USBD_ReqSetInterface) refers to usbd_stm32f103_1.o(i.USBD_EnableEP) for USBD_EnableEP
-    usbd_core.o(i.USBD_ReqSetInterface) refers to usbd_stm32f103_1.o(i.USBD_ResetEP) for USBD_ResetEP
-    usbd_core.o(i.USBD_ReqSetInterface) refers to usbd_stm32f103_1.o(i.USBD_DisableEP) for USBD_DisableEP
+    usbd_core.o(i.USBD_ReqSetConfiguration) refers to usb_config.o(.constdata) for usbd_hs_enable
+    usbd_core.o(i.USBD_ReqSetConfiguration) refers to usb_config.o(.data) for USBD_AltSetting
+    usbd_core.o(i.USBD_ReqSetInterface) refers to usbd_stm32f103.o(i.USBD_ConfigEP) for USBD_ConfigEP
+    usbd_core.o(i.USBD_ReqSetInterface) refers to usbd_stm32f103.o(i.USBD_EnableEP) for USBD_EnableEP
+    usbd_core.o(i.USBD_ReqSetInterface) refers to usbd_stm32f103.o(i.USBD_ResetEP) for USBD_ResetEP
+    usbd_core.o(i.USBD_ReqSetInterface) refers to usbd_stm32f103.o(i.USBD_DisableEP) for USBD_DisableEP
     usbd_core.o(i.USBD_ReqSetInterface) refers to usbd_core.o(.data) for .data
-    usbd_core.o(i.USBD_ReqSetInterface) refers to usb_config_1.o(.constdata) for usbd_hs_enable
-    usbd_core.o(i.USBD_ReqSetInterface) refers to usb_config_1.o(.data) for USBD_AltSetting
+    usbd_core.o(i.USBD_ReqSetInterface) refers to usb_config.o(.constdata) for usbd_hs_enable
+    usbd_core.o(i.USBD_ReqSetInterface) refers to usb_config.o(.data) for USBD_AltSetting
     usbd_core.o(i.USBD_ReqGetStatus) refers to usbd_core.o(.data) for .data
-    usbd_core.o(i.USBD_ReqGetStatus) refers to usb_config_1.o(.bss) for USBD_EP0Buf
+    usbd_core.o(i.USBD_ReqGetStatus) refers to usb_config.o(.bss) for USBD_EP0Buf
     usbd_core_hid.o(.ARM.RL_ARM1) refers to usbd_core_hid.o(.ARM.RL_ARM2) for .ARM.RL_ARM2
     usbd_core_hid.o(.ARM.RL_ARM2) refers to usbd_core_hid.o(.ARM.RL_ARM3) for .ARM.RL_ARM3
     usbd_core_hid.o(.ARM.RL_ARM3) refers to usbd_core_hid.o(.ARM.RL_ARM4) for .ARM.RL_ARM4
@@ -2117,18 +2117,18 @@ Removing Unused input sections from the image.
     Removing swo.o(.rev16_text), (4 bytes).
     Removing swo.o(.revsh_text), (4 bytes).
     Removing swo.o(.rrx_text), (6 bytes).
-    Removing usb_config_1.o(i.USBD_EndPoint0_Out_MSC_ReqToIF), (4 bytes).
-    Removing usb_config_1.o(i.usbd_os_evt_get), (4 bytes).
-    Removing usb_config_1.o(i.usbd_os_evt_wait_or), (4 bytes).
-    Removing usbd_stm32f103_1.o(.rev16_text), (4 bytes).
-    Removing usbd_stm32f103_1.o(.revsh_text), (4 bytes).
-    Removing usbd_stm32f103_1.o(.rrx_text), (6 bytes).
-    Removing usbd_stm32f103_1.o(i.USBD_ClearEPBuf), (2 bytes).
-    Removing usbd_stm32f103_1.o(i.USBD_GetFrame), (16 bytes).
-    Removing usbd_stm32f103_1.o(i.USBD_Resume), (2 bytes).
-    Removing usbd_user_hid_1.o(.rev16_text), (4 bytes).
-    Removing usbd_user_hid_1.o(.revsh_text), (4 bytes).
-    Removing usbd_user_hid_1.o(.rrx_text), (6 bytes).
+    Removing usb_config.o(i.USBD_EndPoint0_Out_MSC_ReqToIF), (4 bytes).
+    Removing usb_config.o(i.usbd_os_evt_get), (4 bytes).
+    Removing usb_config.o(i.usbd_os_evt_wait_or), (4 bytes).
+    Removing usbd_stm32f103.o(.rev16_text), (4 bytes).
+    Removing usbd_stm32f103.o(.revsh_text), (4 bytes).
+    Removing usbd_stm32f103.o(.rrx_text), (6 bytes).
+    Removing usbd_stm32f103.o(i.USBD_ClearEPBuf), (2 bytes).
+    Removing usbd_stm32f103.o(i.USBD_GetFrame), (16 bytes).
+    Removing usbd_stm32f103.o(i.USBD_Resume), (2 bytes).
+    Removing usbd_user_hid.o(.rev16_text), (4 bytes).
+    Removing usbd_user_hid.o(.revsh_text), (4 bytes).
+    Removing usbd_user_hid.o(.rrx_text), (6 bytes).
     Removing usbd_user_cdc_acm.o(.rev16_text), (4 bytes).
     Removing usbd_user_cdc_acm.o(.revsh_text), (4 bytes).
     Removing usbd_user_cdc_acm.o(.rrx_text), (6 bytes).
@@ -2315,10 +2315,10 @@ Image Symbol Table
     ..\HARDWARE\DAP_UART\DMA_STM32F10x.c     0x00000000   Number         0  dma_stm32f10x.o ABSOLUTE
     ..\HARDWARE\DAP_UART\GPIO_STM32F10x.c    0x00000000   Number         0  gpio_stm32f10x.o ABSOLUTE
     ..\HARDWARE\DAP_UART\USART_STM32F10x.c   0x00000000   Number         0  usart_stm32f10x.o ABSOLUTE
-    ..\HARDWARE\DAP_USB\src\usb_config.c     0x00000000   Number         0  usb_config_1.o ABSOLUTE
-    ..\HARDWARE\DAP_USB\src\usbd_STM32F103.c 0x00000000   Number         0  usbd_stm32f103_1.o ABSOLUTE
+    ..\HARDWARE\DAP_USB\src\usb_config.c     0x00000000   Number         0  usb_config.o ABSOLUTE
+    ..\HARDWARE\DAP_USB\src\usbd_STM32F103.c 0x00000000   Number         0  usbd_stm32f103.o ABSOLUTE
     ..\HARDWARE\DAP_USB\src\usbd_user_cdc_acm.c 0x00000000   Number         0  usbd_user_cdc_acm.o ABSOLUTE
-    ..\HARDWARE\DAP_USB\src\usbd_user_hid.c  0x00000000   Number         0  usbd_user_hid_1.o ABSOLUTE
+    ..\HARDWARE\DAP_USB\src\usbd_user_hid.c  0x00000000   Number         0  usbd_user_hid.o ABSOLUTE
     ..\HARDWARE\Mass_Storage\src\fsmc_nand.c 0x00000000   Number         0  fsmc_nand.o ABSOLUTE
     ..\HARDWARE\Mass_Storage\src\hw_config.c 0x00000000   Number         0  hw_config.o ABSOLUTE
     ..\HARDWARE\Mass_Storage\src\mass_mal.c  0x00000000   Number         0  mass_mal.o ABSOLUTE
@@ -2379,9 +2379,9 @@ Image Symbol Table
     ..\\HARDWARE\\DAP_UART\\DMA_STM32F10x.c  0x00000000   Number         0  dma_stm32f10x.o ABSOLUTE
     ..\\HARDWARE\\DAP_UART\\GPIO_STM32F10x.c 0x00000000   Number         0  gpio_stm32f10x.o ABSOLUTE
     ..\\HARDWARE\\DAP_UART\\USART_STM32F10x.c 0x00000000   Number         0  usart_stm32f10x.o ABSOLUTE
-    ..\\HARDWARE\\DAP_USB\\src\\usbd_STM32F103.c 0x00000000   Number         0  usbd_stm32f103_1.o ABSOLUTE
+    ..\\HARDWARE\\DAP_USB\\src\\usbd_STM32F103.c 0x00000000   Number         0  usbd_stm32f103.o ABSOLUTE
     ..\\HARDWARE\\DAP_USB\\src\\usbd_user_cdc_acm.c 0x00000000   Number         0  usbd_user_cdc_acm.o ABSOLUTE
-    ..\\HARDWARE\\DAP_USB\\src\\usbd_user_hid.c 0x00000000   Number         0  usbd_user_hid_1.o ABSOLUTE
+    ..\\HARDWARE\\DAP_USB\\src\\usbd_user_hid.c 0x00000000   Number         0  usbd_user_hid.o ABSOLUTE
     ..\\HARDWARE\\Mass_Storage\\src\\fsmc_nand.c 0x00000000   Number         0  fsmc_nand.o ABSOLUTE
     ..\\HARDWARE\\Mass_Storage\\src\\hw_config.c 0x00000000   Number         0  hw_config.o ABSOLUTE
     ..\\HARDWARE\\Mass_Storage\\src\\mass_mal.c 0x00000000   Number         0  mass_mal.o ABSOLUTE
@@ -2615,8 +2615,8 @@ Image Symbol Table
     i.EP2_OUT_Callback                       0x08003a60   Section        0  usb_endp.o(i.EP2_OUT_Callback)
     i.EP4_IN_Callback                        0x08003a68   Section        0  usb_endp.o(i.EP4_IN_Callback)
     i.EP6_OUT_Callback                       0x08003a74   Section        0  usb_endp.o(i.EP6_OUT_Callback)
-    i.EP_Reset                               0x08003acc   Section        0  usbd_stm32f103_1.o(i.EP_Reset)
-    i.EP_Status                              0x08003b0c   Section        0  usbd_stm32f103_1.o(i.EP_Status)
+    i.EP_Reset                               0x08003acc   Section        0  usbd_stm32f103.o(i.EP_Reset)
+    i.EP_Status                              0x08003b0c   Section        0  usbd_stm32f103.o(i.EP_Status)
     i.EXTI_ClearITPendingBit                 0x08003b58   Section        0  stm32f10x_exti.o(i.EXTI_ClearITPendingBit)
     i.EXTI_Init                              0x08003b64   Section        0  stm32f10x_exti.o(i.EXTI_Init)
     i.FLASH_ErasePage                        0x08003bf8   Section        0  stm32f10x_flash.o(i.FLASH_ErasePage)
@@ -2644,7 +2644,7 @@ Image Symbol Table
     i.GetTraceStatus                         0x08004680   Section        0  swo.o(i.GetTraceStatus)
     GetTraceStatus                           0x08004681   Thumb Code    34  swo.o(i.GetTraceStatus)
     i.Get_SerialNum                          0x080046b0   Section        0  hw_config.o(i.Get_SerialNum)
-    i.HID_ProcessCommand                     0x080046f8   Section        0  usbd_user_hid_1.o(i.HID_ProcessCommand)
+    i.HID_ProcessCommand                     0x080046f8   Section        0  usbd_user_hid.o(i.HID_ProcessCommand)
     i.HardFault_Handler                      0x080048a8   Section        0  cmsis-dap.o(i.HardFault_Handler)
     i.HexFormatUncode                        0x08004930   Section        0  hex2bin.o(i.HexFormatUncode)
     i.In0_Process                            0x08004a88   Section        0  usb_core.o(i.In0_Process)
@@ -2936,32 +2936,32 @@ Image Symbol Table
     i.USBD_CDC_ACM_SetCommFeature            0x0800b0a0   Section        0  usbd_cdc_acm.o(i.USBD_CDC_ACM_SetCommFeature)
     i.USBD_CDC_ACM_SetControlLineState       0x0800b0a4   Section        0  usbd_cdc_acm.o(i.USBD_CDC_ACM_SetControlLineState)
     i.USBD_CDC_ACM_SetLineCoding             0x0800b0b4   Section        0  usbd_cdc_acm.o(i.USBD_CDC_ACM_SetLineCoding)
-    i.USBD_ClrStallEP                        0x0800b0e0   Section        0  usbd_stm32f103_1.o(i.USBD_ClrStallEP)
-    i.USBD_ConfigEP                          0x0800b0f8   Section        0  usbd_stm32f103_1.o(i.USBD_ConfigEP)
-    i.USBD_Configure                         0x0800b1c0   Section        0  usbd_stm32f103_1.o(i.USBD_Configure)
-    i.USBD_Configure_Event                   0x0800b1d8   Section        0  usb_config_1.o(i.USBD_Configure_Event)
-    i.USBD_Connect                           0x0800b1dc   Section        0  usbd_stm32f103_1.o(i.USBD_Connect)
+    i.USBD_ClrStallEP                        0x0800b0e0   Section        0  usbd_stm32f103.o(i.USBD_ClrStallEP)
+    i.USBD_ConfigEP                          0x0800b0f8   Section        0  usbd_stm32f103.o(i.USBD_ConfigEP)
+    i.USBD_Configure                         0x0800b1c0   Section        0  usbd_stm32f103.o(i.USBD_Configure)
+    i.USBD_Configure_Event                   0x0800b1d8   Section        0  usb_config.o(i.USBD_Configure_Event)
+    i.USBD_Connect                           0x0800b1dc   Section        0  usbd_stm32f103.o(i.USBD_Connect)
     i.USBD_DataInStage                       0x0800b214   Section        0  usbd_core.o(i.USBD_DataInStage)
     i.USBD_DataOutStage                      0x0800b24c   Section        0  usbd_core.o(i.USBD_DataOutStage)
-    i.USBD_DirCtrlEP                         0x0800b26c   Section        0  usbd_stm32f103_1.o(i.USBD_DirCtrlEP)
-    i.USBD_DisableEP                         0x0800b26e   Section        0  usbd_stm32f103_1.o(i.USBD_DisableEP)
-    i.USBD_EnableEP                          0x0800b27c   Section        0  usbd_stm32f103_1.o(i.USBD_EnableEP)
+    i.USBD_DirCtrlEP                         0x0800b26c   Section        0  usbd_stm32f103.o(i.USBD_DirCtrlEP)
+    i.USBD_DisableEP                         0x0800b26e   Section        0  usbd_stm32f103.o(i.USBD_DisableEP)
+    i.USBD_EnableEP                          0x0800b27c   Section        0  usbd_stm32f103.o(i.USBD_EnableEP)
     i.USBD_EndPoint0                         0x0800b28c   Section        0  usbd_core.o(i.USBD_EndPoint0)
-    i.USBD_EndPoint0_Out_ADC_ReqToEP         0x0800b4f0   Section        0  usb_config_1.o(i.USBD_EndPoint0_Out_ADC_ReqToEP)
-    i.USBD_EndPoint0_Out_ADC_ReqToIF         0x0800b4f4   Section        0  usb_config_1.o(i.USBD_EndPoint0_Out_ADC_ReqToIF)
+    i.USBD_EndPoint0_Out_ADC_ReqToEP         0x0800b4f0   Section        0  usb_config.o(i.USBD_EndPoint0_Out_ADC_ReqToEP)
+    i.USBD_EndPoint0_Out_ADC_ReqToIF         0x0800b4f4   Section        0  usb_config.o(i.USBD_EndPoint0_Out_ADC_ReqToIF)
     i.USBD_EndPoint0_Out_CDC_ReqToIF         0x0800b4f8   Section        0  usbd_core_cdc.o(i.USBD_EndPoint0_Out_CDC_ReqToIF)
-    i.USBD_EndPoint0_Out_CLS_ReqToDEV        0x0800b548   Section        0  usb_config_1.o(i.USBD_EndPoint0_Out_CLS_ReqToDEV)
-    i.USBD_EndPoint0_Out_CLS_ReqToEP         0x0800b54c   Section        0  usb_config_1.o(i.USBD_EndPoint0_Out_CLS_ReqToEP)
-    i.USBD_EndPoint0_Out_CLS_ReqToIF         0x0800b550   Section        0  usb_config_1.o(i.USBD_EndPoint0_Out_CLS_ReqToIF)
+    i.USBD_EndPoint0_Out_CLS_ReqToDEV        0x0800b548   Section        0  usb_config.o(i.USBD_EndPoint0_Out_CLS_ReqToDEV)
+    i.USBD_EndPoint0_Out_CLS_ReqToEP         0x0800b54c   Section        0  usb_config.o(i.USBD_EndPoint0_Out_CLS_ReqToEP)
+    i.USBD_EndPoint0_Out_CLS_ReqToIF         0x0800b550   Section        0  usb_config.o(i.USBD_EndPoint0_Out_CLS_ReqToIF)
     i.USBD_EndPoint0_Out_HID_ReqToIF         0x0800b554   Section        0  usbd_core_hid.o(i.USBD_EndPoint0_Out_HID_ReqToIF)
-    i.USBD_EndPoint0_Setup_ADC_ReqToEP       0x0800b584   Section        0  usb_config_1.o(i.USBD_EndPoint0_Setup_ADC_ReqToEP)
-    i.USBD_EndPoint0_Setup_ADC_ReqToIF       0x0800b588   Section        0  usb_config_1.o(i.USBD_EndPoint0_Setup_ADC_ReqToIF)
+    i.USBD_EndPoint0_Setup_ADC_ReqToEP       0x0800b584   Section        0  usb_config.o(i.USBD_EndPoint0_Setup_ADC_ReqToEP)
+    i.USBD_EndPoint0_Setup_ADC_ReqToIF       0x0800b588   Section        0  usb_config.o(i.USBD_EndPoint0_Setup_ADC_ReqToIF)
     i.USBD_EndPoint0_Setup_CDC_ReqToIF       0x0800b58c   Section        0  usbd_core_cdc.o(i.USBD_EndPoint0_Setup_CDC_ReqToIF)
-    i.USBD_EndPoint0_Setup_CLS_ReqToDEV      0x0800b62c   Section        0  usb_config_1.o(i.USBD_EndPoint0_Setup_CLS_ReqToDEV)
-    i.USBD_EndPoint0_Setup_CLS_ReqToEP       0x0800b630   Section        0  usb_config_1.o(i.USBD_EndPoint0_Setup_CLS_ReqToEP)
-    i.USBD_EndPoint0_Setup_CLS_ReqToIF       0x0800b634   Section        0  usb_config_1.o(i.USBD_EndPoint0_Setup_CLS_ReqToIF)
+    i.USBD_EndPoint0_Setup_CLS_ReqToDEV      0x0800b62c   Section        0  usb_config.o(i.USBD_EndPoint0_Setup_CLS_ReqToDEV)
+    i.USBD_EndPoint0_Setup_CLS_ReqToEP       0x0800b630   Section        0  usb_config.o(i.USBD_EndPoint0_Setup_CLS_ReqToEP)
+    i.USBD_EndPoint0_Setup_CLS_ReqToIF       0x0800b634   Section        0  usb_config.o(i.USBD_EndPoint0_Setup_CLS_ReqToIF)
     i.USBD_EndPoint0_Setup_HID_ReqToIF       0x0800b638   Section        0  usbd_core_hid.o(i.USBD_EndPoint0_Setup_HID_ReqToIF)
-    i.USBD_EndPoint0_Setup_MSC_ReqToIF       0x0800b6e4   Section        0  usb_config_1.o(i.USBD_EndPoint0_Setup_MSC_ReqToIF)
+    i.USBD_EndPoint0_Setup_MSC_ReqToIF       0x0800b6e4   Section        0  usb_config.o(i.USBD_EndPoint0_Setup_MSC_ReqToIF)
     i.USBD_HID_Configure_Event               0x0800b6e8   Section        0  usbd_hid.o(i.USBD_HID_Configure_Event)
     i.USBD_HID_EP_INTIN_Event                0x0800b710   Section        0  usbd_hid.o(i.USBD_HID_EP_INTIN_Event)
     i.USBD_HID_EP_INTOUT_Event               0x0800b874   Section        0  usbd_hid.o(i.USBD_HID_EP_INTOUT_Event)
@@ -2973,37 +2973,37 @@ Image Symbol Table
     i.USBD_HID_SetIdle                       0x0800bacc   Section        0  usbd_hid.o(i.USBD_HID_SetIdle)
     i.USBD_HID_SetProtocol                   0x0800bb08   Section        0  usbd_hid.o(i.USBD_HID_SetProtocol)
     i.USBD_HID_SetReport                     0x0800bb1c   Section        0  usbd_hid.o(i.USBD_HID_SetReport)
-    i.USBD_Init                              0x0800bb5c   Section        0  usbd_stm32f103_1.o(i.USBD_Init)
-    i.USBD_IntrEna                           0x0800bb78   Section        0  usbd_stm32f103_1.o(i.USBD_IntrEna)
-    i.USBD_RTX_TaskInit                      0x0800bb8e   Section        0  usb_config_1.o(i.USBD_RTX_TaskInit)
-    i.USBD_ReadEP                            0x0800bb90   Section        0  usbd_stm32f103_1.o(i.USBD_ReadEP)
-    i.USBD_ReqClrFeature_MSC                 0x0800bbf0   Section        0  usb_config_1.o(i.USBD_ReqClrFeature_MSC)
+    i.USBD_Init                              0x0800bb5c   Section        0  usbd_stm32f103.o(i.USBD_Init)
+    i.USBD_IntrEna                           0x0800bb78   Section        0  usbd_stm32f103.o(i.USBD_IntrEna)
+    i.USBD_RTX_TaskInit                      0x0800bb8e   Section        0  usb_config.o(i.USBD_RTX_TaskInit)
+    i.USBD_ReadEP                            0x0800bb90   Section        0  usbd_stm32f103.o(i.USBD_ReadEP)
+    i.USBD_ReqClrFeature_MSC                 0x0800bbf0   Section        0  usb_config.o(i.USBD_ReqClrFeature_MSC)
     i.USBD_ReqGetDescriptor                  0x0800bbf4   Section        0  usbd_core.o(i.USBD_ReqGetDescriptor)
     i.USBD_ReqGetDescriptor_HID              0x0800bd24   Section        0  usbd_core_hid.o(i.USBD_ReqGetDescriptor_HID)
     i.USBD_ReqGetStatus                      0x0800bda8   Section        0  usbd_core.o(i.USBD_ReqGetStatus)
     i.USBD_ReqSetClrFeature                  0x0800be24   Section        0  usbd_core.o(i.USBD_ReqSetClrFeature)
     i.USBD_ReqSetConfiguration               0x0800bed0   Section        0  usbd_core.o(i.USBD_ReqSetConfiguration)
     i.USBD_ReqSetInterface                   0x0800c060   Section        0  usbd_core.o(i.USBD_ReqSetInterface)
-    i.USBD_Reset                             0x0800c18c   Section        0  usbd_stm32f103_1.o(i.USBD_Reset)
-    i.USBD_ResetEP                           0x0800c240   Section        0  usbd_stm32f103_1.o(i.USBD_ResetEP)
-    i.USBD_Reset_Event                       0x0800c24c   Section        0  usb_config_1.o(i.USBD_Reset_Event)
-    i.USBD_SOF_Event                         0x0800c250   Section        0  usb_config_1.o(i.USBD_SOF_Event)
-    i.USBD_SetAddress                        0x0800c260   Section        0  usbd_stm32f103_1.o(i.USBD_SetAddress)
-    i.USBD_SetStallEP                        0x0800c274   Section        0  usbd_stm32f103_1.o(i.USBD_SetStallEP)
+    i.USBD_Reset                             0x0800c18c   Section        0  usbd_stm32f103.o(i.USBD_Reset)
+    i.USBD_ResetEP                           0x0800c240   Section        0  usbd_stm32f103.o(i.USBD_ResetEP)
+    i.USBD_Reset_Event                       0x0800c24c   Section        0  usb_config.o(i.USBD_Reset_Event)
+    i.USBD_SOF_Event                         0x0800c250   Section        0  usb_config.o(i.USBD_SOF_Event)
+    i.USBD_SetAddress                        0x0800c260   Section        0  usbd_stm32f103.o(i.USBD_SetAddress)
+    i.USBD_SetStallEP                        0x0800c274   Section        0  usbd_stm32f103.o(i.USBD_SetStallEP)
     i.USBD_SetupStage                        0x0800c284   Section        0  usbd_core.o(i.USBD_SetupStage)
     i.USBD_StatusInStage                     0x0800c290   Section        0  usbd_core.o(i.USBD_StatusInStage)
     i.USBD_StatusOutStage                    0x0800c29c   Section        0  usbd_core.o(i.USBD_StatusOutStage)
-    i.USBD_Suspend                           0x0800c2a8   Section        0  usbd_stm32f103_1.o(i.USBD_Suspend)
-    i.USBD_WakeUp                            0x0800c2c4   Section        0  usbd_stm32f103_1.o(i.USBD_WakeUp)
-    i.USBD_WakeUpCfg                         0x0800c2d8   Section        0  usbd_stm32f103_1.o(i.USBD_WakeUpCfg)
-    i.USBD_WriteEP                           0x0800c2dc   Section        0  usbd_stm32f103_1.o(i.USBD_WriteEP)
+    i.USBD_Suspend                           0x0800c2a8   Section        0  usbd_stm32f103.o(i.USBD_Suspend)
+    i.USBD_WakeUp                            0x0800c2c4   Section        0  usbd_stm32f103.o(i.USBD_WakeUp)
+    i.USBD_WakeUpCfg                         0x0800c2d8   Section        0  usbd_stm32f103.o(i.USBD_WakeUpCfg)
+    i.USBD_WriteEP                           0x0800c2dc   Section        0  usbd_stm32f103.o(i.USBD_WriteEP)
     i.USBWakeUp_IRQHandler                   0x0800c350   Section        0  hw_config.o(i.USBWakeUp_IRQHandler)
     i.USB_Cable_Config                       0x0800c35c   Section        0  hw_config.o(i.USB_Cable_Config)
     i.USB_HP_CAN1_TX_IRQHandler              0x0800c35e   Section        0  hw_config.o(i.USB_HP_CAN1_TX_IRQHandler)
     i.USB_Init                               0x0800c368   Section        0  usb_init.o(i.USB_Init)
     i.USB_Interrupts_Config                  0x0800c3a4   Section        0  hw_config.o(i.USB_Interrupts_Config)
     i.USB_Istr                               0x0800c404   Section        0  usb_istr.o(i.USB_Istr)
-    i.USB_LP_CAN1_RX0_IRQHandler             0x0800c454   Section        0  usbd_stm32f103_1.o(i.USB_LP_CAN1_RX0_IRQHandler)
+    i.USB_LP_CAN1_RX0_IRQHandler             0x0800c454   Section        0  usbd_stm32f103.o(i.USB_LP_CAN1_RX0_IRQHandler)
     i.USB_SIL_Init                           0x0800c5bc   Section        0  usb_sil.o(i.USB_SIL_Init)
     i.USB_SIL_Read                           0x0800c5e0   Section        0  usb_sil.o(i.USB_SIL_Read)
     i.USB_SIL_Write                          0x0800c60e   Section        0  usb_sil.o(i.USB_SIL_Write)
@@ -3139,18 +3139,18 @@ Image Symbol Table
     i.uart_init                              0x0800ef64   Section        0  usart.o(i.uart_init)
     i.usart_receive_parse                    0x0800f0c8   Section        0  usart.o(i.usart_receive_parse)
     i.usart_sendCommand                      0x0800f154   Section        0  usart.o(i.usart_sendCommand)
-    i.usbd_class_init                        0x0800f190   Section        0  usb_config_1.o(i.usbd_class_init)
+    i.usbd_class_init                        0x0800f190   Section        0  usb_config.o(i.usbd_class_init)
     i.usbd_configured                        0x0800f1a0   Section        0  usbd_core.o(i.usbd_configured)
     i.usbd_connect                           0x0800f1b0   Section        0  usbd_core.o(i.usbd_connect)
     i.usbd_hid_get_protocol                  0x0800f1b4   Section        0  usbd_hid.o(i.usbd_hid_get_protocol)
-    i.usbd_hid_get_report                    0x0800f1b8   Section        0  usbd_user_hid_1.o(i.usbd_hid_get_report)
+    i.usbd_hid_get_report                    0x0800f1b8   Section        0  usbd_user_hid.o(i.usbd_hid_get_report)
     i.usbd_hid_get_report_trigger            0x0800f258   Section        0  usbd_hid.o(i.usbd_hid_get_report_trigger)
-    i.usbd_hid_init                          0x0800f2f4   Section        0  usbd_user_hid_1.o(i.usbd_hid_init)
-    i.usbd_hid_process                       0x0800f334   Section        0  usbd_user_hid_1.o(i.usbd_hid_process)
+    i.usbd_hid_init                          0x0800f2f4   Section        0  usbd_user_hid.o(i.usbd_hid_init)
+    i.usbd_hid_process                       0x0800f334   Section        0  usbd_user_hid.o(i.usbd_hid_process)
     i.usbd_hid_set_protocol                  0x0800f3f0   Section        0  usbd_hid.o(i.usbd_hid_set_protocol)
-    i.usbd_hid_set_report                    0x0800f3f4   Section        0  usbd_user_hid_1.o(i.usbd_hid_set_report)
+    i.usbd_hid_set_report                    0x0800f3f4   Section        0  usbd_user_hid.o(i.usbd_hid_set_report)
     i.usbd_init                              0x0800f494   Section        0  usbd_core.o(i.usbd_init)
-    i.usbd_os_evt_set                        0x0800f4b0   Section        0  usb_config_1.o(i.usbd_os_evt_set)
+    i.usbd_os_evt_set                        0x0800f4b0   Section        0  usb_config.o(i.usbd_os_evt_set)
     i.usbd_reset_core                        0x0800f4b4   Section        0  usbd_core.o(i.usbd_reset_core)
     i.vResetTarget                           0x0800f4d8   Section        0  cmsis-dap.o(i.vResetTarget)
     i.validate                               0x0800f574   Section        0  ff.o(i.validate)
@@ -3166,7 +3166,7 @@ Image Symbol Table
     x$fpl$usenofp                            0x0800facc   Section        0  usenofp.o(x$fpl$usenofp)
     .constdata                               0x0800fb20   Section      195  usb_desc.o(.constdata)
     .constdata                               0x0800fbe3   Section        5  dap.o(.constdata)
-    .constdata                               0x0800fbe8   Section      468  usb_config_1.o(.constdata)
+    .constdata                               0x0800fbe8   Section      468  usb_config.o(.constdata)
     .constdata                               0x0800fdbc   Section      148  usart_stm32f10x.o(.constdata)
     usart_driver_version                     0x0800fdbc   Data           4  usart_stm32f10x.o(.constdata)
     USART2_tx                                0x0800fdc0   Data           8  usart_stm32f10x.o(.constdata)
@@ -3222,16 +3222,16 @@ Image Symbol Table
     TraceIn                                  0x2000042c   Data           4  swo.o(.data)
     TraceOut                                 0x20000430   Data           4  swo.o(.data)
     TracePending                             0x20000434   Data           4  swo.o(.data)
-    .data                                    0x20000438   Section       11  usb_config_1.o(.data)
-    .data                                    0x20000444   Section        6  usbd_stm32f103_1.o(.data)
-    .data                                    0x2000044c   Section       24  usbd_user_hid_1.o(.data)
-    USB_RequestFlag                          0x2000044c   Data           1  usbd_user_hid_1.o(.data)
-    USB_RequestIn                            0x20000450   Data           4  usbd_user_hid_1.o(.data)
-    USB_RequestOut                           0x20000454   Data           4  usbd_user_hid_1.o(.data)
-    USB_ResponseIdle                         0x20000458   Data           1  usbd_user_hid_1.o(.data)
-    USB_ResponseFlag                         0x20000459   Data           1  usbd_user_hid_1.o(.data)
-    USB_ResponseIn                           0x2000045c   Data           4  usbd_user_hid_1.o(.data)
-    USB_ResponseOut                          0x20000460   Data           4  usbd_user_hid_1.o(.data)
+    .data                                    0x20000438   Section       11  usb_config.o(.data)
+    .data                                    0x20000444   Section        6  usbd_stm32f103.o(.data)
+    .data                                    0x2000044c   Section       24  usbd_user_hid.o(.data)
+    USB_RequestFlag                          0x2000044c   Data           1  usbd_user_hid.o(.data)
+    USB_RequestIn                            0x20000450   Data           4  usbd_user_hid.o(.data)
+    USB_RequestOut                           0x20000454   Data           4  usbd_user_hid.o(.data)
+    USB_ResponseIdle                         0x20000458   Data           1  usbd_user_hid.o(.data)
+    USB_ResponseFlag                         0x20000459   Data           1  usbd_user_hid.o(.data)
+    USB_ResponseIn                           0x2000045c   Data           4  usbd_user_hid.o(.data)
+    USB_ResponseOut                          0x20000460   Data           4  usbd_user_hid.o(.data)
     .data                                    0x20000464   Section       15  usbd_user_cdc_acm.o(.data)
     uart_rx_cnt                              0x20000464   Data           4  usbd_user_cdc_acm.o(.data)
     usb_tx_cnt                               0x20000468   Data           4  usbd_user_cdc_acm.o(.data)
@@ -3255,10 +3255,10 @@ Image Symbol Table
     .bss                                     0x20001278   Section       64  dap.o(.bss)
     .bss                                     0x200012b8   Section     4096  swo.o(.bss)
     TraceBuf                                 0x200012b8   Data        4096  swo.o(.bss)
-    .bss                                     0x200022b8   Section      332  usb_config_1.o(.bss)
-    .bss                                     0x20002404   Section     8192  usbd_user_hid_1.o(.bss)
-    USB_Request                              0x20002404   Data        4096  usbd_user_hid_1.o(.bss)
-    USB_Response                             0x20003404   Data        4096  usbd_user_hid_1.o(.bss)
+    .bss                                     0x200022b8   Section      332  usb_config.o(.bss)
+    .bss                                     0x20002404   Section     8192  usbd_user_hid.o(.bss)
+    USB_Request                              0x20002404   Data        4096  usbd_user_hid.o(.bss)
+    USB_Response                             0x20003404   Data        4096  usbd_user_hid.o(.bss)
     .bss                                     0x20004404   Section     2048  usbd_user_cdc_acm.o(.bss)
     uart_rx_buf                              0x20004404   Data        1024  usbd_user_cdc_acm.o(.bss)
     uart_tx_buf                              0x20004804   Data        1024  usbd_user_cdc_acm.o(.bss)
@@ -3521,8 +3521,8 @@ Image Symbol Table
     EP2_OUT_Callback                         0x08003a61   Thumb Code     8  usb_endp.o(i.EP2_OUT_Callback)
     EP4_IN_Callback                          0x08003a69   Thumb Code     8  usb_endp.o(i.EP4_IN_Callback)
     EP6_OUT_Callback                         0x08003a75   Thumb Code    76  usb_endp.o(i.EP6_OUT_Callback)
-    EP_Reset                                 0x08003acd   Thumb Code    58  usbd_stm32f103_1.o(i.EP_Reset)
-    EP_Status                                0x08003b0d   Thumb Code    70  usbd_stm32f103_1.o(i.EP_Status)
+    EP_Reset                                 0x08003acd   Thumb Code    58  usbd_stm32f103.o(i.EP_Reset)
+    EP_Status                                0x08003b0d   Thumb Code    70  usbd_stm32f103.o(i.EP_Status)
     EXTI_ClearITPendingBit                   0x08003b59   Thumb Code     6  stm32f10x_exti.o(i.EXTI_ClearITPendingBit)
     EXTI_Init                                0x08003b65   Thumb Code   142  stm32f10x_exti.o(i.EXTI_Init)
     FLASH_ErasePage                          0x08003bf9   Thumb Code    72  stm32f10x_flash.o(i.FLASH_ErasePage)
@@ -3544,7 +3544,7 @@ Image Symbol Table
     GetEPRxCount                             0x080045c9   Thumb Code    26  usb_regs.o(i.GetEPRxCount)
     GetEPTxAddr                              0x080045ed   Thumb Code    22  usb_regs.o(i.GetEPTxAddr)
     Get_SerialNum                            0x080046b1   Thumb Code    62  hw_config.o(i.Get_SerialNum)
-    HID_ProcessCommand                       0x080046f9   Thumb Code   400  usbd_user_hid_1.o(i.HID_ProcessCommand)
+    HID_ProcessCommand                       0x080046f9   Thumb Code   400  usbd_user_hid.o(i.HID_ProcessCommand)
     BusFault_Handler                         0x080048a9   Thumb Code     0  cmsis-dap.o(i.HardFault_Handler)
     DebugMon_Handler                         0x080048a9   Thumb Code     0  cmsis-dap.o(i.HardFault_Handler)
     HardFault_Handler                        0x080048a9   Thumb Code   122  cmsis-dap.o(i.HardFault_Handler)
@@ -3723,32 +3723,32 @@ Image Symbol Table
     USBD_CDC_ACM_SetCommFeature              0x0800b0a1   Thumb Code     4  usbd_cdc_acm.o(i.USBD_CDC_ACM_SetCommFeature)
     USBD_CDC_ACM_SetControlLineState         0x0800b0a5   Thumb Code    12  usbd_cdc_acm.o(i.USBD_CDC_ACM_SetControlLineState)
     USBD_CDC_ACM_SetLineCoding               0x0800b0b5   Thumb Code    36  usbd_cdc_acm.o(i.USBD_CDC_ACM_SetLineCoding)
-    USBD_ClrStallEP                          0x0800b0e1   Thumb Code    22  usbd_stm32f103_1.o(i.USBD_ClrStallEP)
-    USBD_ConfigEP                            0x0800b0f9   Thumb Code   186  usbd_stm32f103_1.o(i.USBD_ConfigEP)
-    USBD_Configure                           0x0800b1c1   Thumb Code    18  usbd_stm32f103_1.o(i.USBD_Configure)
-    USBD_Configure_Event                     0x0800b1d9   Thumb Code     4  usb_config_1.o(i.USBD_Configure_Event)
-    USBD_Connect                             0x0800b1dd   Thumb Code    48  usbd_stm32f103_1.o(i.USBD_Connect)
+    USBD_ClrStallEP                          0x0800b0e1   Thumb Code    22  usbd_stm32f103.o(i.USBD_ClrStallEP)
+    USBD_ConfigEP                            0x0800b0f9   Thumb Code   186  usbd_stm32f103.o(i.USBD_ConfigEP)
+    USBD_Configure                           0x0800b1c1   Thumb Code    18  usbd_stm32f103.o(i.USBD_Configure)
+    USBD_Configure_Event                     0x0800b1d9   Thumb Code     4  usb_config.o(i.USBD_Configure_Event)
+    USBD_Connect                             0x0800b1dd   Thumb Code    48  usbd_stm32f103.o(i.USBD_Connect)
     USBD_DataInStage                         0x0800b215   Thumb Code    48  usbd_core.o(i.USBD_DataInStage)
     USBD_DataOutStage                        0x0800b24d   Thumb Code    26  usbd_core.o(i.USBD_DataOutStage)
-    USBD_DirCtrlEP                           0x0800b26d   Thumb Code     2  usbd_stm32f103_1.o(i.USBD_DirCtrlEP)
-    USBD_DisableEP                           0x0800b26f   Thumb Code    14  usbd_stm32f103_1.o(i.USBD_DisableEP)
-    USBD_EnableEP                            0x0800b27d   Thumb Code    16  usbd_stm32f103_1.o(i.USBD_EnableEP)
+    USBD_DirCtrlEP                           0x0800b26d   Thumb Code     2  usbd_stm32f103.o(i.USBD_DirCtrlEP)
+    USBD_DisableEP                           0x0800b26f   Thumb Code    14  usbd_stm32f103.o(i.USBD_DisableEP)
+    USBD_EnableEP                            0x0800b27d   Thumb Code    16  usbd_stm32f103.o(i.USBD_EnableEP)
     USBD_EndPoint0                           0x0800b28d   Thumb Code   588  usbd_core.o(i.USBD_EndPoint0)
-    USBD_EndPoint0_Out_ADC_ReqToEP           0x0800b4f1   Thumb Code     4  usb_config_1.o(i.USBD_EndPoint0_Out_ADC_ReqToEP)
-    USBD_EndPoint0_Out_ADC_ReqToIF           0x0800b4f5   Thumb Code     4  usb_config_1.o(i.USBD_EndPoint0_Out_ADC_ReqToIF)
+    USBD_EndPoint0_Out_ADC_ReqToEP           0x0800b4f1   Thumb Code     4  usb_config.o(i.USBD_EndPoint0_Out_ADC_ReqToEP)
+    USBD_EndPoint0_Out_ADC_ReqToIF           0x0800b4f5   Thumb Code     4  usb_config.o(i.USBD_EndPoint0_Out_ADC_ReqToIF)
     USBD_EndPoint0_Out_CDC_ReqToIF           0x0800b4f9   Thumb Code    68  usbd_core_cdc.o(i.USBD_EndPoint0_Out_CDC_ReqToIF)
-    USBD_EndPoint0_Out_CLS_ReqToDEV          0x0800b549   Thumb Code     4  usb_config_1.o(i.USBD_EndPoint0_Out_CLS_ReqToDEV)
-    USBD_EndPoint0_Out_CLS_ReqToEP           0x0800b54d   Thumb Code     4  usb_config_1.o(i.USBD_EndPoint0_Out_CLS_ReqToEP)
-    USBD_EndPoint0_Out_CLS_ReqToIF           0x0800b551   Thumb Code     4  usb_config_1.o(i.USBD_EndPoint0_Out_CLS_ReqToIF)
+    USBD_EndPoint0_Out_CLS_ReqToDEV          0x0800b549   Thumb Code     4  usb_config.o(i.USBD_EndPoint0_Out_CLS_ReqToDEV)
+    USBD_EndPoint0_Out_CLS_ReqToEP           0x0800b54d   Thumb Code     4  usb_config.o(i.USBD_EndPoint0_Out_CLS_ReqToEP)
+    USBD_EndPoint0_Out_CLS_ReqToIF           0x0800b551   Thumb Code     4  usb_config.o(i.USBD_EndPoint0_Out_CLS_ReqToIF)
     USBD_EndPoint0_Out_HID_ReqToIF           0x0800b555   Thumb Code    38  usbd_core_hid.o(i.USBD_EndPoint0_Out_HID_ReqToIF)
-    USBD_EndPoint0_Setup_ADC_ReqToEP         0x0800b585   Thumb Code     4  usb_config_1.o(i.USBD_EndPoint0_Setup_ADC_ReqToEP)
-    USBD_EndPoint0_Setup_ADC_ReqToIF         0x0800b589   Thumb Code     4  usb_config_1.o(i.USBD_EndPoint0_Setup_ADC_ReqToIF)
+    USBD_EndPoint0_Setup_ADC_ReqToEP         0x0800b585   Thumb Code     4  usb_config.o(i.USBD_EndPoint0_Setup_ADC_ReqToEP)
+    USBD_EndPoint0_Setup_ADC_ReqToIF         0x0800b589   Thumb Code     4  usb_config.o(i.USBD_EndPoint0_Setup_ADC_ReqToIF)
     USBD_EndPoint0_Setup_CDC_ReqToIF         0x0800b58d   Thumb Code   140  usbd_core_cdc.o(i.USBD_EndPoint0_Setup_CDC_ReqToIF)
-    USBD_EndPoint0_Setup_CLS_ReqToDEV        0x0800b62d   Thumb Code     4  usb_config_1.o(i.USBD_EndPoint0_Setup_CLS_ReqToDEV)
-    USBD_EndPoint0_Setup_CLS_ReqToEP         0x0800b631   Thumb Code     4  usb_config_1.o(i.USBD_EndPoint0_Setup_CLS_ReqToEP)
-    USBD_EndPoint0_Setup_CLS_ReqToIF         0x0800b635   Thumb Code     4  usb_config_1.o(i.USBD_EndPoint0_Setup_CLS_ReqToIF)
+    USBD_EndPoint0_Setup_CLS_ReqToDEV        0x0800b62d   Thumb Code     4  usb_config.o(i.USBD_EndPoint0_Setup_CLS_ReqToDEV)
+    USBD_EndPoint0_Setup_CLS_ReqToEP         0x0800b631   Thumb Code     4  usb_config.o(i.USBD_EndPoint0_Setup_CLS_ReqToEP)
+    USBD_EndPoint0_Setup_CLS_ReqToIF         0x0800b635   Thumb Code     4  usb_config.o(i.USBD_EndPoint0_Setup_CLS_ReqToIF)
     USBD_EndPoint0_Setup_HID_ReqToIF         0x0800b639   Thumb Code   144  usbd_core_hid.o(i.USBD_EndPoint0_Setup_HID_ReqToIF)
-    USBD_EndPoint0_Setup_MSC_ReqToIF         0x0800b6e5   Thumb Code     4  usb_config_1.o(i.USBD_EndPoint0_Setup_MSC_ReqToIF)
+    USBD_EndPoint0_Setup_MSC_ReqToIF         0x0800b6e5   Thumb Code     4  usb_config.o(i.USBD_EndPoint0_Setup_MSC_ReqToIF)
     USBD_HID_Configure_Event                 0x0800b6e9   Thumb Code    34  usbd_hid.o(i.USBD_HID_Configure_Event)
     USBD_HID_EP_INTIN_Event                  0x0800b711   Thumb Code   326  usbd_hid.o(i.USBD_HID_EP_INTIN_Event)
     USBD_HID_EP_INTOUT_Event                 0x0800b875   Thumb Code   102  usbd_hid.o(i.USBD_HID_EP_INTOUT_Event)
@@ -3760,37 +3760,37 @@ Image Symbol Table
     USBD_HID_SetIdle                         0x0800bacd   Thumb Code    42  usbd_hid.o(i.USBD_HID_SetIdle)
     USBD_HID_SetProtocol                     0x0800bb09   Thumb Code    14  usbd_hid.o(i.USBD_HID_SetProtocol)
     USBD_HID_SetReport                       0x0800bb1d   Thumb Code    50  usbd_hid.o(i.USBD_HID_SetReport)
-    USBD_Init                                0x0800bb5d   Thumb Code    24  usbd_stm32f103_1.o(i.USBD_Init)
-    USBD_IntrEna                             0x0800bb79   Thumb Code    22  usbd_stm32f103_1.o(i.USBD_IntrEna)
-    USBD_RTX_TaskInit                        0x0800bb8f   Thumb Code     2  usb_config_1.o(i.USBD_RTX_TaskInit)
-    USBD_ReadEP                              0x0800bb91   Thumb Code    86  usbd_stm32f103_1.o(i.USBD_ReadEP)
-    USBD_ReqClrFeature_MSC                   0x0800bbf1   Thumb Code     2  usb_config_1.o(i.USBD_ReqClrFeature_MSC)
+    USBD_Init                                0x0800bb5d   Thumb Code    24  usbd_stm32f103.o(i.USBD_Init)
+    USBD_IntrEna                             0x0800bb79   Thumb Code    22  usbd_stm32f103.o(i.USBD_IntrEna)
+    USBD_RTX_TaskInit                        0x0800bb8f   Thumb Code     2  usb_config.o(i.USBD_RTX_TaskInit)
+    USBD_ReadEP                              0x0800bb91   Thumb Code    86  usbd_stm32f103.o(i.USBD_ReadEP)
+    USBD_ReqClrFeature_MSC                   0x0800bbf1   Thumb Code     2  usb_config.o(i.USBD_ReqClrFeature_MSC)
     USBD_ReqGetDescriptor                    0x0800bbf5   Thumb Code   260  usbd_core.o(i.USBD_ReqGetDescriptor)
     USBD_ReqGetDescriptor_HID                0x0800bd25   Thumb Code    90  usbd_core_hid.o(i.USBD_ReqGetDescriptor_HID)
     USBD_ReqGetStatus                        0x0800bda9   Thumb Code   116  usbd_core.o(i.USBD_ReqGetStatus)
     USBD_ReqSetClrFeature                    0x0800be25   Thumb Code   168  usbd_core.o(i.USBD_ReqSetClrFeature)
     USBD_ReqSetConfiguration                 0x0800bed1   Thumb Code   376  usbd_core.o(i.USBD_ReqSetConfiguration)
     USBD_ReqSetInterface                     0x0800c061   Thumb Code   280  usbd_core.o(i.USBD_ReqSetInterface)
-    USBD_Reset                               0x0800c18d   Thumb Code   160  usbd_stm32f103_1.o(i.USBD_Reset)
-    USBD_ResetEP                             0x0800c241   Thumb Code    12  usbd_stm32f103_1.o(i.USBD_ResetEP)
-    USBD_Reset_Event                         0x0800c24d   Thumb Code     4  usb_config_1.o(i.USBD_Reset_Event)
-    USBD_SOF_Event                           0x0800c251   Thumb Code    14  usb_config_1.o(i.USBD_SOF_Event)
-    USBD_SetAddress                          0x0800c261   Thumb Code    16  usbd_stm32f103_1.o(i.USBD_SetAddress)
-    USBD_SetStallEP                          0x0800c275   Thumb Code    16  usbd_stm32f103_1.o(i.USBD_SetStallEP)
+    USBD_Reset                               0x0800c18d   Thumb Code   160  usbd_stm32f103.o(i.USBD_Reset)
+    USBD_ResetEP                             0x0800c241   Thumb Code    12  usbd_stm32f103.o(i.USBD_ResetEP)
+    USBD_Reset_Event                         0x0800c24d   Thumb Code     4  usb_config.o(i.USBD_Reset_Event)
+    USBD_SOF_Event                           0x0800c251   Thumb Code    14  usb_config.o(i.USBD_SOF_Event)
+    USBD_SetAddress                          0x0800c261   Thumb Code    16  usbd_stm32f103.o(i.USBD_SetAddress)
+    USBD_SetStallEP                          0x0800c275   Thumb Code    16  usbd_stm32f103.o(i.USBD_SetStallEP)
     USBD_SetupStage                          0x0800c285   Thumb Code     8  usbd_core.o(i.USBD_SetupStage)
     USBD_StatusInStage                       0x0800c291   Thumb Code    10  usbd_core.o(i.USBD_StatusInStage)
     USBD_StatusOutStage                      0x0800c29d   Thumb Code     8  usbd_core.o(i.USBD_StatusOutStage)
-    USBD_Suspend                             0x0800c2a9   Thumb Code    24  usbd_stm32f103_1.o(i.USBD_Suspend)
-    USBD_WakeUp                              0x0800c2c5   Thumb Code    14  usbd_stm32f103_1.o(i.USBD_WakeUp)
-    USBD_WakeUpCfg                           0x0800c2d9   Thumb Code     2  usbd_stm32f103_1.o(i.USBD_WakeUpCfg)
-    USBD_WriteEP                             0x0800c2dd   Thumb Code   104  usbd_stm32f103_1.o(i.USBD_WriteEP)
+    USBD_Suspend                             0x0800c2a9   Thumb Code    24  usbd_stm32f103.o(i.USBD_Suspend)
+    USBD_WakeUp                              0x0800c2c5   Thumb Code    14  usbd_stm32f103.o(i.USBD_WakeUp)
+    USBD_WakeUpCfg                           0x0800c2d9   Thumb Code     2  usbd_stm32f103.o(i.USBD_WakeUpCfg)
+    USBD_WriteEP                             0x0800c2dd   Thumb Code   104  usbd_stm32f103.o(i.USBD_WriteEP)
     USBWakeUp_IRQHandler                     0x0800c351   Thumb Code    12  hw_config.o(i.USBWakeUp_IRQHandler)
     USB_Cable_Config                         0x0800c35d   Thumb Code     2  hw_config.o(i.USB_Cable_Config)
     USB_HP_CAN1_TX_IRQHandler                0x0800c35f   Thumb Code     8  hw_config.o(i.USB_HP_CAN1_TX_IRQHandler)
     USB_Init                                 0x0800c369   Thumb Code    36  usb_init.o(i.USB_Init)
     USB_Interrupts_Config                    0x0800c3a5   Thumb Code    94  hw_config.o(i.USB_Interrupts_Config)
     USB_Istr                                 0x0800c405   Thumb Code    62  usb_istr.o(i.USB_Istr)
-    USB_LP_CAN1_RX0_IRQHandler               0x0800c455   Thumb Code   326  usbd_stm32f103_1.o(i.USB_LP_CAN1_RX0_IRQHandler)
+    USB_LP_CAN1_RX0_IRQHandler               0x0800c455   Thumb Code   326  usbd_stm32f103.o(i.USB_LP_CAN1_RX0_IRQHandler)
     USB_SIL_Init                             0x0800c5bd   Thumb Code    28  usb_sil.o(i.USB_SIL_Init)
     USB_SIL_Read                             0x0800c5e1   Thumb Code    46  usb_sil.o(i.USB_SIL_Read)
     USB_SIL_Write                            0x0800c60f   Thumb Code    46  usb_sil.o(i.USB_SIL_Write)
@@ -3858,18 +3858,18 @@ Image Symbol Table
     uart_init                                0x0800ef65   Thumb Code   334  usart.o(i.uart_init)
     usart_receive_parse                      0x0800f0c9   Thumb Code   108  usart.o(i.usart_receive_parse)
     usart_sendCommand                        0x0800f155   Thumb Code    50  usart.o(i.usart_sendCommand)
-    usbd_class_init                          0x0800f191   Thumb Code    14  usb_config_1.o(i.usbd_class_init)
+    usbd_class_init                          0x0800f191   Thumb Code    14  usb_config.o(i.usbd_class_init)
     usbd_configured                          0x0800f1a1   Thumb Code    12  usbd_core.o(i.usbd_configured)
     usbd_connect                             0x0800f1b1   Thumb Code     4  usbd_core.o(i.usbd_connect)
     usbd_hid_get_protocol                    0x0800f1b5   Thumb Code     4  usbd_hid.o(i.usbd_hid_get_protocol)
-    usbd_hid_get_report                      0x0800f1b9   Thumb Code   140  usbd_user_hid_1.o(i.usbd_hid_get_report)
+    usbd_hid_get_report                      0x0800f1b9   Thumb Code   140  usbd_user_hid.o(i.usbd_hid_get_report)
     usbd_hid_get_report_trigger              0x0800f259   Thumb Code   132  usbd_hid.o(i.usbd_hid_get_report_trigger)
-    usbd_hid_init                            0x0800f2f5   Thumb Code    36  usbd_user_hid_1.o(i.usbd_hid_init)
-    usbd_hid_process                         0x0800f335   Thumb Code   150  usbd_user_hid_1.o(i.usbd_hid_process)
+    usbd_hid_init                            0x0800f2f5   Thumb Code    36  usbd_user_hid.o(i.usbd_hid_init)
+    usbd_hid_process                         0x0800f335   Thumb Code   150  usbd_user_hid.o(i.usbd_hid_process)
     usbd_hid_set_protocol                    0x0800f3f1   Thumb Code     2  usbd_hid.o(i.usbd_hid_set_protocol)
-    usbd_hid_set_report                      0x0800f3f5   Thumb Code   138  usbd_user_hid_1.o(i.usbd_hid_set_report)
+    usbd_hid_set_report                      0x0800f3f5   Thumb Code   138  usbd_user_hid.o(i.usbd_hid_set_report)
     usbd_init                                0x0800f495   Thumb Code    24  usbd_core.o(i.usbd_init)
-    usbd_os_evt_set                          0x0800f4b1   Thumb Code     2  usb_config_1.o(i.usbd_os_evt_set)
+    usbd_os_evt_set                          0x0800f4b1   Thumb Code     2  usb_config.o(i.usbd_os_evt_set)
     usbd_reset_core                          0x0800f4b5   Thumb Code    26  usbd_core.o(i.usbd_reset_core)
     vResetTarget                             0x0800f4d9   Thumb Code   142  cmsis-dap.o(i.vResetTarget)
     __aeabi_ddiv                             0x0800f5a1   Thumb Code     0  ddiv.o(x$fpl$ddiv)
@@ -3908,53 +3908,53 @@ Image Symbol Table
     MASS_StringProduct                       0x0800fbad   Data          38  usb_desc.o(.constdata)
     MASS_StringInterface                     0x0800fbd3   Data          16  usb_desc.o(.constdata)
     DAP_FW_Ver                               0x0800fbe3   Data           5  dap.o(.constdata)
-    usbd_power                               0x0800fbe8   Data           1  usb_config_1.o(.constdata)
-    usbd_hs_enable                           0x0800fbe9   Data           1  usb_config_1.o(.constdata)
-    usbd_if_num                              0x0800fbea   Data           2  usb_config_1.o(.constdata)
-    usbd_ep_num                              0x0800fbec   Data           1  usb_config_1.o(.constdata)
-    usbd_max_packet0                         0x0800fbed   Data           1  usb_config_1.o(.constdata)
-    usbd_hid_if_num                          0x0800fbee   Data           1  usb_config_1.o(.constdata)
-    usbd_hid_ep_intin                        0x0800fbef   Data           1  usb_config_1.o(.constdata)
-    usbd_hid_ep_intout                       0x0800fbf0   Data           1  usb_config_1.o(.constdata)
-    usbd_hid_interval                        0x0800fbf2   Data           4  usb_config_1.o(.constdata)
-    usbd_hid_maxpacketsize                   0x0800fbf6   Data           4  usb_config_1.o(.constdata)
-    usbd_hid_inreport_num                    0x0800fbfa   Data           1  usb_config_1.o(.constdata)
-    usbd_hid_outreport_num                   0x0800fbfb   Data           1  usb_config_1.o(.constdata)
-    usbd_hid_inreport_max_sz                 0x0800fbfc   Data           2  usb_config_1.o(.constdata)
-    usbd_hid_outreport_max_sz                0x0800fbfe   Data           2  usb_config_1.o(.constdata)
-    usbd_hid_featreport_max_sz               0x0800fc00   Data           2  usb_config_1.o(.constdata)
-    usbd_cdc_acm_cif_num                     0x0800fc02   Data           1  usb_config_1.o(.constdata)
-    usbd_cdc_acm_dif_num                     0x0800fc03   Data           1  usb_config_1.o(.constdata)
-    usbd_cdc_acm_ep_intin                    0x0800fc04   Data           1  usb_config_1.o(.constdata)
-    usbd_cdc_acm_ep_bulkin                   0x0800fc05   Data           1  usb_config_1.o(.constdata)
-    usbd_cdc_acm_ep_bulkout                  0x0800fc06   Data           1  usb_config_1.o(.constdata)
-    usbd_cdc_acm_sendbuf_sz                  0x0800fc08   Data           2  usb_config_1.o(.constdata)
-    usbd_cdc_acm_receivebuf_sz               0x0800fc0a   Data           2  usb_config_1.o(.constdata)
-    usbd_cdc_acm_maxpacketsize               0x0800fc0c   Data           4  usb_config_1.o(.constdata)
-    usbd_cdc_acm_maxpacketsize1              0x0800fc10   Data           4  usb_config_1.o(.constdata)
-    USBD_P_Power_Event                       0x0800fc14   Data           4  usb_config_1.o(.constdata)
-    USBD_P_Reset_Event                       0x0800fc18   Data           4  usb_config_1.o(.constdata)
-    USBD_P_Suspend_Event                     0x0800fc1c   Data           4  usb_config_1.o(.constdata)
-    USBD_P_Resume_Event                      0x0800fc20   Data           4  usb_config_1.o(.constdata)
-    USBD_P_WakeUp_Event                      0x0800fc24   Data           4  usb_config_1.o(.constdata)
-    USBD_P_SOF_Event                         0x0800fc28   Data           4  usb_config_1.o(.constdata)
-    USBD_P_Error_Event                       0x0800fc2c   Data           4  usb_config_1.o(.constdata)
-    USBD_P_EP                                0x0800fc30   Data          64  usb_config_1.o(.constdata)
-    USBD_P_Configure_Event                   0x0800fc70   Data           4  usb_config_1.o(.constdata)
-    USBD_P_Interface_Event                   0x0800fc74   Data           4  usb_config_1.o(.constdata)
-    USBD_P_Feature_Event                     0x0800fc78   Data           4  usb_config_1.o(.constdata)
-    __rtx                                    0x0800fc7c   Data           4  usb_config_1.o(.constdata)
-    USBD_HID_ReportDescriptor                0x0800fc80   Data          33  usb_config_1.o(.constdata)
-    USBD_HID_ReportDescriptorSize            0x0800fca2   Data           2  usb_config_1.o(.constdata)
-    USBD_HID_DescriptorOffset                0x0800fca4   Data           2  usb_config_1.o(.constdata)
-    USBD_DeviceDescriptor                    0x0800fca6   Data          18  usb_config_1.o(.constdata)
-    USBD_DeviceQualifier                     0x0800fcb8   Data           1  usb_config_1.o(.constdata)
-    USBD_DeviceQualifier_HS                  0x0800fcb9   Data           1  usb_config_1.o(.constdata)
-    USBD_ConfigDescriptor                    0x0800fcba   Data         108  usb_config_1.o(.constdata)
-    USBD_ConfigDescriptor_HS                 0x0800fd26   Data           1  usb_config_1.o(.constdata)
-    USBD_OtherSpeedConfigDescriptor          0x0800fd27   Data           1  usb_config_1.o(.constdata)
-    USBD_OtherSpeedConfigDescriptor_HS       0x0800fd28   Data           1  usb_config_1.o(.constdata)
-    USBD_StringDescriptor                    0x0800fd2a   Data         146  usb_config_1.o(.constdata)
+    usbd_power                               0x0800fbe8   Data           1  usb_config.o(.constdata)
+    usbd_hs_enable                           0x0800fbe9   Data           1  usb_config.o(.constdata)
+    usbd_if_num                              0x0800fbea   Data           2  usb_config.o(.constdata)
+    usbd_ep_num                              0x0800fbec   Data           1  usb_config.o(.constdata)
+    usbd_max_packet0                         0x0800fbed   Data           1  usb_config.o(.constdata)
+    usbd_hid_if_num                          0x0800fbee   Data           1  usb_config.o(.constdata)
+    usbd_hid_ep_intin                        0x0800fbef   Data           1  usb_config.o(.constdata)
+    usbd_hid_ep_intout                       0x0800fbf0   Data           1  usb_config.o(.constdata)
+    usbd_hid_interval                        0x0800fbf2   Data           4  usb_config.o(.constdata)
+    usbd_hid_maxpacketsize                   0x0800fbf6   Data           4  usb_config.o(.constdata)
+    usbd_hid_inreport_num                    0x0800fbfa   Data           1  usb_config.o(.constdata)
+    usbd_hid_outreport_num                   0x0800fbfb   Data           1  usb_config.o(.constdata)
+    usbd_hid_inreport_max_sz                 0x0800fbfc   Data           2  usb_config.o(.constdata)
+    usbd_hid_outreport_max_sz                0x0800fbfe   Data           2  usb_config.o(.constdata)
+    usbd_hid_featreport_max_sz               0x0800fc00   Data           2  usb_config.o(.constdata)
+    usbd_cdc_acm_cif_num                     0x0800fc02   Data           1  usb_config.o(.constdata)
+    usbd_cdc_acm_dif_num                     0x0800fc03   Data           1  usb_config.o(.constdata)
+    usbd_cdc_acm_ep_intin                    0x0800fc04   Data           1  usb_config.o(.constdata)
+    usbd_cdc_acm_ep_bulkin                   0x0800fc05   Data           1  usb_config.o(.constdata)
+    usbd_cdc_acm_ep_bulkout                  0x0800fc06   Data           1  usb_config.o(.constdata)
+    usbd_cdc_acm_sendbuf_sz                  0x0800fc08   Data           2  usb_config.o(.constdata)
+    usbd_cdc_acm_receivebuf_sz               0x0800fc0a   Data           2  usb_config.o(.constdata)
+    usbd_cdc_acm_maxpacketsize               0x0800fc0c   Data           4  usb_config.o(.constdata)
+    usbd_cdc_acm_maxpacketsize1              0x0800fc10   Data           4  usb_config.o(.constdata)
+    USBD_P_Power_Event                       0x0800fc14   Data           4  usb_config.o(.constdata)
+    USBD_P_Reset_Event                       0x0800fc18   Data           4  usb_config.o(.constdata)
+    USBD_P_Suspend_Event                     0x0800fc1c   Data           4  usb_config.o(.constdata)
+    USBD_P_Resume_Event                      0x0800fc20   Data           4  usb_config.o(.constdata)
+    USBD_P_WakeUp_Event                      0x0800fc24   Data           4  usb_config.o(.constdata)
+    USBD_P_SOF_Event                         0x0800fc28   Data           4  usb_config.o(.constdata)
+    USBD_P_Error_Event                       0x0800fc2c   Data           4  usb_config.o(.constdata)
+    USBD_P_EP                                0x0800fc30   Data          64  usb_config.o(.constdata)
+    USBD_P_Configure_Event                   0x0800fc70   Data           4  usb_config.o(.constdata)
+    USBD_P_Interface_Event                   0x0800fc74   Data           4  usb_config.o(.constdata)
+    USBD_P_Feature_Event                     0x0800fc78   Data           4  usb_config.o(.constdata)
+    __rtx                                    0x0800fc7c   Data           4  usb_config.o(.constdata)
+    USBD_HID_ReportDescriptor                0x0800fc80   Data          33  usb_config.o(.constdata)
+    USBD_HID_ReportDescriptorSize            0x0800fca2   Data           2  usb_config.o(.constdata)
+    USBD_HID_DescriptorOffset                0x0800fca4   Data           2  usb_config.o(.constdata)
+    USBD_DeviceDescriptor                    0x0800fca6   Data          18  usb_config.o(.constdata)
+    USBD_DeviceQualifier                     0x0800fcb8   Data           1  usb_config.o(.constdata)
+    USBD_DeviceQualifier_HS                  0x0800fcb9   Data           1  usb_config.o(.constdata)
+    USBD_ConfigDescriptor                    0x0800fcba   Data         108  usb_config.o(.constdata)
+    USBD_ConfigDescriptor_HS                 0x0800fd26   Data           1  usb_config.o(.constdata)
+    USBD_OtherSpeedConfigDescriptor          0x0800fd27   Data           1  usb_config.o(.constdata)
+    USBD_OtherSpeedConfigDescriptor_HS       0x0800fd28   Data           1  usb_config.o(.constdata)
+    USBD_StringDescriptor                    0x0800fd2a   Data         146  usb_config.o(.constdata)
     Driver_USART2                            0x0800fe18   Data          56  usart_stm32f10x.o(.constdata)
     flash_algo                               0x0800ff9c   Data          52  stm32f10x_128.o(.constdata)
     flash_opt                                0x08010188   Data          52  stm32f10x_opt.o(.constdata)
@@ -4038,14 +4038,14 @@ Image Symbol Table
     SaveRState                               0x2000041c   Data           2  usb_int.o(.data)
     SaveTState                               0x2000041e   Data           2  usb_int.o(.data)
     DAP_TransferAbort                        0x20000420   Data           1  dap.o(.data)
-    USBD_AltSetting                          0x20000438   Data           3  usb_config_1.o(.data)
-    USBD_HID_PollingCnt                      0x2000043c   Data           2  usb_config_1.o(.data)
-    USBD_HID_IdleCnt                         0x2000043e   Data           1  usb_config_1.o(.data)
-    USBD_HID_IdleReload                      0x2000043f   Data           1  usb_config_1.o(.data)
-    USBD_HID_IdleSet                         0x20000440   Data           1  usb_config_1.o(.data)
-    USBD_HID_FeatReport                      0x20000441   Data           2  usb_config_1.o(.data)
-    pBUF_DSCR                                0x20000444   Data           4  usbd_stm32f103_1.o(.data)
-    FreeBufAddr                              0x20000448   Data           2  usbd_stm32f103_1.o(.data)
+    USBD_AltSetting                          0x20000438   Data           3  usb_config.o(.data)
+    USBD_HID_PollingCnt                      0x2000043c   Data           2  usb_config.o(.data)
+    USBD_HID_IdleCnt                         0x2000043e   Data           1  usb_config.o(.data)
+    USBD_HID_IdleReload                      0x2000043f   Data           1  usb_config.o(.data)
+    USBD_HID_IdleSet                         0x20000440   Data           1  usb_config.o(.data)
+    USBD_HID_FeatReport                      0x20000441   Data           2  usb_config.o(.data)
+    pBUF_DSCR                                0x20000444   Data           4  usbd_stm32f103.o(.data)
+    FreeBufAddr                              0x20000448   Data           2  usbd_stm32f103.o(.data)
     W25QXX_TYPE                              0x20000480   Data           2  w25qxx.o(.data)
     USBD_DeviceAddress                       0x20000484   Data           1  usbd_core.o(.data)
     USBD_Configuration                       0x20000485   Data           1  usbd_core.o(.data)
@@ -4104,12 +4104,12 @@ Image Symbol Table
     temp                                     0x20001220   Data          60  usb_endp.o(.bss)
     Device_Info                              0x2000125c   Data          28  usb_init.o(.bss)
     DAP_Data                                 0x20001278   Data          64  dap.o(.bss)
-    USBD_EP0Buf                              0x200022b8   Data          64  usb_config_1.o(.bss)
-    USBD_HID_InReport                        0x200022f8   Data          65  usb_config_1.o(.bss)
-    USBD_HID_OutReport                       0x20002339   Data          65  usb_config_1.o(.bss)
-    USBD_CDC_ACM_SendBuf                     0x2000237a   Data          64  usb_config_1.o(.bss)
-    USBD_CDC_ACM_ReceiveBuf                  0x200023ba   Data          64  usb_config_1.o(.bss)
-    USBD_CDC_ACM_NotifyBuf                   0x200023fa   Data          10  usb_config_1.o(.bss)
+    USBD_EP0Buf                              0x200022b8   Data          64  usb_config.o(.bss)
+    USBD_HID_InReport                        0x200022f8   Data          65  usb_config.o(.bss)
+    USBD_HID_OutReport                       0x20002339   Data          65  usb_config.o(.bss)
+    USBD_CDC_ACM_SendBuf                     0x2000237a   Data          64  usb_config.o(.bss)
+    USBD_CDC_ACM_ReceiveBuf                  0x200023ba   Data          64  usb_config.o(.bss)
+    USBD_CDC_ACM_NotifyBuf                   0x200023fa   Data          10  usb_config.o(.bss)
     W25QXX_BUFFER                            0x20004c3c   Data        4096  w25qxx.o(.bss)
     __libspace_start                         0x20005c3c   Data          96  libspace.o(.bss)
     __temporary_stack_top$libspace           0x20005c9c   Data           0  libspace.o(.bss)
@@ -4292,8 +4292,8 @@ Memory Map of the image
     0x08003a60   0x08003a60   0x00000008   Code   RO         3364    i.EP2_OUT_Callback  usb_endp.o
     0x08003a68   0x08003a68   0x0000000c   Code   RO         3365    i.EP4_IN_Callback   usb_endp.o
     0x08003a74   0x08003a74   0x00000058   Code   RO         3366    i.EP6_OUT_Callback  usb_endp.o
-    0x08003acc   0x08003acc   0x00000040   Code   RO         5118    i.EP_Reset          usbd_stm32f103_1.o
-    0x08003b0c   0x08003b0c   0x0000004c   Code   RO         5119    i.EP_Status         usbd_stm32f103_1.o
+    0x08003acc   0x08003acc   0x00000040   Code   RO         5118    i.EP_Reset          usbd_stm32f103.o
+    0x08003b0c   0x08003b0c   0x0000004c   Code   RO         5119    i.EP_Status         usbd_stm32f103.o
     0x08003b58   0x08003b58   0x0000000c   Code   RO         1682    i.EXTI_ClearITPendingBit  stm32f10x_exti.o
     0x08003b64   0x08003b64   0x00000094   Code   RO         1687    i.EXTI_Init         stm32f10x_exti.o
     0x08003bf8   0x08003bf8   0x0000004c   Code   RO         1836    i.FLASH_ErasePage   stm32f10x_flash.o
@@ -4320,7 +4320,7 @@ Memory Map of the image
     0x08004654   0x08004654   0x0000002c   Code   RO         4819    i.GetTraceSpace     swo.o
     0x08004680   0x08004680   0x00000030   Code   RO         4820    i.GetTraceStatus    swo.o
     0x080046b0   0x080046b0   0x00000048   Code   RO         3070    i.Get_SerialNum     hw_config.o
-    0x080046f8   0x080046f8   0x000001b0   Code   RO         5304    i.HID_ProcessCommand  usbd_user_hid_1.o
+    0x080046f8   0x080046f8   0x000001b0   Code   RO         5304    i.HID_ProcessCommand  usbd_user_hid.o
     0x080048a8   0x080048a8   0x00000088   Code   RO          275    i.HardFault_Handler  cmsis-dap.o
     0x08004930   0x08004930   0x00000158   Code   RO         2627    i.HexFormatUncode   hex2bin.o
     0x08004a88   0x08004a88   0x00000070   Code   RO         3758    i.In0_Process       usb_core.o
@@ -4563,33 +4563,33 @@ Memory Map of the image
     0x0800b0a0   0x0800b0a0   0x00000004   Code   RO         6530    i.USBD_CDC_ACM_SetCommFeature  USB_CM3.lib(usbd_cdc_acm.o)
     0x0800b0a4   0x0800b0a4   0x00000010   Code   RO         6531    i.USBD_CDC_ACM_SetControlLineState  USB_CM3.lib(usbd_cdc_acm.o)
     0x0800b0b4   0x0800b0b4   0x0000002c   Code   RO         6532    i.USBD_CDC_ACM_SetLineCoding  USB_CM3.lib(usbd_cdc_acm.o)
-    0x0800b0e0   0x0800b0e0   0x00000016   Code   RO         5121    i.USBD_ClrStallEP   usbd_stm32f103_1.o
+    0x0800b0e0   0x0800b0e0   0x00000016   Code   RO         5121    i.USBD_ClrStallEP   usbd_stm32f103.o
     0x0800b0f6   0x0800b0f6   0x00000002   PAD
-    0x0800b0f8   0x0800b0f8   0x000000c8   Code   RO         5122    i.USBD_ConfigEP     usbd_stm32f103_1.o
-    0x0800b1c0   0x0800b1c0   0x00000018   Code   RO         5123    i.USBD_Configure    usbd_stm32f103_1.o
-    0x0800b1d8   0x0800b1d8   0x00000004   Code   RO         4941    i.USBD_Configure_Event  usb_config_1.o
-    0x0800b1dc   0x0800b1dc   0x00000038   Code   RO         5124    i.USBD_Connect      usbd_stm32f103_1.o
+    0x0800b0f8   0x0800b0f8   0x000000c8   Code   RO         5122    i.USBD_ConfigEP     usbd_stm32f103.o
+    0x0800b1c0   0x0800b1c0   0x00000018   Code   RO         5123    i.USBD_Configure    usbd_stm32f103.o
+    0x0800b1d8   0x0800b1d8   0x00000004   Code   RO         4941    i.USBD_Configure_Event  usb_config.o
+    0x0800b1dc   0x0800b1dc   0x00000038   Code   RO         5124    i.USBD_Connect      usbd_stm32f103.o
     0x0800b214   0x0800b214   0x00000038   Code   RO         6460    i.USBD_DataInStage  USB_CM3.lib(usbd_core.o)
     0x0800b24c   0x0800b24c   0x00000020   Code   RO         6461    i.USBD_DataOutStage  USB_CM3.lib(usbd_core.o)
-    0x0800b26c   0x0800b26c   0x00000002   Code   RO         5125    i.USBD_DirCtrlEP    usbd_stm32f103_1.o
-    0x0800b26e   0x0800b26e   0x0000000e   Code   RO         5126    i.USBD_DisableEP    usbd_stm32f103_1.o
-    0x0800b27c   0x0800b27c   0x00000010   Code   RO         5127    i.USBD_EnableEP     usbd_stm32f103_1.o
+    0x0800b26c   0x0800b26c   0x00000002   Code   RO         5125    i.USBD_DirCtrlEP    usbd_stm32f103.o
+    0x0800b26e   0x0800b26e   0x0000000e   Code   RO         5126    i.USBD_DisableEP    usbd_stm32f103.o
+    0x0800b27c   0x0800b27c   0x00000010   Code   RO         5127    i.USBD_EnableEP     usbd_stm32f103.o
     0x0800b28c   0x0800b28c   0x00000264   Code   RO         6462    i.USBD_EndPoint0    USB_CM3.lib(usbd_core.o)
-    0x0800b4f0   0x0800b4f0   0x00000004   Code   RO         4942    i.USBD_EndPoint0_Out_ADC_ReqToEP  usb_config_1.o
-    0x0800b4f4   0x0800b4f4   0x00000004   Code   RO         4943    i.USBD_EndPoint0_Out_ADC_ReqToIF  usb_config_1.o
+    0x0800b4f0   0x0800b4f0   0x00000004   Code   RO         4942    i.USBD_EndPoint0_Out_ADC_ReqToEP  usb_config.o
+    0x0800b4f4   0x0800b4f4   0x00000004   Code   RO         4943    i.USBD_EndPoint0_Out_ADC_ReqToIF  usb_config.o
     0x0800b4f8   0x0800b4f8   0x00000050   Code   RO         6630    i.USBD_EndPoint0_Out_CDC_ReqToIF  USB_CM3.lib(usbd_core_cdc.o)
-    0x0800b548   0x0800b548   0x00000004   Code   RO         4944    i.USBD_EndPoint0_Out_CLS_ReqToDEV  usb_config_1.o
-    0x0800b54c   0x0800b54c   0x00000004   Code   RO         4945    i.USBD_EndPoint0_Out_CLS_ReqToEP  usb_config_1.o
-    0x0800b550   0x0800b550   0x00000004   Code   RO         4946    i.USBD_EndPoint0_Out_CLS_ReqToIF  usb_config_1.o
+    0x0800b548   0x0800b548   0x00000004   Code   RO         4944    i.USBD_EndPoint0_Out_CLS_ReqToDEV  usb_config.o
+    0x0800b54c   0x0800b54c   0x00000004   Code   RO         4945    i.USBD_EndPoint0_Out_CLS_ReqToEP  usb_config.o
+    0x0800b550   0x0800b550   0x00000004   Code   RO         4946    i.USBD_EndPoint0_Out_CLS_ReqToIF  usb_config.o
     0x0800b554   0x0800b554   0x00000030   Code   RO         6640    i.USBD_EndPoint0_Out_HID_ReqToIF  USB_CM3.lib(usbd_core_hid.o)
-    0x0800b584   0x0800b584   0x00000004   Code   RO         4948    i.USBD_EndPoint0_Setup_ADC_ReqToEP  usb_config_1.o
-    0x0800b588   0x0800b588   0x00000004   Code   RO         4949    i.USBD_EndPoint0_Setup_ADC_ReqToIF  usb_config_1.o
+    0x0800b584   0x0800b584   0x00000004   Code   RO         4948    i.USBD_EndPoint0_Setup_ADC_ReqToEP  usb_config.o
+    0x0800b588   0x0800b588   0x00000004   Code   RO         4949    i.USBD_EndPoint0_Setup_ADC_ReqToIF  usb_config.o
     0x0800b58c   0x0800b58c   0x000000a0   Code   RO         6631    i.USBD_EndPoint0_Setup_CDC_ReqToIF  USB_CM3.lib(usbd_core_cdc.o)
-    0x0800b62c   0x0800b62c   0x00000004   Code   RO         4950    i.USBD_EndPoint0_Setup_CLS_ReqToDEV  usb_config_1.o
-    0x0800b630   0x0800b630   0x00000004   Code   RO         4951    i.USBD_EndPoint0_Setup_CLS_ReqToEP  usb_config_1.o
-    0x0800b634   0x0800b634   0x00000004   Code   RO         4952    i.USBD_EndPoint0_Setup_CLS_ReqToIF  usb_config_1.o
+    0x0800b62c   0x0800b62c   0x00000004   Code   RO         4950    i.USBD_EndPoint0_Setup_CLS_ReqToDEV  usb_config.o
+    0x0800b630   0x0800b630   0x00000004   Code   RO         4951    i.USBD_EndPoint0_Setup_CLS_ReqToEP  usb_config.o
+    0x0800b634   0x0800b634   0x00000004   Code   RO         4952    i.USBD_EndPoint0_Setup_CLS_ReqToIF  usb_config.o
     0x0800b638   0x0800b638   0x000000ac   Code   RO         6641    i.USBD_EndPoint0_Setup_HID_ReqToIF  USB_CM3.lib(usbd_core_hid.o)
-    0x0800b6e4   0x0800b6e4   0x00000004   Code   RO         4953    i.USBD_EndPoint0_Setup_MSC_ReqToIF  usb_config_1.o
+    0x0800b6e4   0x0800b6e4   0x00000004   Code   RO         4953    i.USBD_EndPoint0_Setup_MSC_ReqToIF  usb_config.o
     0x0800b6e8   0x0800b6e8   0x00000028   Code   RO         6583    i.USBD_HID_Configure_Event  USB_CM3.lib(usbd_hid.o)
     0x0800b710   0x0800b710   0x00000164   Code   RO         6584    i.USBD_HID_EP_INTIN_Event  USB_CM3.lib(usbd_hid.o)
     0x0800b874   0x0800b874   0x00000084   Code   RO         6585    i.USBD_HID_EP_INTOUT_Event  USB_CM3.lib(usbd_hid.o)
@@ -4602,11 +4602,11 @@ Memory Map of the image
     0x0800bacc   0x0800bacc   0x0000003c   Code   RO         6591    i.USBD_HID_SetIdle  USB_CM3.lib(usbd_hid.o)
     0x0800bb08   0x0800bb08   0x00000014   Code   RO         6592    i.USBD_HID_SetProtocol  USB_CM3.lib(usbd_hid.o)
     0x0800bb1c   0x0800bb1c   0x00000040   Code   RO         6593    i.USBD_HID_SetReport  USB_CM3.lib(usbd_hid.o)
-    0x0800bb5c   0x0800bb5c   0x0000001c   Code   RO         5129    i.USBD_Init         usbd_stm32f103_1.o
-    0x0800bb78   0x0800bb78   0x00000016   Code   RO         5130    i.USBD_IntrEna      usbd_stm32f103_1.o
-    0x0800bb8e   0x0800bb8e   0x00000002   Code   RO         4954    i.USBD_RTX_TaskInit  usb_config_1.o
-    0x0800bb90   0x0800bb90   0x00000060   Code   RO         5131    i.USBD_ReadEP       usbd_stm32f103_1.o
-    0x0800bbf0   0x0800bbf0   0x00000002   Code   RO         4955    i.USBD_ReqClrFeature_MSC  usb_config_1.o
+    0x0800bb5c   0x0800bb5c   0x0000001c   Code   RO         5129    i.USBD_Init         usbd_stm32f103.o
+    0x0800bb78   0x0800bb78   0x00000016   Code   RO         5130    i.USBD_IntrEna      usbd_stm32f103.o
+    0x0800bb8e   0x0800bb8e   0x00000002   Code   RO         4954    i.USBD_RTX_TaskInit  usb_config.o
+    0x0800bb90   0x0800bb90   0x00000060   Code   RO         5131    i.USBD_ReadEP       usbd_stm32f103.o
+    0x0800bbf0   0x0800bbf0   0x00000002   Code   RO         4955    i.USBD_ReqClrFeature_MSC  usb_config.o
     0x0800bbf2   0x0800bbf2   0x00000002   PAD
     0x0800bbf4   0x0800bbf4   0x00000130   Code   RO         6487    i.USBD_ReqGetDescriptor  USB_CM3.lib(usbd_core.o)
     0x0800bd24   0x0800bd24   0x00000084   Code   RO         6642    i.USBD_ReqGetDescriptor_HID  USB_CM3.lib(usbd_core_hid.o)
@@ -4614,22 +4614,22 @@ Memory Map of the image
     0x0800be24   0x0800be24   0x000000ac   Code   RO         6485    i.USBD_ReqSetClrFeature  USB_CM3.lib(usbd_core.o)
     0x0800bed0   0x0800bed0   0x00000190   Code   RO         6489    i.USBD_ReqSetConfiguration  USB_CM3.lib(usbd_core.o)
     0x0800c060   0x0800c060   0x0000012c   Code   RO         6491    i.USBD_ReqSetInterface  USB_CM3.lib(usbd_core.o)
-    0x0800c18c   0x0800c18c   0x000000b4   Code   RO         5132    i.USBD_Reset        usbd_stm32f103_1.o
-    0x0800c240   0x0800c240   0x0000000c   Code   RO         5133    i.USBD_ResetEP      usbd_stm32f103_1.o
-    0x0800c24c   0x0800c24c   0x00000004   Code   RO         4956    i.USBD_Reset_Event  usb_config_1.o
-    0x0800c250   0x0800c250   0x0000000e   Code   RO         4957    i.USBD_SOF_Event    usb_config_1.o
+    0x0800c18c   0x0800c18c   0x000000b4   Code   RO         5132    i.USBD_Reset        usbd_stm32f103.o
+    0x0800c240   0x0800c240   0x0000000c   Code   RO         5133    i.USBD_ResetEP      usbd_stm32f103.o
+    0x0800c24c   0x0800c24c   0x00000004   Code   RO         4956    i.USBD_Reset_Event  usb_config.o
+    0x0800c250   0x0800c250   0x0000000e   Code   RO         4957    i.USBD_SOF_Event    usb_config.o
     0x0800c25e   0x0800c25e   0x00000002   PAD
-    0x0800c260   0x0800c260   0x00000014   Code   RO         5135    i.USBD_SetAddress   usbd_stm32f103_1.o
-    0x0800c274   0x0800c274   0x00000010   Code   RO         5136    i.USBD_SetStallEP   usbd_stm32f103_1.o
+    0x0800c260   0x0800c260   0x00000014   Code   RO         5135    i.USBD_SetAddress   usbd_stm32f103.o
+    0x0800c274   0x0800c274   0x00000010   Code   RO         5136    i.USBD_SetStallEP   usbd_stm32f103.o
     0x0800c284   0x0800c284   0x0000000c   Code   RO         6464    i.USBD_SetupStage   USB_CM3.lib(usbd_core.o)
     0x0800c290   0x0800c290   0x0000000a   Code   RO         6465    i.USBD_StatusInStage  USB_CM3.lib(usbd_core.o)
     0x0800c29a   0x0800c29a   0x00000002   PAD
     0x0800c29c   0x0800c29c   0x0000000c   Code   RO         6466    i.USBD_StatusOutStage  USB_CM3.lib(usbd_core.o)
-    0x0800c2a8   0x0800c2a8   0x0000001c   Code   RO         5137    i.USBD_Suspend      usbd_stm32f103_1.o
-    0x0800c2c4   0x0800c2c4   0x00000014   Code   RO         5138    i.USBD_WakeUp       usbd_stm32f103_1.o
-    0x0800c2d8   0x0800c2d8   0x00000002   Code   RO         5139    i.USBD_WakeUpCfg    usbd_stm32f103_1.o
+    0x0800c2a8   0x0800c2a8   0x0000001c   Code   RO         5137    i.USBD_Suspend      usbd_stm32f103.o
+    0x0800c2c4   0x0800c2c4   0x00000014   Code   RO         5138    i.USBD_WakeUp       usbd_stm32f103.o
+    0x0800c2d8   0x0800c2d8   0x00000002   Code   RO         5139    i.USBD_WakeUpCfg    usbd_stm32f103.o
     0x0800c2da   0x0800c2da   0x00000002   PAD
-    0x0800c2dc   0x0800c2dc   0x00000074   Code   RO         5140    i.USBD_WriteEP      usbd_stm32f103_1.o
+    0x0800c2dc   0x0800c2dc   0x00000074   Code   RO         5140    i.USBD_WriteEP      usbd_stm32f103.o
     0x0800c350   0x0800c350   0x0000000c   Code   RO         3076    i.USBWakeUp_IRQHandler  hw_config.o
     0x0800c35c   0x0800c35c   0x00000002   Code   RO         3077    i.USB_Cable_Config  hw_config.o
     0x0800c35e   0x0800c35e   0x00000008   Code   RO         3078    i.USB_HP_CAN1_TX_IRQHandler  hw_config.o
@@ -4638,7 +4638,7 @@ Memory Map of the image
     0x0800c3a4   0x0800c3a4   0x0000005e   Code   RO         3079    i.USB_Interrupts_Config  hw_config.o
     0x0800c402   0x0800c402   0x00000002   PAD
     0x0800c404   0x0800c404   0x00000050   Code   RO         3415    i.USB_Istr          usb_istr.o
-    0x0800c454   0x0800c454   0x00000168   Code   RO         5141    i.USB_LP_CAN1_RX0_IRQHandler  usbd_stm32f103_1.o
+    0x0800c454   0x0800c454   0x00000168   Code   RO         5141    i.USB_LP_CAN1_RX0_IRQHandler  usbd_stm32f103.o
     0x0800c5bc   0x0800c5bc   0x00000024   Code   RO         4365    i.USB_SIL_Init      usb_sil.o
     0x0800c5e0   0x0800c5e0   0x0000002e   Code   RO         4366    i.USB_SIL_Read      usb_sil.o
     0x0800c60e   0x0800c60e   0x0000002e   Code   RO         4367    i.USB_SIL_Write     usb_sil.o
@@ -4748,20 +4748,20 @@ Memory Map of the image
     0x0800ef64   0x0800ef64   0x00000164   Code   RO          607    i.uart_init         usart.o
     0x0800f0c8   0x0800f0c8   0x0000008c   Code   RO          608    i.usart_receive_parse  usart.o
     0x0800f154   0x0800f154   0x0000003c   Code   RO          609    i.usart_sendCommand  usart.o
-    0x0800f190   0x0800f190   0x0000000e   Code   RO         4958    i.usbd_class_init   usb_config_1.o
+    0x0800f190   0x0800f190   0x0000000e   Code   RO         4958    i.usbd_class_init   usb_config.o
     0x0800f19e   0x0800f19e   0x00000002   PAD
     0x0800f1a0   0x0800f1a0   0x00000010   Code   RO         6467    i.usbd_configured   USB_CM3.lib(usbd_core.o)
     0x0800f1b0   0x0800f1b0   0x00000004   Code   RO         6468    i.usbd_connect      USB_CM3.lib(usbd_core.o)
     0x0800f1b4   0x0800f1b4   0x00000004   Code   RO         6597    i.usbd_hid_get_protocol  USB_CM3.lib(usbd_hid.o)
-    0x0800f1b8   0x0800f1b8   0x000000a0   Code   RO         5305    i.usbd_hid_get_report  usbd_user_hid_1.o
+    0x0800f1b8   0x0800f1b8   0x000000a0   Code   RO         5305    i.usbd_hid_get_report  usbd_user_hid.o
     0x0800f258   0x0800f258   0x0000009c   Code   RO         6599    i.usbd_hid_get_report_trigger  USB_CM3.lib(usbd_hid.o)
-    0x0800f2f4   0x0800f2f4   0x00000040   Code   RO         5306    i.usbd_hid_init     usbd_user_hid_1.o
-    0x0800f334   0x0800f334   0x000000bc   Code   RO         5307    i.usbd_hid_process  usbd_user_hid_1.o
+    0x0800f2f4   0x0800f2f4   0x00000040   Code   RO         5306    i.usbd_hid_init     usbd_user_hid.o
+    0x0800f334   0x0800f334   0x000000bc   Code   RO         5307    i.usbd_hid_process  usbd_user_hid.o
     0x0800f3f0   0x0800f3f0   0x00000002   Code   RO         6601    i.usbd_hid_set_protocol  USB_CM3.lib(usbd_hid.o)
     0x0800f3f2   0x0800f3f2   0x00000002   PAD
-    0x0800f3f4   0x0800f3f4   0x000000a0   Code   RO         5308    i.usbd_hid_set_report  usbd_user_hid_1.o
+    0x0800f3f4   0x0800f3f4   0x000000a0   Code   RO         5308    i.usbd_hid_set_report  usbd_user_hid.o
     0x0800f494   0x0800f494   0x0000001c   Code   RO         6469    i.usbd_init         USB_CM3.lib(usbd_core.o)
-    0x0800f4b0   0x0800f4b0   0x00000002   Code   RO         4960    i.usbd_os_evt_set   usb_config_1.o
+    0x0800f4b0   0x0800f4b0   0x00000002   Code   RO         4960    i.usbd_os_evt_set   usb_config.o
     0x0800f4b2   0x0800f4b2   0x00000002   PAD
     0x0800f4b4   0x0800f4b4   0x00000024   Code   RO         6470    i.usbd_reset_core   USB_CM3.lib(usbd_core.o)
     0x0800f4d8   0x0800f4d8   0x0000009c   Code   RO          301    i.vResetTarget      cmsis-dap.o
@@ -4777,7 +4777,7 @@ Memory Map of the image
     0x0800facc   0x0800facc   0x00000054   Data   RO          302    .constdata          cmsis-dap.o
     0x0800fb20   0x0800fb20   0x000000c3   Data   RO         3338    .constdata          usb_desc.o
     0x0800fbe3   0x0800fbe3   0x00000005   Data   RO         4434    .constdata          dap.o
-    0x0800fbe8   0x0800fbe8   0x000001d4   Data   RO         4963    .constdata          usb_config_1.o
+    0x0800fbe8   0x0800fbe8   0x000001d4   Data   RO         4963    .constdata          usb_config.o
     0x0800fdbc   0x0800fdbc   0x00000094   Data   RO         5767    .constdata          usart_stm32f10x.o
     0x0800fe50   0x0800fe50   0x00000180   Data   RO         6233    .constdata          stm32f10x_128.o
     0x0800ffd0   0x0800ffd0   0x000001ec   Data   RO         6242    .constdata          stm32f10x_opt.o
@@ -4819,11 +4819,11 @@ Memory Map of the image
     0x20000420   COMPRESSED   0x00000001   Data   RW         4435    .data               dap.o
     0x20000421   COMPRESSED   0x00000003   PAD
     0x20000424   COMPRESSED   0x00000014   Data   RW         4835    .data               swo.o
-    0x20000438   COMPRESSED   0x0000000b   Data   RW         4964    .data               usb_config_1.o
+    0x20000438   COMPRESSED   0x0000000b   Data   RW         4964    .data               usb_config.o
     0x20000443   COMPRESSED   0x00000001   PAD
-    0x20000444   COMPRESSED   0x00000006   Data   RW         5142    .data               usbd_stm32f103_1.o
+    0x20000444   COMPRESSED   0x00000006   Data   RW         5142    .data               usbd_stm32f103.o
     0x2000044a   COMPRESSED   0x00000002   PAD
-    0x2000044c   COMPRESSED   0x00000018   Data   RW         5310    .data               usbd_user_hid_1.o
+    0x2000044c   COMPRESSED   0x00000018   Data   RW         5310    .data               usbd_user_hid.o
     0x20000464   COMPRESSED   0x0000000f   Data   RW         5405    .data               usbd_user_cdc_acm.o
     0x20000473   COMPRESSED   0x00000002   Data   RW         5503    .data               dma_stm32f10x.o
     0x20000475   COMPRESSED   0x00000003   PAD
@@ -4842,8 +4842,8 @@ Memory Map of the image
     0x2000125c        -       0x0000001c   Zero   RW         3887    .bss                usb_init.o
     0x20001278        -       0x00000040   Zero   RW         4433    .bss                dap.o
     0x200012b8        -       0x00001000   Zero   RW         4834    .bss                swo.o
-    0x200022b8        -       0x0000014c   Zero   RW         4962    .bss                usb_config_1.o
-    0x20002404        -       0x00002000   Zero   RW         5309    .bss                usbd_user_hid_1.o
+    0x200022b8        -       0x0000014c   Zero   RW         4962    .bss                usb_config.o
+    0x20002404        -       0x00002000   Zero   RW         5309    .bss                usbd_user_hid.o
     0x20004404        -       0x00000800   Zero   RW         5404    .bss                usbd_user_cdc_acm.o
     0x20004c04        -       0x00000038   Zero   RW         5766    .bss                usart_stm32f10x.o
     0x20004c3c        -       0x00001000   Zero   RW         6359    .bss                w25qxx.o
@@ -4860,65 +4860,65 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-      2244        260         84         12          0      65986   cmsis-dap.o
-      5068        242          5          1         64      31125   dap.o
-       128         32          0          0          0        991   dap_vendor.o
-       144         22          0          4          0       1172   delay.o
-       174          0          0          0          0       4780   diskio.o
+      2244        260         84         12          0      66026   cmsis-dap.o
+      5068        242          5          1         64      31153   dap.o
+       128         32          0          0          0        995   dap_vendor.o
+       144         22          0          4          0       1176   delay.o
+       174          0          0          0          0       4788   diskio.o
       1254        132          0          2          0     238696   dma_stm32f10x.o
-      6340         46          0          6          0      29709   ff.o
-       744         76          0          0          0       6069   gpio_stm32f10x.o
+      6340         46          0          6          0      29753   ff.o
+       744         76          0          0          0       6077   gpio_stm32f10x.o
        408         46          0          0          0       4777   hex2bin.o
-       244         14          0          0          0       4211   hw_config.o
-      4392         94          0          0          0      29306   jtag_dp.o
+       244         14          0          0          0       4219   hw_config.o
+      4392         94          0          0          0      29326   jtag_dp.o
         76         10          0          0          0        503   key.o
         52          8          0          0          0        483   led.o
-      4808        564          0        508       2184     277480   main.o
+      4808        564          0        508       2184     277524   main.o
        174         14          0         16          0       3461   mass_mal.o
-       556         80          0         36        512       3776   memory.o
-       172         22          0          0          0       2017   misc.o
-       880         22       2072          0          0       5641   oled.o
+       556         80          0         36        512       3788   memory.o
+       172         22          0          0          0       2025   misc.o
+       880         22       2072          0          0       5649   oled.o
          0          0          0        113          0       1094   scsi_data.o
        272         18          0          0          0       1745   spi.o
         64         26        304          0       1536        796   startup_stm32f10x_hd.o
-         0          0        384          0          0        581   stm32f10x_128.o
-       474         18          0          0          0       5571   stm32f10x_dma.o
-       160         12          0          0          0       1473   stm32f10x_exti.o
-       274         30          0          0          0       3378   stm32f10x_flash.o
-       430          6          0          0          0       3830   stm32f10x_gpio.o
+         0          0        384          0          0        585   stm32f10x_128.o
+       474         18          0          0          0       5575   stm32f10x_dma.o
+       160         12          0          0          0       1477   stm32f10x_exti.o
+       274         30          0          0          0       3382   stm32f10x_flash.o
+       430          6          0          0          0       3834   stm32f10x_gpio.o
          0          0        492          0          0        580   stm32f10x_opt.o
-       320         44          0         20          0       5453   stm32f10x_rcc.o
+       320         44          0         20          0       5457   stm32f10x_rcc.o
        112          0          0          0          0       3782   stm32f10x_spi.o
-       456          6          0          0          0       6163   stm32f10x_usart.o
-      3292         82          0          0          0      23511   sw_dp.o
-       224         14          0          0          0       3293   swd_flash.o
-      2318        106          0          8          0      19179   swd_host.o
+       456          6          0          0          0       6167   stm32f10x_usart.o
+      3292         82          0          0          0      23531   sw_dp.o
+       224         14          0          0          0       3301   swd_flash.o
+      2318        106          0          8          0      19195   swd_host.o
        144         16          0          0          0       1606   swd_opt.o
-      1496        248          0         20       4096      17464   swo.o
-       328         28          0         20          0       2117   system_stm32f10x.o
-       706         84          0          7        460       5978   usart.o
-      5492        184        148          0         56      56394   usart_stm32f10x.o
-      1148        108          0         12        112       4667   usb_bot.o
-        86          0        468         11        332      34534   usb_config_1.o
-      3058        288          0          3          0      14967   usb_core.o
+      1496        248          0         20       4096      17532   swo.o
+       328         28          0         20          0       2125   system_stm32f10x.o
+       706         84          0          7        460       5990   usart.o
+      5492        184        148          0         56      56422   usart_stm32f10x.o
+      1148        108          0         12        112       4675   usb_bot.o
+        86          0        468         11        332      34546   usb_config.o
+      3058        288          0          3          0      14975   usb_core.o
          0          0        195         26          0        996   usb_desc.o
-       116         16          0          9        124       2908   usb_endp.o
-        60         24          0         20         28       4198   usb_init.o
-       848         58          0          4          0       2373   usb_int.o
+       116         16          0          9        124       2916   usb_endp.o
+        60         24          0         20         28       4202   usb_init.o
+       848         58          0          4          0       2377   usb_int.o
         80         18          0         60          0       1388   usb_istr.o
-        96         10          0          0          0       1852   usb_mem.o
-       828        136          0        160          0      12545   usb_prop.o
-        64         10          0          7          0       1989   usb_pwr.o
-       712        100          0          0          0      10215   usb_regs.o
-      1086        130          0          0          0       9840   usb_scsi.o
-       128          8          0          0          0       2254   usb_sil.o
-      1374        134          0          6          0      36321   usbd_stm32f103_1.o
+        96         10          0          0          0       1856   usb_mem.o
+       828        136          0        160          0      12561   usb_prop.o
+        64         10          0          7          0       1993   usb_pwr.o
+       712        100          0          0          0      10247   usb_regs.o
+      1086        130          0          0          0       9864   usb_scsi.o
+       128          8          0          0          0       2258   usb_sil.o
+      1374        134          0          6          0      36337   usbd_stm32f103.o
        530         72          0         15       2048       5570   usbd_user_cdc_acm.o
-      1004        148          0         24       8192      34508   usbd_user_hid_1.o
-       756         70          0          2       4096       6701   w25qxx.o
+      1004        148          0         24       8192      34508   usbd_user_hid.o
+       756         70          0          2       4096       6729   w25qxx.o
 
     ----------------------------------------------------------------------
-     56476       3936       4184       1156      23840    1061997   Object Totals
+     56476       3936       4184       1156      23840    1062593   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         82          0          0         24          0          0   (incl. Padding)
 
@@ -4996,8 +4996,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     63900       4740       4224       1308      23940    1040505   Grand Totals
-     63900       4740       4224        516      23940    1040505   ELF Image Totals (compressed)
+     63900       4740       4224       1308      23940    1041101   Grand Totals
+     63900       4740       4224        516      23940    1041101   ELF Image Totals (compressed)
      63900       4740       4224        516          0          0   ROM Totals
 
 ==============================================================================

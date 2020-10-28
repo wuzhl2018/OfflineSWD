@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\STM32-OffineSWD.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\STM32-OffineSWD.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Fri Oct 09 09:47:28 2020
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Wed Oct 28 18:14:55 2020
 <BR><P>
 <H3>Maximum Stack Usage =       1688 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -131,16 +131,16 @@ Function Pointers
  <LI><a href="#[46]">USART3_IRQHandler</a> from startup_stm32f10x_hd.o(.text) referenced from startup_stm32f10x_hd.o(RESET)
  <LI><a href="#[64]">USART_Callback</a> from swo.o(i.USART_Callback) referenced from swo.o(i.UART_SWO_Mode)
  <LI><a href="#[72]">USARTx_GetVersion</a> from usart_stm32f10x.o(i.USARTx_GetVersion) referenced from usart_stm32f10x.o(.constdata)
- <LI><a href="#[6f]">USBD_CDC_ACM_EP_BULK_Event</a> from usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULK_Event) referenced from usb_config_1.o(.constdata)
- <LI><a href="#[6e]">USBD_CDC_ACM_EP_INTIN_Event</a> from usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_INTIN_Event) referenced from usb_config_1.o(.constdata)
- <LI><a href="#[71]">USBD_Configure_Event</a> from usb_config_1.o(i.USBD_Configure_Event) referenced from usb_config_1.o(.constdata)
- <LI><a href="#[6d]">USBD_EndPoint0</a> from usbd_core.o(i.USBD_EndPoint0) referenced from usb_config_1.o(.constdata)
- <LI><a href="#[70]">USBD_HID_EP_INT_Event</a> from usbd_hid.o(i.USBD_HID_EP_INT_Event) referenced from usb_config_1.o(.constdata)
- <LI><a href="#[6b]">USBD_Reset_Event</a> from usb_config_1.o(i.USBD_Reset_Event) referenced from usb_config_1.o(.constdata)
- <LI><a href="#[6c]">USBD_SOF_Event</a> from usb_config_1.o(i.USBD_SOF_Event) referenced from usb_config_1.o(.constdata)
+ <LI><a href="#[6f]">USBD_CDC_ACM_EP_BULK_Event</a> from usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_BULK_Event) referenced from usb_config.o(.constdata)
+ <LI><a href="#[6e]">USBD_CDC_ACM_EP_INTIN_Event</a> from usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_INTIN_Event) referenced from usb_config.o(.constdata)
+ <LI><a href="#[71]">USBD_Configure_Event</a> from usb_config.o(i.USBD_Configure_Event) referenced from usb_config.o(.constdata)
+ <LI><a href="#[6d]">USBD_EndPoint0</a> from usbd_core.o(i.USBD_EndPoint0) referenced from usb_config.o(.constdata)
+ <LI><a href="#[70]">USBD_HID_EP_INT_Event</a> from usbd_hid.o(i.USBD_HID_EP_INT_Event) referenced from usb_config.o(.constdata)
+ <LI><a href="#[6b]">USBD_Reset_Event</a> from usb_config.o(i.USBD_Reset_Event) referenced from usb_config.o(.constdata)
+ <LI><a href="#[6c]">USBD_SOF_Event</a> from usb_config.o(i.USBD_SOF_Event) referenced from usb_config.o(.constdata)
  <LI><a href="#[49]">USBWakeUp_IRQHandler</a> from hw_config.o(i.USBWakeUp_IRQHandler) referenced from startup_stm32f10x_hd.o(RESET)
  <LI><a href="#[32]">USB_HP_CAN1_TX_IRQHandler</a> from hw_config.o(i.USB_HP_CAN1_TX_IRQHandler) referenced from startup_stm32f10x_hd.o(RESET)
- <LI><a href="#[33]">USB_LP_CAN1_RX0_IRQHandler</a> from usbd_stm32f103_1.o(i.USB_LP_CAN1_RX0_IRQHandler) referenced from startup_stm32f10x_hd.o(RESET)
+ <LI><a href="#[33]">USB_LP_CAN1_RX0_IRQHandler</a> from usbd_stm32f103.o(i.USB_LP_CAN1_RX0_IRQHandler) referenced from startup_stm32f10x_hd.o(RESET)
  <LI><a href="#[1a]">UsageFault_Handler</a> from cmsis-dap.o(i.HardFault_Handler) referenced from startup_stm32f10x_hd.o(RESET)
  <LI><a href="#[6a]">UserAppAbort</a> from cmsis-dap.o(i.UserAppAbort) referenced from cmsis-dap.o(.constdata)
  <LI><a href="#[68]">UserAppInit</a> from cmsis-dap.o(i.UserAppInit) referenced from cmsis-dap.o(.constdata)
@@ -1013,14 +1013,14 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> usb_istr.o(.data)
 </UL>
-<P><STRONG><a name="[1d9]"></a>EP_Reset</STRONG> (Thumb, 58 bytes, Stack size 12 bytes, usbd_stm32f103_1.o(i.EP_Reset))
+<P><STRONG><a name="[1d9]"></a>EP_Reset</STRONG> (Thumb, 58 bytes, Stack size 12 bytes, usbd_stm32f103.o(i.EP_Reset))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = EP_Reset
 </UL>
 <BR>[Called By]<UL><LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_ResetEP
 <LI><a href="#[1d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_ClrStallEP
 </UL>
 
-<P><STRONG><a name="[1da]"></a>EP_Status</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, usbd_stm32f103_1.o(i.EP_Status))
+<P><STRONG><a name="[1da]"></a>EP_Status</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, usbd_stm32f103.o(i.EP_Status))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = EP_Status
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_WriteEP
@@ -1184,7 +1184,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MASS_init
 </UL>
 
-<P><STRONG><a name="[12d]"></a>HID_ProcessCommand</STRONG> (Thumb, 400 bytes, Stack size 32 bytes, usbd_user_hid_1.o(i.HID_ProcessCommand))
+<P><STRONG><a name="[12d]"></a>HID_ProcessCommand</STRONG> (Thumb, 400 bytes, Stack size 32 bytes, usbd_user_hid.o(i.HID_ProcessCommand))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = HID_ProcessCommand &rArr; FLASH_ProgramHalfWord &rArr; FLASH_WaitForLastOperation
 </UL>
 <BR>[Calls]<UL><LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_Unlock
@@ -2550,10 +2550,10 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[1c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_CDC_ACM_EP_BULKOUT_Event
 <LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_CDC_ACM_EP_BULKIN_Event
 </UL>
-<BR>[Address Reference Count : 1]<UL><LI> usb_config_1.o(.constdata)
+<BR>[Address Reference Count : 1]<UL><LI> usb_config.o(.constdata)
 </UL>
 <P><STRONG><a name="[6e]"></a>USBD_CDC_ACM_EP_INTIN_Event</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, usbd_cdc_acm.o(i.USBD_CDC_ACM_EP_INTIN_Event))
-<BR>[Address Reference Count : 1]<UL><LI> usb_config_1.o(.constdata)
+<BR>[Address Reference Count : 1]<UL><LI> usb_config.o(.constdata)
 </UL>
 <P><STRONG><a name="[1ff]"></a>USBD_CDC_ACM_GetCommFeature</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, usbd_cdc_acm.o(i.USBD_CDC_ACM_GetCommFeature))
 <BR><BR>[Called By]<UL><LI><a href="#[1ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0_Setup_CDC_ReqToIF
@@ -2661,7 +2661,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[1f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0_Out_CDC_ReqToIF
 </UL>
 
-<P><STRONG><a name="[1d8]"></a>USBD_ClrStallEP</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, usbd_stm32f103_1.o(i.USBD_ClrStallEP))
+<P><STRONG><a name="[1d8]"></a>USBD_ClrStallEP</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, usbd_stm32f103.o(i.USBD_ClrStallEP))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = USBD_ClrStallEP &rArr; EP_Status
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EP_Status
@@ -2671,23 +2671,23 @@ Global Symbols
 <LI><a href="#[1e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_ReqSetClrFeature
 </UL>
 
-<P><STRONG><a name="[214]"></a>USBD_ConfigEP</STRONG> (Thumb, 186 bytes, Stack size 8 bytes, usbd_stm32f103_1.o(i.USBD_ConfigEP))
+<P><STRONG><a name="[214]"></a>USBD_ConfigEP</STRONG> (Thumb, 186 bytes, Stack size 8 bytes, usbd_stm32f103.o(i.USBD_ConfigEP))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = USBD_ConfigEP
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_ReqSetInterface
 <LI><a href="#[1e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_ReqSetConfiguration
 </UL>
 
-<P><STRONG><a name="[213]"></a>USBD_Configure</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, usbd_stm32f103_1.o(i.USBD_Configure))
+<P><STRONG><a name="[213]"></a>USBD_Configure</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, usbd_stm32f103.o(i.USBD_Configure))
 <BR><BR>[Called By]<UL><LI><a href="#[1e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_ReqSetConfiguration
 </UL>
 
-<P><STRONG><a name="[71]"></a>USBD_Configure_Event</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, usb_config_1.o(i.USBD_Configure_Event))
+<P><STRONG><a name="[71]"></a>USBD_Configure_Event</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, usb_config.o(i.USBD_Configure_Event))
 <BR><BR>[Calls]<UL><LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_HID_Configure_Event
 </UL>
-<BR>[Address Reference Count : 1]<UL><LI> usb_config_1.o(.constdata)
+<BR>[Address Reference Count : 1]<UL><LI> usb_config.o(.constdata)
 </UL>
-<P><STRONG><a name="[268]"></a>USBD_Connect</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, usbd_stm32f103_1.o(i.USBD_Connect))
+<P><STRONG><a name="[268]"></a>USBD_Connect</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, usbd_stm32f103.o(i.USBD_Connect))
 <BR><BR>[Called By]<UL><LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usbd_connect
 </UL>
 
@@ -2709,11 +2709,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0
 </UL>
 
-<P><STRONG><a name="[1e1]"></a>USBD_DirCtrlEP</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, usbd_stm32f103_1.o(i.USBD_DirCtrlEP))
+<P><STRONG><a name="[1e1]"></a>USBD_DirCtrlEP</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, usbd_stm32f103.o(i.USBD_DirCtrlEP))
 <BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0
 </UL>
 
-<P><STRONG><a name="[1de]"></a>USBD_DisableEP</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, usbd_stm32f103_1.o(i.USBD_DisableEP))
+<P><STRONG><a name="[1de]"></a>USBD_DisableEP</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, usbd_stm32f103.o(i.USBD_DisableEP))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = USBD_DisableEP &rArr; EP_Status
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EP_Status
@@ -2722,7 +2722,7 @@ Global Symbols
 <LI><a href="#[1e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_ReqSetConfiguration
 </UL>
 
-<P><STRONG><a name="[1df]"></a>USBD_EnableEP</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, usbd_stm32f103_1.o(i.USBD_EnableEP))
+<P><STRONG><a name="[1df]"></a>USBD_EnableEP</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, usbd_stm32f103.o(i.USBD_EnableEP))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = USBD_EnableEP &rArr; EP_Status
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EP_Status
@@ -2765,13 +2765,13 @@ Global Symbols
 <LI><a href="#[1dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_DataOutStage
 <LI><a href="#[1dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_DataInStage
 </UL>
-<BR>[Address Reference Count : 1]<UL><LI> usb_config_1.o(.constdata)
+<BR>[Address Reference Count : 1]<UL><LI> usb_config.o(.constdata)
 </UL>
-<P><STRONG><a name="[1f8]"></a>USBD_EndPoint0_Out_ADC_ReqToEP</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, usb_config_1.o(i.USBD_EndPoint0_Out_ADC_ReqToEP))
+<P><STRONG><a name="[1f8]"></a>USBD_EndPoint0_Out_ADC_ReqToEP</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, usb_config.o(i.USBD_EndPoint0_Out_ADC_ReqToEP))
 <BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0
 </UL>
 
-<P><STRONG><a name="[1f5]"></a>USBD_EndPoint0_Out_ADC_ReqToIF</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, usb_config_1.o(i.USBD_EndPoint0_Out_ADC_ReqToIF))
+<P><STRONG><a name="[1f5]"></a>USBD_EndPoint0_Out_ADC_ReqToIF</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, usb_config.o(i.USBD_EndPoint0_Out_ADC_ReqToIF))
 <BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0
 </UL>
 
@@ -2786,15 +2786,15 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0
 </UL>
 
-<P><STRONG><a name="[1f3]"></a>USBD_EndPoint0_Out_CLS_ReqToDEV</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, usb_config_1.o(i.USBD_EndPoint0_Out_CLS_ReqToDEV))
+<P><STRONG><a name="[1f3]"></a>USBD_EndPoint0_Out_CLS_ReqToDEV</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, usb_config.o(i.USBD_EndPoint0_Out_CLS_ReqToDEV))
 <BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0
 </UL>
 
-<P><STRONG><a name="[1f9]"></a>USBD_EndPoint0_Out_CLS_ReqToEP</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, usb_config_1.o(i.USBD_EndPoint0_Out_CLS_ReqToEP))
+<P><STRONG><a name="[1f9]"></a>USBD_EndPoint0_Out_CLS_ReqToEP</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, usb_config.o(i.USBD_EndPoint0_Out_CLS_ReqToEP))
 <BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0
 </UL>
 
-<P><STRONG><a name="[1f7]"></a>USBD_EndPoint0_Out_CLS_ReqToIF</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, usb_config_1.o(i.USBD_EndPoint0_Out_CLS_ReqToIF))
+<P><STRONG><a name="[1f7]"></a>USBD_EndPoint0_Out_CLS_ReqToIF</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, usb_config.o(i.USBD_EndPoint0_Out_CLS_ReqToIF))
 <BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0
 </UL>
 
@@ -2807,11 +2807,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0
 </UL>
 
-<P><STRONG><a name="[1f0]"></a>USBD_EndPoint0_Setup_ADC_ReqToEP</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, usb_config_1.o(i.USBD_EndPoint0_Setup_ADC_ReqToEP))
+<P><STRONG><a name="[1f0]"></a>USBD_EndPoint0_Setup_ADC_ReqToEP</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, usb_config.o(i.USBD_EndPoint0_Setup_ADC_ReqToEP))
 <BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0
 </UL>
 
-<P><STRONG><a name="[1ed]"></a>USBD_EndPoint0_Setup_ADC_ReqToIF</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, usb_config_1.o(i.USBD_EndPoint0_Setup_ADC_ReqToIF))
+<P><STRONG><a name="[1ed]"></a>USBD_EndPoint0_Setup_ADC_ReqToIF</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, usb_config.o(i.USBD_EndPoint0_Setup_ADC_ReqToIF))
 <BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0
 </UL>
 
@@ -2830,15 +2830,15 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0
 </UL>
 
-<P><STRONG><a name="[1ea]"></a>USBD_EndPoint0_Setup_CLS_ReqToDEV</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, usb_config_1.o(i.USBD_EndPoint0_Setup_CLS_ReqToDEV))
+<P><STRONG><a name="[1ea]"></a>USBD_EndPoint0_Setup_CLS_ReqToDEV</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, usb_config.o(i.USBD_EndPoint0_Setup_CLS_ReqToDEV))
 <BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0
 </UL>
 
-<P><STRONG><a name="[1f1]"></a>USBD_EndPoint0_Setup_CLS_ReqToEP</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, usb_config_1.o(i.USBD_EndPoint0_Setup_CLS_ReqToEP))
+<P><STRONG><a name="[1f1]"></a>USBD_EndPoint0_Setup_CLS_ReqToEP</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, usb_config.o(i.USBD_EndPoint0_Setup_CLS_ReqToEP))
 <BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0
 </UL>
 
-<P><STRONG><a name="[1ef]"></a>USBD_EndPoint0_Setup_CLS_ReqToIF</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, usb_config_1.o(i.USBD_EndPoint0_Setup_CLS_ReqToIF))
+<P><STRONG><a name="[1ef]"></a>USBD_EndPoint0_Setup_CLS_ReqToIF</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, usb_config.o(i.USBD_EndPoint0_Setup_CLS_ReqToIF))
 <BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0
 </UL>
 
@@ -2856,7 +2856,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0
 </UL>
 
-<P><STRONG><a name="[1ec]"></a>USBD_EndPoint0_Setup_MSC_ReqToIF</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, usb_config_1.o(i.USBD_EndPoint0_Setup_MSC_ReqToIF))
+<P><STRONG><a name="[1ec]"></a>USBD_EndPoint0_Setup_MSC_ReqToIF</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, usb_config.o(i.USBD_EndPoint0_Setup_MSC_ReqToIF))
 <BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0
 </UL>
 
@@ -2890,7 +2890,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[209]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_HID_EP_INTOUT_Event
 <LI><a href="#[207]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_HID_EP_INTIN_Event
 </UL>
-<BR>[Address Reference Count : 1]<UL><LI> usb_config_1.o(.constdata)
+<BR>[Address Reference Count : 1]<UL><LI> usb_config.o(.constdata)
 </UL>
 <P><STRONG><a name="[203]"></a>USBD_HID_GetIdle</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, usbd_hid.o(i.USBD_HID_GetIdle))
 <BR><BR>[Called By]<UL><LI><a href="#[1eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0_Setup_HID_ReqToIF
@@ -2942,7 +2942,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[1f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0_Out_HID_ReqToIF
 </UL>
 
-<P><STRONG><a name="[20e]"></a>USBD_Init</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, usbd_stm32f103_1.o(i.USBD_Init))
+<P><STRONG><a name="[20e]"></a>USBD_Init</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, usbd_stm32f103.o(i.USBD_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = USBD_Init &rArr; PORT_USB_CONNECT_SETUP &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PORT_USB_CONNECT_SETUP
@@ -2951,15 +2951,15 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usbd_init
 </UL>
 
-<P><STRONG><a name="[20f]"></a>USBD_IntrEna</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, usbd_stm32f103_1.o(i.USBD_IntrEna))
+<P><STRONG><a name="[20f]"></a>USBD_IntrEna</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, usbd_stm32f103.o(i.USBD_IntrEna))
 <BR><BR>[Called By]<UL><LI><a href="#[20e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_Init
 </UL>
 
-<P><STRONG><a name="[26a]"></a>USBD_RTX_TaskInit</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, usb_config_1.o(i.USBD_RTX_TaskInit))
+<P><STRONG><a name="[26a]"></a>USBD_RTX_TaskInit</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, usb_config.o(i.USBD_RTX_TaskInit))
 <BR><BR>[Called By]<UL><LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usbd_init
 </UL>
 
-<P><STRONG><a name="[1cb]"></a>USBD_ReadEP</STRONG> (Thumb, 86 bytes, Stack size 28 bytes, usbd_stm32f103_1.o(i.USBD_ReadEP))
+<P><STRONG><a name="[1cb]"></a>USBD_ReadEP</STRONG> (Thumb, 86 bytes, Stack size 28 bytes, usbd_stm32f103.o(i.USBD_ReadEP))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = USBD_ReadEP &rArr; EP_Status
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EP_Status
@@ -2971,7 +2971,7 @@ Global Symbols
 <LI><a href="#[1dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_DataOutStage
 </UL>
 
-<P><STRONG><a name="[212]"></a>USBD_ReqClrFeature_MSC</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, usb_config_1.o(i.USBD_ReqClrFeature_MSC))
+<P><STRONG><a name="[212]"></a>USBD_ReqClrFeature_MSC</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, usb_config.o(i.USBD_ReqClrFeature_MSC))
 <BR><BR>[Called By]<UL><LI><a href="#[1e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_ReqSetClrFeature
 </UL>
 
@@ -3029,11 +3029,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0
 </UL>
 
-<P><STRONG><a name="[21b]"></a>USBD_Reset</STRONG> (Thumb, 160 bytes, Stack size 0 bytes, usbd_stm32f103_1.o(i.USBD_Reset))
+<P><STRONG><a name="[21b]"></a>USBD_Reset</STRONG> (Thumb, 160 bytes, Stack size 0 bytes, usbd_stm32f103.o(i.USBD_Reset))
 <BR><BR>[Called By]<UL><LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_LP_CAN1_RX0_IRQHandler
 </UL>
 
-<P><STRONG><a name="[215]"></a>USBD_ResetEP</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, usbd_stm32f103_1.o(i.USBD_ResetEP))
+<P><STRONG><a name="[215]"></a>USBD_ResetEP</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, usbd_stm32f103.o(i.USBD_ResetEP))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = USBD_ResetEP &rArr; EP_Reset
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EP_Reset
@@ -3042,26 +3042,26 @@ Global Symbols
 <LI><a href="#[1e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_ReqSetConfiguration
 </UL>
 
-<P><STRONG><a name="[6b]"></a>USBD_Reset_Event</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, usb_config_1.o(i.USBD_Reset_Event))
+<P><STRONG><a name="[6b]"></a>USBD_Reset_Event</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, usb_config.o(i.USBD_Reset_Event))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = USBD_Reset_Event &rArr; USBD_CDC_ACM_Reset_Event &rArr; USBD_CDC_ACM_Reset &rArr; USBD_CDC_ACM_PortSetLineCoding
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_CDC_ACM_Reset_Event
 </UL>
-<BR>[Address Reference Count : 1]<UL><LI> usb_config_1.o(.constdata)
+<BR>[Address Reference Count : 1]<UL><LI> usb_config.o(.constdata)
 </UL>
-<P><STRONG><a name="[6c]"></a>USBD_SOF_Event</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, usb_config_1.o(i.USBD_SOF_Event))
+<P><STRONG><a name="[6c]"></a>USBD_SOF_Event</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, usb_config.o(i.USBD_SOF_Event))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = USBD_SOF_Event &rArr; USBD_HID_SOF_Event &rArr; USBD_HID_EP_INTIN_Event &rArr; USBD_WriteEP &rArr; EP_Status
 </UL>
 <BR>[Calls]<UL><LI><a href="#[20c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_HID_SOF_Event
 <LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_CDC_ACM_SOF_Event
 </UL>
-<BR>[Address Reference Count : 1]<UL><LI> usb_config_1.o(.constdata)
+<BR>[Address Reference Count : 1]<UL><LI> usb_config.o(.constdata)
 </UL>
-<P><STRONG><a name="[1e5]"></a>USBD_SetAddress</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, usbd_stm32f103_1.o(i.USBD_SetAddress))
+<P><STRONG><a name="[1e5]"></a>USBD_SetAddress</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, usbd_stm32f103.o(i.USBD_SetAddress))
 <BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0
 </UL>
 
-<P><STRONG><a name="[1f2]"></a>USBD_SetStallEP</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, usbd_stm32f103_1.o(i.USBD_SetStallEP))
+<P><STRONG><a name="[1f2]"></a>USBD_SetStallEP</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, usbd_stm32f103.o(i.USBD_SetStallEP))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = USBD_SetStallEP &rArr; EP_Status
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EP_Status
@@ -3098,19 +3098,19 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0
 </UL>
 
-<P><STRONG><a name="[21d]"></a>USBD_Suspend</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, usbd_stm32f103_1.o(i.USBD_Suspend))
+<P><STRONG><a name="[21d]"></a>USBD_Suspend</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, usbd_stm32f103.o(i.USBD_Suspend))
 <BR><BR>[Called By]<UL><LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_LP_CAN1_RX0_IRQHandler
 </UL>
 
-<P><STRONG><a name="[21e]"></a>USBD_WakeUp</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, usbd_stm32f103_1.o(i.USBD_WakeUp))
+<P><STRONG><a name="[21e]"></a>USBD_WakeUp</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, usbd_stm32f103.o(i.USBD_WakeUp))
 <BR><BR>[Called By]<UL><LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_LP_CAN1_RX0_IRQHandler
 </UL>
 
-<P><STRONG><a name="[211]"></a>USBD_WakeUpCfg</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, usbd_stm32f103_1.o(i.USBD_WakeUpCfg))
+<P><STRONG><a name="[211]"></a>USBD_WakeUpCfg</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, usbd_stm32f103.o(i.USBD_WakeUpCfg))
 <BR><BR>[Called By]<UL><LI><a href="#[1e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_ReqSetClrFeature
 </UL>
 
-<P><STRONG><a name="[1c8]"></a>USBD_WriteEP</STRONG> (Thumb, 104 bytes, Stack size 32 bytes, usbd_stm32f103_1.o(i.USBD_WriteEP))
+<P><STRONG><a name="[1c8]"></a>USBD_WriteEP</STRONG> (Thumb, 104 bytes, Stack size 32 bytes, usbd_stm32f103.o(i.USBD_WriteEP))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = USBD_WriteEP &rArr; EP_Status
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EP_Status
@@ -3163,7 +3163,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_LP_CAN1_RX0_IRQHandler
 </UL>
 
-<P><STRONG><a name="[33]"></a>USB_LP_CAN1_RX0_IRQHandler</STRONG> (Thumb, 326 bytes, Stack size 16 bytes, usbd_stm32f103_1.o(i.USB_LP_CAN1_RX0_IRQHandler))
+<P><STRONG><a name="[33]"></a>USB_LP_CAN1_RX0_IRQHandler</STRONG> (Thumb, 326 bytes, Stack size 16 bytes, usbd_stm32f103.o(i.USB_LP_CAN1_RX0_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = USB_LP_CAN1_RX0_IRQHandler &rArr; USB_Istr &rArr; CTR_LP &rArr; Setup0_Process &rArr; Data_Setup0 &rArr; DataStageIn &rArr; UserToPMABufferCopy
 </UL>
 <BR>[Calls]<UL><LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usbd_reset_core
@@ -3828,7 +3828,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EP6_OUT_Callback
 </UL>
 
-<P><STRONG><a name="[266]"></a>usbd_class_init</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, usb_config_1.o(i.usbd_class_init))
+<P><STRONG><a name="[266]"></a>usbd_class_init</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, usb_config.o(i.usbd_class_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = usbd_class_init &rArr; USBD_CDC_ACM_Initialize &rArr; USBD_CDC_ACM_PortInitialize
 </UL>
 <BR>[Calls]<UL><LI><a href="#[267]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usbd_hid_init
@@ -3851,7 +3851,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[205]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_HID_GetProtocol
 </UL>
 
-<P><STRONG><a name="[208]"></a>usbd_hid_get_report</STRONG> (Thumb, 140 bytes, Stack size 24 bytes, usbd_user_hid_1.o(i.usbd_hid_get_report))
+<P><STRONG><a name="[208]"></a>usbd_hid_get_report</STRONG> (Thumb, 140 bytes, Stack size 24 bytes, usbd_user_hid.o(i.usbd_hid_get_report))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = usbd_hid_get_report
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
@@ -3869,11 +3869,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usbd_hid_process
 </UL>
 
-<P><STRONG><a name="[267]"></a>usbd_hid_init</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, usbd_user_hid_1.o(i.usbd_hid_init))
+<P><STRONG><a name="[267]"></a>usbd_hid_init</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, usbd_user_hid.o(i.usbd_hid_init))
 <BR><BR>[Called By]<UL><LI><a href="#[266]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usbd_class_init
 </UL>
 
-<P><STRONG><a name="[102]"></a>usbd_hid_process</STRONG> (Thumb, 150 bytes, Stack size 8 bytes, usbd_user_hid_1.o(i.usbd_hid_process))
+<P><STRONG><a name="[102]"></a>usbd_hid_process</STRONG> (Thumb, 150 bytes, Stack size 8 bytes, usbd_user_hid.o(i.usbd_hid_process))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = usbd_hid_process &rArr; usbd_hid_get_report_trigger &rArr; USBD_HID_EP_INTIN_Event &rArr; USBD_WriteEP &rArr; EP_Status
 </UL>
 <BR>[Calls]<UL><LI><a href="#[269]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usbd_hid_get_report_trigger
@@ -3886,7 +3886,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[206]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_HID_SetProtocol
 </UL>
 
-<P><STRONG><a name="[20a]"></a>usbd_hid_set_report</STRONG> (Thumb, 138 bytes, Stack size 24 bytes, usbd_user_hid_1.o(i.usbd_hid_set_report))
+<P><STRONG><a name="[20a]"></a>usbd_hid_set_report</STRONG> (Thumb, 138 bytes, Stack size 24 bytes, usbd_user_hid.o(i.usbd_hid_set_report))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = usbd_hid_set_report
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
@@ -3905,7 +3905,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_DAPUSB
 </UL>
 
-<P><STRONG><a name="[1e9]"></a>usbd_os_evt_set</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, usb_config_1.o(i.usbd_os_evt_set))
+<P><STRONG><a name="[1e9]"></a>usbd_os_evt_set</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, usb_config.o(i.usbd_os_evt_set))
 <BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0
 </UL>
 

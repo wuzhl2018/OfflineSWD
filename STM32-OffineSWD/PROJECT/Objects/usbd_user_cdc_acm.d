@@ -24,8 +24,8 @@
 .\objects\usbd_user_cdc_acm.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\..\..\RL\USB\INC\usbd_cls.h
 .\objects\usbd_user_cdc_acm.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\..\..\RL\USB\INC\usbd_hw.h
 .\objects\usbd_user_cdc_acm.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\..\..\RL\USB\INC\usbh.h
-.\objects\usbd_user_cdc_acm.o: D:\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Driver\Include\Driver_USART.h
-.\objects\usbd_user_cdc_acm.o: D:\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Driver\Include\Driver_Common.h
+.\objects\usbd_user_cdc_acm.o: ..\CMSIS\5.6.0\CMSIS\Driver\Include\Driver_USART.h
+.\objects\usbd_user_cdc_acm.o: ..\CMSIS\5.6.0\CMSIS\Driver\Include\Driver_Common.h
 .\objects\usbd_user_cdc_acm.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\objects\usbd_user_cdc_acm.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\usbd_user_cdc_acm.o: ..\HARDWARE\DAP_USB\src\usb_config.c

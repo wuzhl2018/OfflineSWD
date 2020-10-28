@@ -35,7 +35,7 @@
 .\objects\usart_stm32f10x.o: ..\STM32F10x_FWLib\inc\misc.h
 .\objects\usart_stm32f10x.o: ..\HARDWARE\DAP_UART\GPIO_STM32F10x.h
 .\objects\usart_stm32f10x.o: ..\HARDWARE\DAP_UART\DMA_STM32F10x.h
-.\objects\usart_stm32f10x.o: D:\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Driver\Include\Driver_USART.h
-.\objects\usart_stm32f10x.o: D:\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Driver\Include\Driver_Common.h
+.\objects\usart_stm32f10x.o: ..\CMSIS\5.6.0\CMSIS\Driver\Include\Driver_USART.h
+.\objects\usart_stm32f10x.o: ..\CMSIS\5.6.0\CMSIS\Driver\Include\Driver_Common.h
 .\objects\usart_stm32f10x.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\objects\usart_stm32f10x.o: ..\HARDWARE\DAP_UART\USART_Config_USART1_Remap.h

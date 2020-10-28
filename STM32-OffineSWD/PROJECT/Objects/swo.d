@@ -34,6 +34,6 @@
 .\objects\swo.o: ..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h
 .\objects\swo.o: ..\STM32F10x_FWLib\inc\misc.h
 .\objects\swo.o: ..\HARDWARE\DAP\DAP.h
-.\objects\swo.o: D:\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Driver\Include\Driver_USART.h
-.\objects\swo.o: D:\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Driver\Include\Driver_Common.h
+.\objects\swo.o: ..\CMSIS\5.6.0\CMSIS\Driver\Include\Driver_USART.h
+.\objects\swo.o: ..\CMSIS\5.6.0\CMSIS\Driver\Include\Driver_Common.h
 .\objects\swo.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h

@@ -10,13 +10,13 @@
       <TargetName>STM32-OfflineSWD</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060750::V5.06 update 6 (build 750)::ARMCC</pCCUsed>
+      <pCCUsed>5060528::V5.06 update 5 (build 528)::ARMCC</pCCUsed>
       <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32F103RE</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <PackID>Keil.STM32F1xx_DFP.2.3.0</PackID>
+          <PackID>Keil.STM32F1xx_DFP.2.1.0</PackID>
           <PackURL>http://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000,0x00010000) IROM(0x08000000,0x00080000) CPUTYPE("Cortex-M3") CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -184,7 +184,6 @@
             <hadXRAM>0</hadXRAM>
             <uocXRam>0</uocXRam>
             <RvdsVP>0</RvdsVP>
-            <RvdsMve>0</RvdsMve>
             <hadIRAM2>0</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
@@ -325,7 +324,6 @@
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
-            <uGnu>0</uGnu>
             <useXO>0</useXO>
             <v6Lang>1</v6Lang>
             <v6LangP>1</v6LangP>
@@ -338,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER,BLUEPILL,SWO_PB7,SWD_REMAP</Define>
               <Undefine></Undefine>
-              <IncludePath>..\USER;..\CORE;..\HARDWARE;..\STM32F10x_FWLib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\SYSTEM\spi;..\HARDWARE\W25Qxx;..\HARDWARE\ff9\src;..\HARDWARE\Mass_Storage\inc;..\HARDWARE\STM32_USB-FS-Device_Driver\inc;..\HARDWARE\Offline_SWD;..\HARDWARE\DAP;..\HARDWARE\SWD;..\HARDWARE\algo;..\HARDWARE\OLED;..\HARDWARE\another;..\HARDWARE\DAP_USB\inc;..\HARDWARE\DAP_UART;..\CMSIS\CoreSupport;D:\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Driver\Include;D:\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Include</IncludePath>
+              <IncludePath>..\USER;..\CORE;..\HARDWARE;..\STM32F10x_FWLib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\SYSTEM\spi;..\HARDWARE\W25Qxx;..\HARDWARE\ff9\src;..\HARDWARE\Mass_Storage\inc;..\HARDWARE\STM32_USB-FS-Device_Driver\inc;..\HARDWARE\Offline_SWD;..\HARDWARE\DAP;..\HARDWARE\SWD;..\HARDWARE\algo;..\HARDWARE\OLED;..\HARDWARE\another;..\HARDWARE\DAP_USB\inc;..\HARDWARE\DAP_UART;..\CMSIS\CoreSupport;..\CMSIS\5.6.0\CMSIS\Include;..\CMSIS\5.6.0\CMSIS\Driver\Include;..\RL\USB\INC</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
