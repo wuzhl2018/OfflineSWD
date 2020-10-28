@@ -15,8 +15,7 @@
 #### 4.选择“>>”，进入DEBUG MODE后选择ENTER即可进行离线串口调试
 #### <br>
 ## 其他
-#### 项目包含开源CMSIS-DAP中的相关文件，请自行包含以下目录
-#### （...\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Driver\Include及...\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Include）
+#### 项目之前包含的CMSIS和RL/USB已集成到项目中，之前的朋友如果不会使用可以尝试重新克隆。
 ## 项目意见
 #### 如果项目有问题或者有新功能需求，欢迎向作者提交意见！
 #### 联系方式 QQ/微信：717398244
